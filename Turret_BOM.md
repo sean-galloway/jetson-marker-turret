@@ -9,8 +9,8 @@
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 1 | Paintball marker | Bore-sighted reference for the ZED | 1 | $0 | $0 | owned | Owned. Bore aligns to the pan axis; hopper top-rear. |  |
-| [ ] | 2 | Push-pull solenoid (trigger) | 12 V, ~10 mm stroke | 1 | $20 | $20 | Makermotor PN00121 | Trigger actuator; 12 V switched. |  |
-| [ ] | 3 | Arming switch / relay (interlock) | SPST toggle / 12 V relay, in the 12 V solenoid line | 1 | $8 | $8 | generic | HARDWARE INTERLOCK: open = cannot fire. Safety-critical. |  |
+| [ ] | 2 | Push-pull solenoid (trigger) | 12 V, 1 A, 20 N, 10 mm stroke | 1 | $13.99 | $13.99 | TOMMSILE 0837B-12V (Amazon) | Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan. |  |
+| [ ] | 3 | Arming switch (SPST toggle) | SPST latching, 10 A DC @ 12 V, pre-wired; in the 12 V solenoid line | 1 | $7.99 | $7.99 | Taiss KNS-1 (2-pack, Amazon) | HARDWARE INTERLOCK: open = cannot fire. Safety-critical. |  |
 | [ ] | 4 | Laser sight (boresight aid) | Mounts on top of the barrel | 1 | $15 | $15 | generic | Zero to impact point at a set range, like a rifle. |  |
 | [x] | 5 | ZED 2i stereo camera | 4 mm, polarizer; USB 3.0 | 1 | $0 | $0 | Stereolabs ZED 2i 4mm | Owned (~$549). Boresighted below the barrel; routes to the Jetson. |  |
 | [x] | 6 | ZED USB3 locking cable (3 m) | USB 3.0 Type-C locking | 1 | $0 | $0 | Stereolabs | Owned. |  |
@@ -93,7 +93,7 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $1,216.86 |
-| Electronics & payload (A–D) | $551.90 |
+| Grand total (to-buy) | $1,210.84 |
+| Electronics & payload (A–D) | $545.88 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |

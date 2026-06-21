@@ -14,15 +14,15 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned. Bore aligns to the pan axis; hopper top-rear._
 
-- **#2 Push-pull solenoid (trigger)** — 12 V, ~10 mm stroke · $20 · Makermotor PN00121
+- **#2 Push-pull solenoid (trigger)** — 12 V, 1 A, 20 N, 10 mm stroke · $13.99 · TOMMSILE 0837B-12V (Amazon)
   
   - [x] Ordered
   
   - [ ] Received
   
-  - _Trigger actuator; 12 V switched._
+  - _Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan._
 
-- **#3 Arming switch / relay (interlock)** — SPST toggle / 12 V relay, in the 12 V solenoid line · $8 · generic
+- **#3 Arming switch (SPST toggle)** — SPST latching, 10 A DC @ 12 V, pre-wired; in the 12 V solenoid line · $7.99 · Taiss KNS-1 (2-pack, Amazon)
   
   - [x] Ordered
   
@@ -420,7 +420,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $1,216.86
-- **Electronics & payload (A–D):** $551.90
+- **Grand total (to-buy):** $1,210.84
+- **Electronics & payload (A–D):** $545.88
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
