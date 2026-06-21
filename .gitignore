@@ -247,3 +247,7 @@ __marimo__/
 
 # Do NOT ignore committed deliverables: DXF plates (cad/dxf), PDFs/docs,
 # the BOM xlsx/markdown, and datasheets are tracked on purpose.
+
+# Redundant archive snapshots of the source tree (6 MB+ binaries) — keep the
+# files, not the zip. Force-add a specific archive with `git add -f` if needed.
+*.zip
