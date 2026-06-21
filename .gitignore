@@ -251,3 +251,8 @@ __marimo__/
 # Redundant archive snapshots of the source tree (6 MB+ binaries) — keep the
 # files, not the zip. Force-add a specific archive with `git add -f` if needed.
 *.zip
+
+# FreeCAD backup/lock files (keep .FCStd, not these)
+*.FCStd1
+*.FCBak
+*.FCStd.lock

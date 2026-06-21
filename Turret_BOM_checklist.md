@@ -16,7 +16,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#2 Push-pull solenoid (trigger)** — 12 V, ~10 mm stroke · $20 · Makermotor PN00121
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -24,7 +24,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#3 Arming switch / relay (interlock)** — SPST toggle / 12 V relay, in the 12 V solenoid line · $8 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -42,7 +42,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [x] Received
+  - [ ] Received
   
   - _Owned (~$549). Boresighted below the barrel; routes to the Jetson._
 
@@ -50,7 +50,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [x] Received
+  - [ ] Received
   
   - _Owned._
 
@@ -72,7 +72,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#9 OLED status screen (SSD1306)** — 128×64; I2C · $9 · Adafruit 938
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -256,15 +256,15 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#31 Motor + driver kit** — NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 · $171.98 · 23HS45-4204D-E1000 / Amazon B0C6943QBM
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1_
 
 - **#32 Planetary gearbox 5:1** — NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 · $115.98 · Ratio 5:1 Nema 23 … φ8mm
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -272,9 +272,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#33 Turntable bearing (lazy susan)** — Heavy-duty steel/alu, OPEN center, 6–8 in · $20 · Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` · [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true)
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)**_
 
