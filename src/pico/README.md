@@ -8,10 +8,12 @@ fast, and safe — it takes intent from the Pi 5 and never decides to fire.
 - Generate step/dir for pan + tilt to the 2× CL57T drivers.
 - Read limit/homing microswitches → power-up homing → absolute aiming.
 - **Stop-and-hold** on any fault or loss of the Pi 5 heartbeat.
+- Drive a small **debug OLED** (SSD1306, I2C) showing the current routine/state,
+  step/dir activity, homing status, heartbeat, and fault codes.
 
 ## Inputs / outputs
 - **In:** commands + heartbeat from the Pi 5 (UART); limit/homing switches (GPIO).
-- **Out:** step/dir to CL57T V4.1 drivers.
+- **Out:** step/dir to CL57T V4.1 drivers; debug OLED (I2C).
 
 ## Runtime
 MicroPython firmware — no on-device pip. `requirements-dev.txt` holds host tools

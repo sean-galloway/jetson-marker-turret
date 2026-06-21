@@ -54,13 +54,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned._
 
-- **#7 BNO085 9-DoF IMU** — SPI; accel+gyro (no mag) · $20 · Adafruit 4754
+- **#7 10-DOF IMU (BNO055 + BMP280)** — I2C Gravity plug (no solder); run IMU mode (no mag) · $25.90 · DFRobot Gravity SEN0253 · [link](https://www.dfrobot.com/product-1793.html)
   
   - [x] Ordered
   
   - [ ] Received
   
-  - _Leveling + stabilization; rigid to the platform._
+  - _Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers; lower Pi I2C baud for BNO055 clock-stretch._
 
 - **#8 Benewake TF03 lidar (100 m)** — Single-point rangefinder; UART/CAN; IP67 · $220 · TF03-100
   
@@ -70,13 +70,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Boresighted to the muzzle; range along the line of fire._
 
-- **#9 OLED status screen (SSD1306)** — 128×64; I2C · $9 · Adafruit 938
+- **#9 Armed/Safe LED indicator** — Red+green LEDs + resistors; hardware-tied · $3 · generic
   
-  - [x] Ordered
+  - [ ] Ordered
   
   - [ ] Received
   
-  - _On-gun ARMED/SAFE + range readout._
+  - _RED ARMED off the armed rail (hardware-true); GREEN SAFE. On the turret._
 
 ## B.  COMPUTE & CONTROL — ON THE TRIPOD
 
@@ -168,9 +168,17 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Drives both CL57T_
 
+- **#21 Pico debug OLED (SSD1306)** — 128×64; I2C · $9 · Adafruit 938
+  
+  - [x] Ordered
+  
+  - [ ] Received
+  
+  - _Pico debug: current routine/state, step/dir, homing, heartbeat, faults._
+
 ## C.  DISPLAYS & CALIBRATION
 
-- **#21 10.1in capacitive touchscreen** — Pi console; HDMI + USB · owned
+- **#22 10.1in capacitive touchscreen** — Pi console; HDMI + USB · owned
   
   - [x] Ordered
   
@@ -178,7 +186,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned. Dev/calibration console, off the rig._
 
-- **#22 7in TFT LCD monitor** — Jetson view; HDMI + 12 V · owned
+- **#23 7in TFT LCD monitor** — Jetson view; HDMI + 12 V · owned
   
   - [x] Ordered
   
@@ -186,7 +194,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned. Jetson perception monitor._
 
-- **#23 Checkerboard calibration target** — Rigid flat backing · owned
+- **#24 Checkerboard calibration target** — Rigid flat backing · owned
   
   - [x] Ordered
   
@@ -194,7 +202,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned. Camera + boresight calibration._
 
-- **#24 micro-HDMI → HDMI cable** — — · $7 · generic
+- **#25 micro-HDMI → HDMI cable** — — · $7 · generic
   
   - [ ] Ordered
   
@@ -202,7 +210,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Pi 5 micro-HDMI → 10.1in._
 
-- **#25 DisplayPort → HDMI adapter** — — · $9 · generic
+- **#26 DisplayPort → HDMI adapter** — — · $9 · generic
   
   - [ ] Ordered
   
@@ -212,7 +220,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## D.  POWER & WIRING
 
-- **#26 12 V DC supply (≥3 A)** — Solenoid rail · $16 · Mean Well GST60A12
+- **#27 12 V DC supply (≥3 A)** — Solenoid rail · $16 · Mean Well GST60A12
   
   - [ ] Ordered
   
@@ -220,7 +228,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Solenoid only (motors on 24–48 V). Or buck from 48 V for one supply._
 
-- **#27 Inline fuse holders + fuses** — ATC · $8 · generic
+- **#28 Inline fuse holders + fuses** — ATC · $8 · generic
   
   - [ ] Ordered
   
@@ -228,7 +236,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Fuse the 24–48 V and 12 V rails; tie ALL grounds together._
 
-- **#28 Ethernet cable, Cat6 (short)** — — · $6 · generic
+- **#29 Ethernet cable, Cat6 (short)** — — · $6 · generic
   
   - [ ] Ordered
   
@@ -236,7 +244,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Direct Pi↔Jetson; service loop on the motion run._
 
-- **#29 Jumper wires (DuPont M-F, M-M)** — — · $7 · generic
+- **#30 Jumper wires (DuPont M-F, M-M)** — — · $7 · generic
   
   - [ ] Ordered
   
@@ -244,7 +252,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Signals: IMU, lidar, Pico, switches._
 
-- **#30 Hookup wire, 18–20 AWG** — — · $10 · generic
+- **#31 Hookup wire, 18–20 AWG** — — · $10 · generic
   
   - [ ] Ordered
   
@@ -252,7 +260,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Motor, solenoid, power runs._
 
-- **#31 Wire ferrules / crimp terminals** — — · $9 · generic
+- **#32 Wire ferrules / crimp terminals** — — · $9 · generic
   
   - [ ] Ordered
   
@@ -262,7 +270,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## E.  BUY — CATALOG PARTS
 
-- **#32 Motor + driver kit** — NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 · $171.98 · 23HS45-4204D-E1000 / Amazon B0C6943QBM
+- **#33 Motor + driver kit** — NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 · $171.98 · 23HS45-4204D-E1000 / Amazon B0C6943QBM
   
   - [x] Ordered
   
@@ -270,7 +278,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1_
 
-- **#33 Planetary gearbox 5:1** — NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 · $115.98 · Ratio 5:1 Nema 23 … φ8mm
+- **#34 Planetary gearbox 5:1** — NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 · $115.98 · Ratio 5:1 Nema 23 … φ8mm
   
   - [x] Ordered
   
@@ -278,7 +286,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor_
 
-- **#34 Turntable bearing (lazy susan)** — Heavy-duty steel/alu, OPEN center, 6–8 in · $20 · Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` · [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true)
+- **#35 Turntable bearing (lazy susan)** — Heavy-duty steel/alu, OPEN center, 6–8 in · $20 · Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` · [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true)
   
   - [x] Ordered
   
@@ -286,7 +294,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)**_
 
-- **#35 Mounted ball bearing (tilt)** — Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") · $15 · McMaster: "mounted ball bearing" · `5968K71` · [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/)
+- **#36 Mounted ball bearing (tilt)** — Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") · $15 · McMaster: "mounted ball bearing" · `5968K71` · [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/)
   
   - [ ] Ordered
   
@@ -294,7 +302,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Match pattern to plate 05_
 
-- **#36 Mounting hub** — Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm · $36 · McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` · [link](https://www.ruland.com/fht-mcl-14-ss.html#)
+- **#37 Mounting hub** — Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm · $36 · McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` · [link](https://www.ruland.com/fht-mcl-14-ss.html#)
   
   - [ ] Ordered
   
@@ -302,15 +310,15 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Or rigid shaft coupling; no keyway_
 
-- **#37 Shoulder screw (tilt pin)** — Shoulder Ø = #35 bearing bore (e.g. 1/2") · $8 · McMaster: "shoulder screw" · `90298A716` · [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/)
+- **#38 Shoulder screw (tilt pin)** — Shoulder Ø = #36 bearing bore (e.g. 1/2") · $8 · McMaster: "shoulder screw" · `90298A716` · [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/)
   
   - [ ] Ordered
   
   - [ ] Received
   
-  - _Far end of tilt axis; pairs with #35_
+  - _Far end of tilt axis; pairs with #36_
 
-- **#38 L-brackets / gussets** — Join yoke side-plates to turntable + stiffen · $32 · 8020 / McMaster · [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/)
+- **#39 L-brackets / gussets** — Join yoke side-plates to turntable + stiffen · $32 · 8020 / McMaster · [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/)
   
   - [ ] Ordered
   
@@ -318,7 +326,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Bolt-together corners_
 
-- **#39 Standoffs** — M5, raise base plate over tripod adapter · $12 · McMaster
+- **#40 Standoffs** — M5, raise base plate over tripod adapter · $12 · McMaster
   
   - [ ] Ordered
   
@@ -326,7 +334,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Length = motor/gbx clearance_
 
-- **#40 Power supply 24–48 V** — 48 V, 5–10 A · $40 · select
+- **#41 Power supply 24–48 V** — 48 V, 5–10 A · $40 · select
   
   - [ ] Ordered
   
@@ -334,7 +342,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _DROK 48V Power Supply, AC to DC Converter 0-48V 10A 480W Variable Power Supply, AC to DC Adapter Low Voltage Transformer_
 
-- **#41 Fasteners + NUTS** — M5/M6/M3 SHCS, nuts, washers (clearance-hole build) · $35 · McMaster / assorted · `92275A110` · [link](https://www.mcmaster.com/products/socket-head-cap-screw-assortments/system-of-measurement~metric/)
+- **#42 Fasteners + NUTS** — M5/M6/M3 SHCS, nuts, washers (clearance-hole build) · $35 · McMaster / assorted · `92275A110` · [link](https://www.mcmaster.com/products/socket-head-cap-screw-assortments/system-of-measurement~metric/)
   
   - [ ] Ordered
   
@@ -342,7 +350,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Nuts replace tapping_
 
-- **#42 Dowel pins** — Ø4 mm (PA-4 interface) · $8 · McMaster · `91595A161` · [link](https://www.mcmaster.com/products/dowel-pins/dowel-pins-1~~/system-of-measurement~metric/diameter~4-0000-mm/diameter~4-000-mm/diameter~4-mm/)
+- **#43 Dowel pins** — Ø4 mm (PA-4 interface) · $8 · McMaster · `91595A161` · [link](https://www.mcmaster.com/products/dowel-pins/dowel-pins-1~~/system-of-measurement~metric/diameter~4-0000-mm/diameter~4-000-mm/diameter~4-mm/)
   
   - [ ] Ordered
   
@@ -350,7 +358,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Reamed-fit_
 
-- **#43 Consumables** — Threadlocker (medium) + anti-seize · $12 · — · `7458A65` · [link](https://www.mcmaster.com/products/loctite-kits/manufacturer-model-number~243/)
+- **#44 Consumables** — Threadlocker (medium) + anti-seize · $12 · — · `7458A65` · [link](https://www.mcmaster.com/products/loctite-kits/manufacturer-model-number~243/)
   
   - [ ] Ordered
   
@@ -360,7 +368,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## F.  CUT — DXF FLAT PLATES (6061-T6; files supplied; one SendCutSend order)
 
-- **#44 Pan base plate** — 6 mm; file 02_base_plate_pan.dxf · $28 · DXF
+- **#45 Pan base plate** — 6 mm; file 02_base_plate_pan.dxf · $28 · DXF
   
   - [ ] Ordered
   
@@ -368,7 +376,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Gearbox + slew bearing + standoffs_
 
-- **#45 Turntable plate** — 6 mm; file 03_turntable_plate.dxf · $28 · DXF
+- **#46 Turntable plate** — 6 mm; file 03_turntable_plate.dxf · $28 · DXF
   
   - [ ] Ordered
   
@@ -376,7 +384,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Slew bearing + yoke feet_
 
-- **#46 Yoke side — gearbox** — 6 mm; file 04_yoke_side_gearbox.dxf · $25 · DXF
+- **#47 Yoke side — gearbox** — 6 mm; file 04_yoke_side_gearbox.dxf · $25 · DXF
   
   - [ ] Ordered
   
@@ -384,7 +392,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Gearbox flange_
 
-- **#47 Yoke side — trunnion** — 6 mm; file 05_yoke_side_trunnion.dxf · $25 · DXF
+- **#48 Yoke side — trunnion** — 6 mm; file 05_yoke_side_trunnion.dxf · $25 · DXF
   
   - [ ] Ordered
   
@@ -392,7 +400,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Pillow-block bearing_
 
-- **#48 Interface plate (PA-4)** — 6 mm; file 01_interface_plate_PA4.dxf · $28 · DXF
+- **#49 Interface plate (PA-4)** — 6 mm; file 01_interface_plate_PA4.dxf · $28 · DXF
   
   - [ ] Ordered
   
@@ -400,7 +408,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Payload mount (Ø70 BC/dowels/Ø14)_
 
-- **#49 Tripod adapter** — 6 mm; file 06_tripod_adapter.dxf · $25 · DXF
+- **#50 Tripod adapter** — 6 mm; file 06_tripod_adapter.dxf · $25 · DXF
   
   - [ ] Ordered
   
@@ -410,7 +418,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## G.  HAVE
 
-- **#50 Tripod** — 35 lb (you own) · —
+- **#51 Tripod** — 35 lb (you own) · —
   
   - [x] Ordered
   
@@ -420,7 +428,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $1,210.84
-- **Electronics & payload (A–D):** $545.88
+- **Grand total (to-buy):** $1,213.84
+- **Electronics & payload (A–D):** $548.88
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159

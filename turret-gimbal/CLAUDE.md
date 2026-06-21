@@ -15,9 +15,10 @@ repo root (`Turret_BOM.md` table + `Turret_BOM_checklist.md`) for the live parts
 
 ## System architecture
 - **On the turret (moving payload):** marker (barrel) + trigger solenoid + boresighted **ZED 2i**
-  (mounted *below* the barrel) + laser sight (on top of the barrel) + **BNO055 IMU** + **TF03 lidar**.
+  (mounted *below* the barrel) + laser sight (on top of the barrel) + **BNO055 IMU** + **TF03 lidar**
+  + **armed/safe LED** (RED ARMED hardware-tied to the armed rail; GREEN SAFE).
 - **On the tripod (static base):** **Jetson AGX Orin** (perception/targeting) + **Raspberry Pi 5**
-  (supervisor) + **Pico RP2040** (real-time step/dir) + monitors + motor PSU.
+  (supervisor) + **Pico RP2040** (real-time step/dir, with a small **debug OLED**) + monitors + motor PSU.
 - **Signal chain:** sensors → Jetson → Pi 5 → Pico → CL57T drivers → 2× NEMA 23 closed-loop steppers.
 - A sensor cable bundle crosses the pan and tilt axes → needs a **service loop or slip ring**
   (decide in frame design; sets how far pan can travel).
