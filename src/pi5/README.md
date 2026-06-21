@@ -6,7 +6,10 @@ step/dir intent down to the Pico.
 
 ## Responsibilities
 - Receive aim setpoints from the Jetson (Ethernet).
-- Read BNO085 IMU (SPI/I2C) and TF03 lidar (UART) for leveling + range.
+- Read the BNO055 IMU (I2C, DFRobot Gravity SEN0253) and TF03 lidar (UART) for
+  leveling + range. Run the IMU in **IMU mode (no magnetometer)** — stepper
+  fields corrupt mag heading. **BNO055 + Pi I2C clock-stretch:** lower the bus
+  baud (`dtparam=i2c_arm_baudrate=10000` in config.txt) or you'll get I/O errors.
 - Own the **arming** logic and overall state machine (SAFE / ARMED / FAULT).
 - Drive the on-gun OLED (ARMED/SAFE + range).
 - Command the Pico; monitor its heartbeat.

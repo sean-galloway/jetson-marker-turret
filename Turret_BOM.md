@@ -14,7 +14,7 @@
 | [ ] | 4 | Laser sight (boresight aid) | Mounts on top of the barrel | 1 | $15 | $15 | generic | Zero to impact point at a set range, like a rifle. |  |
 | [x] | 5 | ZED 2i stereo camera | 4 mm, polarizer; USB 3.0 | 1 | $0 | $0 | Stereolabs ZED 2i 4mm | Owned (~$549). Boresighted below the barrel; routes to the Jetson. |  |
 | [x] | 6 | ZED USB3 locking cable (3 m) | USB 3.0 Type-C locking | 1 | $0 | $0 | Stereolabs | Owned. |  |
-| [ ] | 7 | BNO085 9-DoF IMU | SPI; accel+gyro (no mag) | 1 | $20 | $20 | Adafruit 4754 | Leveling + stabilization; rigid to the platform. |  |
+| [ ] | 7 | 10-DOF IMU (BNO055 + BMP280) | I2C Gravity plug (no solder); run IMU mode (no mag) | 1 | $25.90 | $25.90 | DFRobot Gravity SEN0253 | Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers; lower Pi I2C baud for BNO055 clock-stretch. | [link](https://www.dfrobot.com/product-1793.html) |
 | [ ] | 8 | Benewake TF03 lidar (100 m) | Single-point rangefinder; UART/CAN; IP67 | 1 | $220 | $220 | TF03-100 | Boresighted to the muzzle; range along the line of fire. |  |
 | [ ] | 9 | OLED status screen (SSD1306) | 128×64; I2C | 1 | $9 | $9 | Adafruit 938 | On-gun ARMED/SAFE + range readout. |  |
 
@@ -93,7 +93,7 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $1,210.96 |
-| Electronics & payload (A–D) | $541 |
+| Grand total (to-buy) | $1,216.86 |
+| Electronics & payload (A–D) | $546.90 |
 | Gimbal — catalog (E) | $510.96 |
 | Gimbal — DXF plates (F) | $159 |

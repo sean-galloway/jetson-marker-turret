@@ -50,7 +50,7 @@ The module must stay inside the envelope the gimbal was sized for. If it grows p
 | Marker cradle + trigger bracket | clamp + solenoid mount | **Marker scan** (trigger, mounting surface, muzzle) |
 | ZED 2i | 1/4-20 + flat | datasheet + caliper check |
 | TF03 lidar | M3 pattern | datasheet + caliper check |
-| BNO085 IMU | M2.5 standoffs | breakout dims |
+| BNO055 IMU (DFRobot Gravity SEN0253) | standoffs (board mtg holes) | breakout dims |
 | Pi 5 + HAT + cooler | M2.5 standoffs + port cutouts | measured envelope |
 
 ---

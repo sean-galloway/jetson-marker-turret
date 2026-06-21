@@ -52,7 +52,7 @@ def parse_item(r):
     """Return a dict for an item row (numeric first cell), else None."""
     if not isinstance(r[0], int):
         return None
-    num, item, spec, pn_src, qty, unit, line = r[0], r[1], r[2], r[3], r[4], r[5], r[6]
+    num, item, spec, pn_src, qty, unit = r[0], r[1], r[2], r[3], r[4], r[5]
     ds_needed, notes, pn2, link = r[7], r[9], r[10], r[12]
     src = clean(pn_src)
     if pn2 and str(pn2).strip().lower() not in ("na", "marker scan", "", "none"):
@@ -65,9 +65,15 @@ def parse_item(r):
         notes = (notes + f" — **measured part: see [Bearing_Dimensions]({BEARING_DOC})**").strip(" —")
         if not link_url:
             link_url = BEARING_DOC
+    # Compute the line total from qty x unit. openpyxl drops cached formula
+    # values on save, so we never rely on the sheet's =E*F result.
+    qty_n = qty if isinstance(qty, (int, float)) else 0
+    unit_n = unit if isinstance(unit, (int, float)) else 0
+    line_raw = qty_n * unit_n
     return dict(num=num, item=clean(item), spec=clean(spec), qty=clean(qty),
-                unit=money(unit), line=money(line), src=src, notes=notes,
-                link=link_url, owned=(clean(ds_needed) == "Have"))
+                unit=money(unit), line=money(line_raw), line_raw=line_raw,
+                src=src, notes=notes, link=link_url,
+                owned=(clean(ds_needed) == "Have"))
 
 
 def load_sections(rows):
@@ -89,6 +95,29 @@ def load_sections(rows):
             cur = (clean(a), [])
             sections.append(cur)
     return sections
+
+
+def compute_totals(rows, sections):
+    """Compute summary totals from item lines (not the sheet's cached formulas).
+
+    Labels are read from the sheet's totals rows (literal text, cache-safe) and
+    matched, in order, to: grand to-buy, electronics A–D, gimbal catalog E,
+    DXF plates F.
+    """
+    by_letter = {}
+    for title, items in sections:
+        letter = title.strip()[:1].upper()
+        by_letter[letter] = by_letter.get(letter, 0) + sum(it["line_raw"] for it in items)
+    grand = sum(by_letter.values())
+    values = [
+        grand,
+        by_letter.get("A", 0) + by_letter.get("B", 0)
+        + by_letter.get("C", 0) + by_letter.get("D", 0),
+        by_letter.get("E", 0),
+        by_letter.get("F", 0),
+    ]
+    labels = [clean(r[5]).rstrip(":") for r in rows if r[0] is None and r[5]]
+    return [(lbl, money(val)) for lbl, val in zip(labels, values)]
 
 
 INTRO = ("> Sections A–D: the turret system (payload on the gun · compute on the tripod · "
@@ -146,7 +175,7 @@ def main() -> None:
     ws = openpyxl.load_workbook(XLSX, data_only=True).active
     rows = list(ws.iter_rows(values_only=True))
     sections = load_sections(rows)
-    totals = [(clean(r[5]).rstrip(":"), money(r[6])) for r in rows if r[0] is None and r[5]]
+    totals = compute_totals(rows, sections)
     write_table(sections, totals)
     write_checklist(sections, totals)
     n_items = sum(len(items) for _, items in sections)
