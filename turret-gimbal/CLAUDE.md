@@ -93,7 +93,7 @@ Install: `pip install ezdxf weasyprint markdown --break-system-packages`.
 
 ## Repo layout
 ```
-bom/         legacy parts-list spreadsheets only; the live 50-item BOM is Turret_BOM.md (repo root)
+bom/legacy/  superseded parts-list spreadsheets only; the live 50-item BOM is Turret_BOM.md (repo root)
 cad/dxf/     6 plate DXFs
 docs/        build plan, assembly guide, drawings, payload spec, SendCutSend spec (md + pdf)
 docs/assets/ images referenced by the md/pdf docs
