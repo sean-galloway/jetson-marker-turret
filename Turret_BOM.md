@@ -32,41 +32,41 @@
 | [ ] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + Pico), spare GPIO. |  |
 | [ ] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |
 | [ ] | 19 | Limit / homing switches | microswitch; GPIO to Pico | 2 | $3 | $6 | generic | One per axis → power-up homing → absolute aiming. |  |
+| [ ] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T |  |
 
 ## C.  DISPLAYS & CALIBRATION
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [x] | 20 | 10.1in capacitive touchscreen | Pi console; HDMI + USB | 1 | $0 | $0 | owned | Owned. Dev/calibration console, off the rig. |  |
-| [x] | 21 | 7in TFT LCD monitor | Jetson view; HDMI + 12 V | 1 | $0 | $0 | owned | Owned. Jetson perception monitor. |  |
-| [x] | 22 | Checkerboard calibration target | Rigid flat backing | 1 | $0 | $0 | owned | Owned. Camera + boresight calibration. |  |
-| [ ] | 23 | micro-HDMI → HDMI cable | — | 1 | $7 | $7 | generic | Pi 5 micro-HDMI → 10.1in. |  |
-| [ ] | 24 | DisplayPort → HDMI adapter | — | 1 | $9 | $9 | generic | AGX Orin is DisplayPort → 7in; verify. |  |
+| [x] | 21 | 10.1in capacitive touchscreen | Pi console; HDMI + USB | 1 | $0 | $0 | owned | Owned. Dev/calibration console, off the rig. |  |
+| [x] | 22 | 7in TFT LCD monitor | Jetson view; HDMI + 12 V | 1 | $0 | $0 | owned | Owned. Jetson perception monitor. |  |
+| [x] | 23 | Checkerboard calibration target | Rigid flat backing | 1 | $0 | $0 | owned | Owned. Camera + boresight calibration. |  |
+| [ ] | 24 | micro-HDMI → HDMI cable | — | 1 | $7 | $7 | generic | Pi 5 micro-HDMI → 10.1in. |  |
+| [ ] | 25 | DisplayPort → HDMI adapter | — | 1 | $9 | $9 | generic | AGX Orin is DisplayPort → 7in; verify. |  |
 
 ## D.  POWER & WIRING
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 25 | 12 V DC supply (≥3 A) | Solenoid rail | 1 | $16 | $16 | Mean Well GST60A12 | Solenoid only (motors on 24–48 V). Or buck from 48 V for one supply. |  |
-| [ ] | 26 | Inline fuse holders + fuses | ATC | 1 | $8 | $8 | generic | Fuse the 24–48 V and 12 V rails; tie ALL grounds together. |  |
-| [ ] | 27 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Direct Pi↔Jetson; service loop on the motion run. |  |
-| [ ] | 28 | Jumper wires (DuPont M-F, M-M) | — | 1 | $7 | $7 | generic | Signals: IMU, lidar, Pico, switches. |  |
-| [ ] | 29 | Hookup wire, 18–20 AWG | — | 1 | $10 | $10 | generic | Motor, solenoid, power runs. |  |
-| [ ] | 30 | Wire ferrules / crimp terminals | — | 1 | $9 | $9 | generic | Driver/terminal terminations. |  |
+| [ ] | 26 | 12 V DC supply (≥3 A) | Solenoid rail | 1 | $16 | $16 | Mean Well GST60A12 | Solenoid only (motors on 24–48 V). Or buck from 48 V for one supply. |  |
+| [ ] | 27 | Inline fuse holders + fuses | ATC | 1 | $8 | $8 | generic | Fuse the 24–48 V and 12 V rails; tie ALL grounds together. |  |
+| [ ] | 28 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Direct Pi↔Jetson; service loop on the motion run. |  |
+| [ ] | 29 | Jumper wires (DuPont M-F, M-M) | — | 1 | $7 | $7 | generic | Signals: IMU, lidar, Pico, switches. |  |
+| [ ] | 30 | Hookup wire, 18–20 AWG | — | 1 | $10 | $10 | generic | Motor, solenoid, power runs. |  |
+| [ ] | 31 | Wire ferrules / crimp terminals | — | 1 | $9 | $9 | generic | Driver/terminal terminations. |  |
 
 ## E.  BUY — CATALOG PARTS
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 31 | Motor + driver kit | NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 | 2 | $85.99 | $171.98 | 23HS45-4204D-E1000 / Amazon B0C6943QBM | STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1 |  |
-| [ ] | 32 | Planetary gearbox 5:1 | NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 | 2 | $57.99 | $115.98 | Ratio 5:1 Nema 23 … φ8mm | Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor |  |
-| [ ] | 33 | Turntable bearing (lazy susan) | Heavy-duty steel/alu, OPEN center, 6–8 in | 1 | $20 | $20 | Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` | 8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)** | [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true) |
-| [ ] | 34 | Mounted ball bearing (tilt) | Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") | 1 | $15 | $15 | McMaster: "mounted ball bearing" · `5968K71` | Match pattern to plate 05 | [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/) |
-| [ ] | 35 | Mounting hub | Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm | 2 | $18 | $36 | McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` | Or rigid shaft coupling; no keyway | [link](https://www.ruland.com/fht-mcl-14-ss.html#) |
-| [ ] | 36 | Shoulder screw (tilt pin) | Shoulder Ø = #34 bearing bore (e.g. 1/2") | 1 | $8 | $8 | McMaster: "shoulder screw" · `90298A716` | Far end of tilt axis; pairs with #34 | [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/) |
-| [ ] | 37 | L-brackets / gussets | Join yoke side-plates to turntable + stiffen | 8 | $4 | $32 | 8020 / McMaster | Bolt-together corners | [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/) |
-| [ ] | 38 | Standoffs | M5, raise base plate over tripod adapter | 4 | $3 | $12 | McMaster | Length = motor/gbx clearance |  |
-| [ ] | 39 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T |  |
+| [ ] | 32 | Motor + driver kit | NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 | 2 | $85.99 | $171.98 | 23HS45-4204D-E1000 / Amazon B0C6943QBM | STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1 |  |
+| [ ] | 33 | Planetary gearbox 5:1 | NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 | 2 | $57.99 | $115.98 | Ratio 5:1 Nema 23 … φ8mm | Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor |  |
+| [ ] | 34 | Turntable bearing (lazy susan) | Heavy-duty steel/alu, OPEN center, 6–8 in | 1 | $20 | $20 | Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` | 8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)** | [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true) |
+| [ ] | 35 | Mounted ball bearing (tilt) | Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") | 1 | $15 | $15 | McMaster: "mounted ball bearing" · `5968K71` | Match pattern to plate 05 | [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/) |
+| [ ] | 36 | Mounting hub | Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm | 2 | $18 | $36 | McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` | Or rigid shaft coupling; no keyway | [link](https://www.ruland.com/fht-mcl-14-ss.html#) |
+| [ ] | 37 | Shoulder screw (tilt pin) | Shoulder Ø = #35 bearing bore (e.g. 1/2") | 1 | $8 | $8 | McMaster: "shoulder screw" · `90298A716` | Far end of tilt axis; pairs with #35 | [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/) |
+| [ ] | 38 | L-brackets / gussets | Join yoke side-plates to turntable + stiffen | 8 | $4 | $32 | 8020 / McMaster | Bolt-together corners | [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/) |
+| [ ] | 39 | Standoffs | M5, raise base plate over tripod adapter | 4 | $3 | $12 | McMaster | Length = motor/gbx clearance |  |
 | [ ] | 40 | Power supply 24–48 V | 48 V, 5–10 A | 1 | $40 | $40 | select | DROK 48V Power Supply, AC to DC Converter 0-48V 10A 480W Variable Power Supply, AC to DC Adapter Low Voltage Transformer |  |
 | [ ] | 41 | Fasteners + NUTS | M5/M6/M3 SHCS, nuts, washers (clearance-hole build) | 1 | $35 | $35 | McMaster / assorted · `92275A110` | Nuts replace tapping | [link](https://www.mcmaster.com/products/socket-head-cap-screw-assortments/system-of-measurement~metric/) |
 | [ ] | 42 | Dowel pins | Ø4 mm (PA-4 interface) | 1 | $8 | $8 | McMaster · `91595A161` | Reamed-fit | [link](https://www.mcmaster.com/products/dowel-pins/dowel-pins-1~~/system-of-measurement~metric/diameter~4-0000-mm/diameter~4-000-mm/diameter~4-mm/) |
@@ -94,6 +94,6 @@
 | | Amount |
 |:--|:--|
 | Grand total (to-buy) | $1,216.86 |
-| Electronics & payload (A–D) | $546.90 |
-| Gimbal — catalog (E) | $510.96 |
+| Electronics & payload (A–D) | $551.90 |
+| Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |

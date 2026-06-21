@@ -160,9 +160,17 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _One per axis → power-up homing → absolute aiming._
 
+- **#20 Pico RP2040** — Motion coprocessor (step/dir) · $5 · Raspberry Pi Pico
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Drives both CL57T_
+
 ## C.  DISPLAYS & CALIBRATION
 
-- **#20 10.1in capacitive touchscreen** — Pi console; HDMI + USB · owned
+- **#21 10.1in capacitive touchscreen** — Pi console; HDMI + USB · owned
   
   - [x] Ordered
   
@@ -170,7 +178,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned. Dev/calibration console, off the rig._
 
-- **#21 7in TFT LCD monitor** — Jetson view; HDMI + 12 V · owned
+- **#22 7in TFT LCD monitor** — Jetson view; HDMI + 12 V · owned
   
   - [x] Ordered
   
@@ -178,7 +186,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned. Jetson perception monitor._
 
-- **#22 Checkerboard calibration target** — Rigid flat backing · owned
+- **#23 Checkerboard calibration target** — Rigid flat backing · owned
   
   - [x] Ordered
   
@@ -186,7 +194,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Owned. Camera + boresight calibration._
 
-- **#23 micro-HDMI → HDMI cable** — — · $7 · generic
+- **#24 micro-HDMI → HDMI cable** — — · $7 · generic
   
   - [ ] Ordered
   
@@ -194,7 +202,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Pi 5 micro-HDMI → 10.1in._
 
-- **#24 DisplayPort → HDMI adapter** — — · $9 · generic
+- **#25 DisplayPort → HDMI adapter** — — · $9 · generic
   
   - [ ] Ordered
   
@@ -204,7 +212,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## D.  POWER & WIRING
 
-- **#25 12 V DC supply (≥3 A)** — Solenoid rail · $16 · Mean Well GST60A12
+- **#26 12 V DC supply (≥3 A)** — Solenoid rail · $16 · Mean Well GST60A12
   
   - [ ] Ordered
   
@@ -212,7 +220,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Solenoid only (motors on 24–48 V). Or buck from 48 V for one supply._
 
-- **#26 Inline fuse holders + fuses** — ATC · $8 · generic
+- **#27 Inline fuse holders + fuses** — ATC · $8 · generic
   
   - [ ] Ordered
   
@@ -220,7 +228,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Fuse the 24–48 V and 12 V rails; tie ALL grounds together._
 
-- **#27 Ethernet cable, Cat6 (short)** — — · $6 · generic
+- **#28 Ethernet cable, Cat6 (short)** — — · $6 · generic
   
   - [ ] Ordered
   
@@ -228,7 +236,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Direct Pi↔Jetson; service loop on the motion run._
 
-- **#28 Jumper wires (DuPont M-F, M-M)** — — · $7 · generic
+- **#29 Jumper wires (DuPont M-F, M-M)** — — · $7 · generic
   
   - [ ] Ordered
   
@@ -236,7 +244,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Signals: IMU, lidar, Pico, switches._
 
-- **#29 Hookup wire, 18–20 AWG** — — · $10 · generic
+- **#30 Hookup wire, 18–20 AWG** — — · $10 · generic
   
   - [ ] Ordered
   
@@ -244,7 +252,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Motor, solenoid, power runs._
 
-- **#30 Wire ferrules / crimp terminals** — — · $9 · generic
+- **#31 Wire ferrules / crimp terminals** — — · $9 · generic
   
   - [ ] Ordered
   
@@ -254,7 +262,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## E.  BUY — CATALOG PARTS
 
-- **#31 Motor + driver kit** — NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 · $171.98 · 23HS45-4204D-E1000 / Amazon B0C6943QBM
+- **#32 Motor + driver kit** — NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 · $171.98 · 23HS45-4204D-E1000 / Amazon B0C6943QBM
   
   - [x] Ordered
   
@@ -262,7 +270,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1_
 
-- **#32 Planetary gearbox 5:1** — NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 · $115.98 · Ratio 5:1 Nema 23 … φ8mm
+- **#33 Planetary gearbox 5:1** — NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 · $115.98 · Ratio 5:1 Nema 23 … φ8mm
   
   - [x] Ordered
   
@@ -270,7 +278,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor_
 
-- **#33 Turntable bearing (lazy susan)** — Heavy-duty steel/alu, OPEN center, 6–8 in · $20 · Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` · [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true)
+- **#34 Turntable bearing (lazy susan)** — Heavy-duty steel/alu, OPEN center, 6–8 in · $20 · Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` · [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true)
   
   - [x] Ordered
   
@@ -278,7 +286,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)**_
 
-- **#34 Mounted ball bearing (tilt)** — Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") · $15 · McMaster: "mounted ball bearing" · `5968K71` · [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/)
+- **#35 Mounted ball bearing (tilt)** — Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") · $15 · McMaster: "mounted ball bearing" · `5968K71` · [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/)
   
   - [ ] Ordered
   
@@ -286,7 +294,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Match pattern to plate 05_
 
-- **#35 Mounting hub** — Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm · $36 · McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` · [link](https://www.ruland.com/fht-mcl-14-ss.html#)
+- **#36 Mounting hub** — Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm · $36 · McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` · [link](https://www.ruland.com/fht-mcl-14-ss.html#)
   
   - [ ] Ordered
   
@@ -294,15 +302,15 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Or rigid shaft coupling; no keyway_
 
-- **#36 Shoulder screw (tilt pin)** — Shoulder Ø = #34 bearing bore (e.g. 1/2") · $8 · McMaster: "shoulder screw" · `90298A716` · [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/)
+- **#37 Shoulder screw (tilt pin)** — Shoulder Ø = #35 bearing bore (e.g. 1/2") · $8 · McMaster: "shoulder screw" · `90298A716` · [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/)
   
   - [ ] Ordered
   
   - [ ] Received
   
-  - _Far end of tilt axis; pairs with #34_
+  - _Far end of tilt axis; pairs with #35_
 
-- **#37 L-brackets / gussets** — Join yoke side-plates to turntable + stiffen · $32 · 8020 / McMaster · [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/)
+- **#38 L-brackets / gussets** — Join yoke side-plates to turntable + stiffen · $32 · 8020 / McMaster · [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/)
   
   - [ ] Ordered
   
@@ -310,21 +318,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Bolt-together corners_
 
-- **#38 Standoffs** — M5, raise base plate over tripod adapter · $12 · McMaster
+- **#39 Standoffs** — M5, raise base plate over tripod adapter · $12 · McMaster
   
   - [ ] Ordered
   
   - [ ] Received
   
   - _Length = motor/gbx clearance_
-
-- **#39 Pico RP2040** — Motion coprocessor (step/dir) · $5 · Raspberry Pi Pico
-  
-  - [ ] Ordered
-  
-  - [ ] Received
-  
-  - _Drives both CL57T_
 
 - **#40 Power supply 24–48 V** — 48 V, 5–10 A · $40 · select
   
@@ -420,7 +420,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $1,210.96
-- **Electronics & payload (A–D):** $541
-- **Gimbal — catalog (E):** $510.96
+- **Grand total (to-buy):** $1,216.86
+- **Electronics & payload (A–D):** $551.90
+- **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
