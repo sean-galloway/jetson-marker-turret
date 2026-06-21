@@ -2,8 +2,8 @@
 
 Context for Claude Code. This project is an autonomous **paintball** (non-lethal hobby) sentry
 turret built around a DIY **NEMA 23 closed-loop pan/tilt gimbal**. The mechanical gimbal is the
-active design focus. Read this file first, then `docs/` for detail and `bom/Turret_BOM.xlsx` for
-the live parts list.
+active design focus. Read this file first, then `docs/` for detail and the BOM markdown at the
+repo root (`Turret_BOM.md` table + `Turret_BOM_checklist.md`) for the live parts list.
 
 ## Safety posture (non-negotiable — keep these invariants in any design work)
 - **Hardware arming interlock**: a physical switch/relay in series with the 12 V solenoid line. The
@@ -46,7 +46,7 @@ the live parts list.
   can't calibrate out. ZED + IMU clip in with wire channels, but the ZED clip must seat on hard datum
   faces (+ a captive screw lock).
 
-## Confirmed parts (see bom/Turret_BOM.xlsx — 50-item integrated BOM, sections A–G)
+## Confirmed parts (see Turret_BOM.md — 50-item integrated BOM, sections A–G)
 | # | Part | P/N | Notes |
 |---|------|-----|-------|
 | 1 | Motor + driver kit ×2 | 23HS45-4204D-E1000 (Amazon B0C6943QBM) | NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 |
@@ -86,13 +86,14 @@ assumed until the real measurements land. Plates 02/03 should become **circular*
 - **DXF:** Python `ezdxf` (`doc.units = 6` for mm; LWPOLYLINE outlines + CIRCLE holes; layer `CUT`).
 - **PDFs:** markdown → `weasyprint` (use `base_url="."` so relative image paths resolve;
   image links must include the folder prefix, e.g. `assets/images/...`).
-- **Spreadsheets:** `openpyxl`; line totals use `=IF(F="","",E*F)`.
+- **BOM:** hand-maintained as Markdown (`Turret_BOM.md` table + `Turret_BOM_checklist.md`).
+  The old xlsx workbook and its `bom2md.py` generator were removed — edit the markdown directly.
 - **Diagrams:** `matplotlib` (Agg backend).
-Install: `pip install ezdxf openpyxl weasyprint markdown --break-system-packages`.
+Install: `pip install ezdxf weasyprint markdown --break-system-packages`.
 
 ## Repo layout
 ```
-bom/         Turret_BOM.xlsx (live, 50 items: A-D payload/compute/displays/power, E-G gimbal) + parts lists
+bom/         legacy parts-list spreadsheets only; the live 50-item BOM is Turret_BOM.md (repo root)
 cad/dxf/     6 plate DXFs
 docs/        build plan, assembly guide, drawings, payload spec, SendCutSend spec (md + pdf)
 docs/assets/ images referenced by the md/pdf docs
@@ -105,5 +106,6 @@ datasheets/  INDEX.md + confirmed-part datasheets (named BOM#_part_part-number)
 2. Design the 3D-printed payload module (marker + solenoid + ZED-below-barrel + laser + IMU + lidar,
    snap/clip mounts, wire channels) and the cosmetic clamshell shell.
 3. As measurements arrive (lazy-susan holes, bearing flange, tripod), drop real holes into the plates.
-4. Keep bom/Turret_BOM.xlsx in sync; don't clobber the user's added columns (DS Needed / have D/S /
-   P/N / source links) — edit cells, don't regenerate the whole sheet.
+4. Keep the BOM markdown current: `Turret_BOM.md` (table, Bought checkbox) and
+   `Turret_BOM_checklist.md` (Ordered/Received boxes). These are hand-maintained now — edit the
+   markdown directly; the xlsx and its generator have been removed.

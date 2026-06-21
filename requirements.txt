@@ -5,7 +5,6 @@
 #   python3 -m pip install -r requirements.txt
 #
 ezdxf>=1.1        # DXF flat-plate generation  -> cad/dxf/*.dxf
-openpyxl>=3.1     # read the live BOM workbook  -> turret-gimbal/tools/bom2md.py
 markdown>=3.5     # markdown -> HTML, step in the PDF export
 weasyprint>=60    # HTML -> PDF for docs/        (use base_url="." for images)
 matplotlib>=3.8   # diagrams (Agg backend)
