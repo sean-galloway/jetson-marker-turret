@@ -1,0 +1,9 @@
+# Raspberry Pi Pico (RP2040) runs MICROPYTHON firmware — there is no on-device
+# pip. These are HOST-side tools (run on your dev machine) for flashing and
+# managing the Pico over USB.
+#
+#   python3 -m pip install -r src/pico/requirements-dev.txt
+#
+mpremote>=1.22    # copy/run/repl files on the Pico over USB
+# On-device modules (machine, rp2, utime, etc.) ship with the MicroPython
+# firmware; flash the latest RP2040 build from micropython.org.

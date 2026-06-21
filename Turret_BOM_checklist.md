@@ -1,0 +1,233 @@
+# Paintball Turret — Purchase Checklist
+
+> Sections A–D: the turret system (payload on the gun · compute on the tripod · displays · power/wiring). Sections E–G: the bolt-together gimbal — BUY catalog · CUT (DXF, SendCutSend) · HAVE. Owned items are priced $0 so they stay out of the totals.
+
+Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, VS Code, Obsidian). Owned items are pre-ticked on both.
+
+## A.  PAYLOAD — ON THE TURRET
+
+- **#1 Paintball marker** — Bore-sighted reference for the ZED · owned
+  - [x] Ordered
+  - [x] Received
+  - _Owned. Bore aligns to the pan axis; hopper top-rear._
+- **#2 Push-pull solenoid (trigger)** — 12 V, ~10 mm stroke · $20 · Makermotor PN00121
+  - [ ] Ordered
+  - [ ] Received
+  - _Trigger actuator; 12 V switched._
+- **#3 Arming switch / relay (interlock)** — SPST toggle / 12 V relay, in the 12 V solenoid line · $8 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _HARDWARE INTERLOCK: open = cannot fire. Safety-critical._
+- **#4 Laser sight (boresight aid)** — Mounts on top of the barrel · $15 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Zero to impact point at a set range, like a rifle._
+- **#5 ZED 2i stereo camera** — 4 mm, polarizer; USB 3.0 · Stereolabs ZED 2i 4mm
+  - [x] Ordered
+  - [x] Received
+  - _Owned (~$549). Boresighted below the barrel; routes to the Jetson._
+- **#6 ZED USB3 locking cable (3 m)** — USB 3.0 Type-C locking · Stereolabs
+  - [x] Ordered
+  - [x] Received
+  - _Owned._
+- **#7 BNO085 9-DoF IMU** — SPI; accel+gyro (no mag) · $20 · Adafruit 4754
+  - [ ] Ordered
+  - [ ] Received
+  - _Leveling + stabilization; rigid to the platform._
+- **#8 Benewake TF03 lidar (100 m)** — Single-point rangefinder; UART/CAN; IP67 · $220 · TF03-100
+  - [ ] Ordered
+  - [ ] Received
+  - _Boresighted to the muzzle; range along the line of fire._
+- **#9 OLED status screen (SSD1306)** — 128×64; I2C · $9 · Adafruit 938
+  - [ ] Ordered
+  - [ ] Received
+  - _On-gun ARMED/SAFE + range readout._
+
+## B.  COMPUTE & CONTROL — ON THE TRIPOD
+
+- **#10 NVIDIA Jetson AGX Orin 32 GB** — Vision/targeting module · AGX Orin 32GB
+  - [x] Ordered
+  - [x] Received
+  - _Owned. Perception/targeting._
+- **#11 Raspberry Pi 5 (8 GB)** — Supervisor · $80 · SC1112
+  - [ ] Ordered
+  - [ ] Received
+  - _Setpoints, IMU/lidar, arming, state._
+- **#12 Pi 5 Active Cooler** — — · $5 · SC1148
+  - [ ] Ordered
+  - [ ] Received
+  - _Pi 5 throttles without it._
+- **#13 Pi 27 W USB-C PD supply** — 5.1 V / 5 A · $12 · SC1158
+  - [ ] Ordered
+  - [ ] Received
+  - _Powers the Pi + HAT reliably._
+- **#14 microSD 64 GB A2** — — · $10 · SanDisk SDSQXAV-064G
+  - [ ] Ordered
+  - [ ] Received
+  - _Pi OS / boot._
+- **#15 Solenoid driver HAT (8-MOSFET)** — I2C; solid-state · $45 · Sequent Eight-MOSFETS
+  - [ ] Ordered
+  - [ ] Received
+  - _Trigger drive; the only HAT on the stack now._
+- **#16 GPIO stacking header, 2×20 tall** — — · $3 · Adafruit 2223
+  - [ ] Ordered
+  - [ ] Received
+  - _Passes GPIO up past the HAT._
+- **#17 Top-of-stack GPIO breakout / proto-HAT** — — · $8 · Adafruit 2310
+  - [ ] Ordered
+  - [ ] Received
+  - _Expose SPI (IMU), UART (lidar + Pico), spare GPIO._
+- **#18 Brass standoff / spacer kit (M2.5)** — — · $8 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Mount/space the HAT + Pi._
+- **#19 Limit / homing switches** — microswitch; GPIO to Pico · $6 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _One per axis → power-up homing → absolute aiming._
+
+## C.  DISPLAYS & CALIBRATION
+
+- **#20 10.1in capacitive touchscreen** — Pi console; HDMI + USB · owned
+  - [x] Ordered
+  - [x] Received
+  - _Owned. Dev/calibration console, off the rig._
+- **#21 7in TFT LCD monitor** — Jetson view; HDMI + 12 V · owned
+  - [x] Ordered
+  - [x] Received
+  - _Owned. Jetson perception monitor._
+- **#22 Checkerboard calibration target** — Rigid flat backing · owned
+  - [x] Ordered
+  - [x] Received
+  - _Owned. Camera + boresight calibration._
+- **#23 micro-HDMI → HDMI cable** — — · $7 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Pi 5 micro-HDMI → 10.1in._
+- **#24 DisplayPort → HDMI adapter** — — · $9 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _AGX Orin is DisplayPort → 7in; verify._
+
+## D.  POWER & WIRING
+
+- **#25 12 V DC supply (≥3 A)** — Solenoid rail · $16 · Mean Well GST60A12
+  - [ ] Ordered
+  - [ ] Received
+  - _Solenoid only (motors on 24–48 V). Or buck from 48 V for one supply._
+- **#26 Inline fuse holders + fuses** — ATC · $8 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Fuse the 24–48 V and 12 V rails; tie ALL grounds together._
+- **#27 Ethernet cable, Cat6 (short)** — — · $6 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Direct Pi↔Jetson; service loop on the motion run._
+- **#28 Jumper wires (DuPont M-F, M-M)** — — · $7 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Signals: IMU, lidar, Pico, switches._
+- **#29 Hookup wire, 18–20 AWG** — — · $10 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Motor, solenoid, power runs._
+- **#30 Wire ferrules / crimp terminals** — — · $9 · generic
+  - [ ] Ordered
+  - [ ] Received
+  - _Driver/terminal terminations._
+
+## E.  BUY — CATALOG PARTS
+
+- **#31 Motor + driver kit** — NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 · $171.98 · 23HS45-4204D-E1000 / Amazon B0C6943QBM
+  - [ ] Ordered
+  - [ ] Received
+  - _STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1_
+- **#32 Planetary gearbox 5:1** — NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 · $115.98 · Ratio 5:1 Nema 23 … φ8mm
+  - [ ] Ordered
+  - [ ] Received
+  - _Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor_
+- **#33 Turntable bearing (lazy susan)** — Heavy-duty steel/alu, OPEN center, 6–8 in · $20 · Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` · [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true)
+  - [ ] Ordered
+  - [ ] Received
+  - _8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)**_
+- **#34 Mounted ball bearing (tilt)** — Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") · $15 · McMaster: "mounted ball bearing" · `5968K71` · [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/)
+  - [ ] Ordered
+  - [ ] Received
+  - _Match pattern to plate 05_
+- **#35 Mounting hub** — Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm · $36 · McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` · [link](https://www.ruland.com/fht-mcl-14-ss.html#)
+  - [ ] Ordered
+  - [ ] Received
+  - _Or rigid shaft coupling; no keyway_
+- **#36 Shoulder screw (tilt pin)** — Shoulder Ø = #34 bearing bore (e.g. 1/2") · $8 · McMaster: "shoulder screw" · `90298A716` · [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/)
+  - [ ] Ordered
+  - [ ] Received
+  - _Far end of tilt axis; pairs with #34_
+- **#37 L-brackets / gussets** — Join yoke side-plates to turntable + stiffen · $32 · 8020 / McMaster · [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/)
+  - [ ] Ordered
+  - [ ] Received
+  - _Bolt-together corners_
+- **#38 Standoffs** — M5, raise base plate over tripod adapter · $12 · McMaster
+  - [ ] Ordered
+  - [ ] Received
+  - _Length = motor/gbx clearance_
+- **#39 Pico RP2040** — Motion coprocessor (step/dir) · $5 · Raspberry Pi Pico
+  - [ ] Ordered
+  - [ ] Received
+  - _Drives both CL57T_
+- **#40 Power supply 24–48 V** — 48 V, 5–10 A · $40 · select
+  - [ ] Ordered
+  - [ ] Received
+  - _DROK 48V Power Supply, AC to DC Converter 0-48V 10A 480W Variable Power Supply, AC to DC Adapter Low Voltage Transformer_
+- **#41 Fasteners + NUTS** — M5/M6/M3 SHCS, nuts, washers (clearance-hole build) · $35 · McMaster / assorted · `92275A110` · [link](https://www.mcmaster.com/products/socket-head-cap-screw-assortments/system-of-measurement~metric/)
+  - [ ] Ordered
+  - [ ] Received
+  - _Nuts replace tapping_
+- **#42 Dowel pins** — Ø4 mm (PA-4 interface) · $8 · McMaster · `91595A161` · [link](https://www.mcmaster.com/products/dowel-pins/dowel-pins-1~~/system-of-measurement~metric/diameter~4-0000-mm/diameter~4-000-mm/diameter~4-mm/)
+  - [ ] Ordered
+  - [ ] Received
+  - _Reamed-fit_
+- **#43 Consumables** — Threadlocker (medium) + anti-seize · $12 · — · `7458A65` · [link](https://www.mcmaster.com/products/loctite-kits/manufacturer-model-number~243/)
+  - [ ] Ordered
+  - [ ] Received
+  - _Loctite 243 kits_
+
+## F.  CUT — DXF FLAT PLATES (6061-T6; files supplied; one SendCutSend order)
+
+- **#44 Pan base plate** — 6 mm; file 02_base_plate_pan.dxf · $28 · DXF
+  - [ ] Ordered
+  - [ ] Received
+  - _Gearbox + slew bearing + standoffs_
+- **#45 Turntable plate** — 6 mm; file 03_turntable_plate.dxf · $28 · DXF
+  - [ ] Ordered
+  - [ ] Received
+  - _Slew bearing + yoke feet_
+- **#46 Yoke side — gearbox** — 6 mm; file 04_yoke_side_gearbox.dxf · $25 · DXF
+  - [ ] Ordered
+  - [ ] Received
+  - _Gearbox flange_
+- **#47 Yoke side — trunnion** — 6 mm; file 05_yoke_side_trunnion.dxf · $25 · DXF
+  - [ ] Ordered
+  - [ ] Received
+  - _Pillow-block bearing_
+- **#48 Interface plate (PA-4)** — 6 mm; file 01_interface_plate_PA4.dxf · $28 · DXF
+  - [ ] Ordered
+  - [ ] Received
+  - _Payload mount (Ø70 BC/dowels/Ø14)_
+- **#49 Tripod adapter** — 6 mm; file 06_tripod_adapter.dxf · $25 · DXF
+  - [ ] Ordered
+  - [ ] Received
+  - _Mates your tripod head_
+
+## G.  HAVE
+
+- **#50 Tripod** — 35 lb (you own) · —
+  - [x] Ordered
+  - [x] Received
+  - _Watch flex under fast slews; confirm bowl_
+
+## Totals
+
+- **Grand total (to-buy):** $1,210.96
+- **Electronics & payload (A–D):** $541
+- **Gimbal — catalog (E):** $510.96
+- **Gimbal — DXF plates (F):** $159

@@ -216,3 +216,34 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# =====================================================================
+# Project-specific: turret run data & analysis
+# =====================================================================
+# Telemetry, captures, and logs pulled off the Jetson / Pi 5 / Pico during
+# test runs, plus analysis outputs. Large/binary/ephemeral — keep out of git.
+# (Use `git add -f` for any single sample you deliberately want to track.)
+/data/
+/runs/
+/captures/
+/logs/
+# analysis outputs are ignored, but keep the empty dir on clone
+/analysis/output/*
+!/analysis/output/.gitkeep
+
+# Capture/recording formats
+*.svo           # ZED stereo recordings
+*.svo2
+*.bag           # rosbag
+*.mcap
+*.pcd           # point clouds
+*.ply
+
+# Saved arrays / large intermediates
+*.npy
+*.npz
+*.h5
+*.hdf5
+
+# Do NOT ignore committed deliverables: DXF plates (cad/dxf), PDFs/docs,
+# the BOM xlsx/markdown, and datasheets are tracked on purpose.

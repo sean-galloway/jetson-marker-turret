@@ -1,0 +1,13 @@
+# Raspberry Pi 5 — supervisor runtime (Python 3).
+#
+#   python3 -m pip install -r src/pi5/requirements.txt
+#
+# On Pi 5 use the lgpio backend; legacy RPi.GPIO does not work reliably on Pi 5.
+
+lgpio>=0.2                              # GPIO (Pi 5 backend)
+gpiozero>=2.0                           # high-level GPIO over lgpio
+pyserial>=3.5                          # TF03 lidar + Pico UART link
+smbus2>=0.4                            # I2C bus (IMU, OLED)
+adafruit-circuitpython-bno08x>=5.0     # BNO085 9-DoF IMU
+adafruit-circuitpython-ssd1306>=2.12   # SSD1306 OLED status screen
+pillow>=10.0                           # OLED framebuffer rendering

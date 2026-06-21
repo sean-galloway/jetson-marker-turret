@@ -1,0 +1,19 @@
+# Jetson AGX Orin — perception & targeting runtime (Python 3 on JetPack).
+#
+# IMPORTANT, install these on the device, not in the repo tooling venv:
+#   python3 -m pip install -r src/jetson/requirements.txt
+#
+# The ZED SDK Python API (pyzed) is NOT on PyPI. Install the Stereolabs ZED SDK
+# for your JetPack version, then run its `get_python_api.py` to build `pyzed`.
+# Likewise, install the JetPack-matched torch/torchvision wheels from NVIDIA,
+# do NOT pip-install generic CPU wheels.
+
+numpy>=1.24
+opencv-python>=4.8        # calibration, image ops, boresight overlay
+scipy>=1.11               # geometry / aim solution math
+pyserial>=3.5             # optional direct sensor link (else via Pi 5)
+
+# --- uncomment once the detector is chosen ---
+# ultralytics>=8.0        # YOLO detection
+# torch / torchvision     # install NVIDIA JetPack wheels, not from PyPI
+# pyzed                   # built by the ZED SDK installer, not pip

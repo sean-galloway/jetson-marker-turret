@@ -1,0 +1,13 @@
+# Analysis environment — post-run crunching of telemetry/captures pulled off the
+# Jetson / Pi 5 / Pico. Separate from the repo-root tooling (DXF/BOM/PDF) so the
+# two concerns stay independently declarable.
+#
+#   python3 -m pip install -r analysis/requirements.txt
+#
+numpy>=1.24
+pandas>=2.1            # tabular telemetry
+scipy>=1.11            # signal processing / stats
+matplotlib>=3.8        # plots
+seaborn>=0.13          # statistical plots
+pyarrow>=14.0          # parquet / feather IO (fast columnar logs)
+jupyterlab>=4.0        # exploratory notebooks
