@@ -178,21 +178,21 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## C.  DISPLAYS & CALIBRATION
 
-- **#22 10.1in capacitive touchscreen** — Pi console; HDMI + USB · owned
+- **#22 1U rack display — Pi 5 (GeeekPi 6.91")** — 1424×280 touch, 1U rack mount · $60 · GeeekPi 6.91" 1U
   
   - [x] Ordered
   
-  - [x] Received
+  - [ ] Received
   
-  - _Owned. Dev/calibration console, off the rig._
+  - _Pi 5 status/console bar. Bought; price est._
 
-- **#23 7in TFT LCD monitor** — Jetson view; HDMI + 12 V · owned
+- **#23 1U rack display — Jetson (GeeekPi 6.91")** — 1424×280 touch, 1U rack mount · $60 · GeeekPi 6.91" 1U
   
   - [x] Ordered
   
-  - [x] Received
+  - [ ] Received
   
-  - _Owned. Jetson perception monitor._
+  - _Jetson perception/status bar. Bought; price est._
 
 - **#24 Checkerboard calibration target** — Rigid flat backing · owned
   
@@ -208,7 +208,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Pi 5 micro-HDMI → 10.1in._
+  - _Pi 5 micro-HDMI → 6.91" display._
 
 - **#26 DisplayPort → HDMI adapter** — — · $9 · generic
   
@@ -216,7 +216,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _AGX Orin is DisplayPort → 7in; verify._
+  - _AGX Orin DP → 6.91" display; verify._
 
 ## D.  POWER & WIRING
 
@@ -508,23 +508,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _To be designed._
 
-- **#62 Display 3U mount panels ×2** — 3U each; 10.1" + 7" (TBD — see #63) · MAKE (3D print/DXF)
-  
-  - [ ] Ordered
-  
-  - [ ] Received
-  
-  - _Pending display plan._
-
-- **#63 Rack status touchscreen** — GeeekPi 6.91" 1424×280, 1U rack mount · $60 · GeeekPi 6.91" 1U
-  
-  - [x] Ordered
-  
-  - [ ] Received
-  
-  - _In-rack status/console bar. Bought; price est._
-
-- **#64 12-port Cat6 patch panel** — 1U; keystone + cable bar · $15 · GeeekPi 12-port
+- **#62 12-port Cat6 patch panel** — 1U; keystone + cable bar · $15 · GeeekPi 12-port
   
   - [x] Ordered
   
@@ -532,7 +516,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Network breakout; part of the umbilical interface. Bought; price est._
 
-- **#65 Switch rack mount (PETG)** — 1U mount for TL-SG108 · $12 · generic PETG
+- **#63 Switch rack mount (PETG)** — 1U mount for TL-SG108 · $12 · generic PETG
   
   - [x] Ordered
   
@@ -542,8 +526,8 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $1,575.84
-- **Electronics & payload (A–D):** $548.88
+- **Grand total (to-buy):** $1,635.84
+- **Electronics & payload (A–D):** $668.88
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $362
+- **Ground station — rack (H):** $302

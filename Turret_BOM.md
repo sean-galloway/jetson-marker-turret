@@ -39,11 +39,11 @@
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [x] | 22 | 10.1in capacitive touchscreen | Pi console; HDMI + USB | 1 | $0 | $0 | owned | Owned. Dev/calibration console, off the rig. |  |
-| [x] | 23 | 7in TFT LCD monitor | Jetson view; HDMI + 12 V | 1 | $0 | $0 | owned | Owned. Jetson perception monitor. |  |
+| [x] | 22 | 1U rack display — Pi 5 (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $60 | $60 | GeeekPi 6.91" 1U | Pi 5 status/console bar. Bought; price est. |  |
+| [x] | 23 | 1U rack display — Jetson (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $60 | $60 | GeeekPi 6.91" 1U | Jetson perception/status bar. Bought; price est. |  |
 | [x] | 24 | Checkerboard calibration target | Rigid flat backing | 1 | $0 | $0 | owned | Owned. Camera + boresight calibration. |  |
-| [ ] | 25 | micro-HDMI → HDMI cable | — | 1 | $7 | $7 | generic | Pi 5 micro-HDMI → 10.1in. |  |
-| [ ] | 26 | DisplayPort → HDMI adapter | — | 1 | $9 | $9 | generic | AGX Orin is DisplayPort → 7in; verify. |  |
+| [ ] | 25 | micro-HDMI → HDMI cable | — | 1 | $7 | $7 | generic | Pi 5 micro-HDMI → 6.91" display. |  |
+| [ ] | 26 | DisplayPort → HDMI adapter | — | 1 | $9 | $9 | generic | AGX Orin DP → 6.91" display; verify. |  |
 
 ## D.  POWER & WIRING
 
@@ -104,17 +104,15 @@
 | [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $15 | $15 | generic / 3D print | Fill gaps; airflow. |  |
 | [ ] | 60 | Cable management | Velcro, clips, ducting | 1 | $10 | $10 | generic | Tidy the onboard cabling. |  |
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
-| [ ] | 62 | Display 3U mount panels ×2 | 3U each; 10.1" + 7" (TBD — see #63) | 2 | $0 | $0 | MAKE (3D print/DXF) | Pending display plan. |  |
-| [x] | 63 | Rack status touchscreen | GeeekPi 6.91" 1424×280, 1U rack mount | 1 | $60 | $60 | GeeekPi 6.91" 1U | In-rack status/console bar. Bought; price est. |  |
-| [x] | 64 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $15 | $15 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
-| [x] | 65 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $12 | $12 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
+| [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $15 | $15 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
+| [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $12 | $12 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
 
 ## Totals
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $1,575.84 |
-| Electronics & payload (A–D) | $548.88 |
+| Grand total (to-buy) | $1,635.84 |
+| Electronics & payload (A–D) | $668.88 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $362 |
+| Ground station — rack (H) | $302 |
