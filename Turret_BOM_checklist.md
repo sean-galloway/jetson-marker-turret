@@ -550,6 +550,24 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Radio battery (not included). Price est._
 
+## J.  PRINTED PARTS — TURRET (MAKE)
+
+- **#67 Turret electronics base** — 3D print; holds Pico + 2× CL57T + IMU, vented · MAKE (3D print)
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Bolts to the pan base plate; IMU senses base level. cad/scad/turret_electronics_base.scad_
+
+- **#68 Barrel shroud (boresight mount)** — 3D print; holds ZED (below barrel) + lidar (to muzzle) · MAKE (3D print)
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Rigid boresight mount. **Gated on the marker scan** (barrel OD/length/bore)._
+
 ## Totals
 
 - **Grand total (to-buy):** $2,030.67

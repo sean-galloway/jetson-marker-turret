@@ -115,6 +115,13 @@
 | [ ] | 65 | ELRS receiver (CRSF) | 2.4 GHz, CRSF serial out | 1 | $15 | $15 | RadioMaster RP3 (or similar) | RX → CRSF → Pico UART. Set failsafe → Pico stop-hold. Price est. |  |
 | [ ] | 66 | 18650 cells (×2) | Li-ion, for the TX16S (USB-C charge) | 1 | $12 | $12 | generic 18650 ×2 | Radio battery (not included). Price est. |  |
 
+## J.  PRINTED PARTS — TURRET (MAKE)
+
+| Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
+|:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
+| [ ] | 67 | Turret electronics base | 3D print; holds Pico + 2× CL57T + IMU, vented | 1 | $0 | $0 | MAKE (3D print) | Bolts to the pan base plate; IMU senses base level. cad/scad/turret_electronics_base.scad |  |
+| [ ] | 68 | Barrel shroud (boresight mount) | 3D print; holds ZED (below barrel) + lidar (to muzzle) | 1 | $0 | $0 | MAKE (3D print) | Rigid boresight mount. **Gated on the marker scan** (barrel OD/length/bore). |  |
+
 ## Totals
 
 | | Amount |
