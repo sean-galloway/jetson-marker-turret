@@ -36,9 +36,10 @@ jetson_h       = 75;      // height incl. feet (72 mm bare). tray floor + this
                           // = ~78 mm = ~1.75U -> shelf_U=3 leaves fan headroom.
 jetson_clear   = 1.0;     // pocket clearance per side
 jetson_wall    = 6;       // locating wall height (just locates the base)
-jetson_vent    = 80;      // floor cutout (square) under the fan intake
-                          // [CONFIRM fan direction: if top-exhaust, keep the U
-                          //  above open; if bottom-intake, this floor vent feeds it]
+jetson_vent    = 90;      // floor cutout (square) under the fan intake.
+                          // FAN = BOTTOM INTAKE: this vent feeds it (feet give the
+                          // ~3 mm gap). Keep the rack bay BELOW the shelf open so
+                          // the fan has air to pull.
 
 // ---- Raspberry Pi 5 (standoffs) ------------------------------------
 pi5_hole_dx    = 58;      // hole rectangle X
