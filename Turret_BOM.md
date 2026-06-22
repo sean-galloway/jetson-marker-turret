@@ -39,8 +39,8 @@
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [x] | 22 | 1U rack display — Pi 5 (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $60 | $60 | GeeekPi 6.91" 1U | Pi 5 status/console bar. Bought; price est. |  |
-| [x] | 23 | 1U rack display — Jetson (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $60 | $60 | GeeekPi 6.91" 1U | Jetson perception/status bar. Bought; price est. |  |
+| [x] | 22 | 1U rack display — Pi 5 (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $89.99 | $89.99 | GeeekPi 6.91" 1U | Pi 5 status/console bar. Bought; price est. |  |
+| [x] | 23 | 1U rack display — Jetson (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $89.99 | $89.99 | GeeekPi 6.91" 1U | Jetson perception/status bar. Bought; price est. |  |
 | [x] | 24 | Checkerboard calibration target | Rigid flat backing | 1 | $0 | $0 | owned | Owned. Camera + boresight calibration. |  |
 | [ ] | 25 | micro-HDMI → HDMI cable | — | 1 | $7 | $7 | generic | Pi 5 micro-HDMI → 6.91" display. |  |
 | [ ] | 26 | DisplayPort → HDMI adapter | — | 1 | $9 | $9 | generic | AGX Orin DP → 6.91" display; verify. |  |
@@ -95,24 +95,24 @@
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 52 | 10" rack — DeskPi RackMate T2 | 12U, 10" wide, 10.23" (~260 mm) deep | 1 | $100 | $100 | GeeekPi / DeskPi RackMate T2 | Houses compute, PSUs, drivers, displays. Bought; price est. |  |
-| [x] | 53 | 10" rackmount PDU | 8 outlets, surge, 15 A switch, 1U | 1 | $30 | $30 | ElecVoztile 10" PDU | All AC onboard; one cord to wall. Bought; price est. |  |
+| [x] | 53 | 10" rackmount PDU | 8 outlets, surge, 15 A switch, 1U | 1 | $69.99 | $69.99 | ElecVoztile 10" PDU | All AC onboard; one cord to wall. Bought; price est. |  |
 | [ ] | 54 | E-stop (panel-mount) | Latching, 2-pole (or drives contactors) | 1 | $20 | $20 | generic | Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical. |  |
-| [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $25 | $25 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
+| [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $19.99 | $19.99 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
 | [ ] | 56 | DIN rail + terminal/ground bus | Terminal blocks + ground bar | 1 | $20 | $20 | generic | Distribute/fuse 48 V & 12 V (with #28); tie all grounds. |  |
 | [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect at the panel. Price est. |  |
 | [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
 | [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $15 | $15 | generic / 3D print | Fill gaps; airflow. |  |
-| [ ] | 60 | Cable management | Velcro, clips, ducting | 1 | $10 | $10 | generic | Tidy the onboard cabling. |  |
+| [x] | 60 | Cable management | Velcro, clips, ducting | 2 | $10 | $20 | generic | Tidy the onboard cabling. |  |
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
-| [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $15 | $15 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
-| [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $12 | $12 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
+| [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
+| [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
 
 ## Totals
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $1,635.84 |
-| Electronics & payload (A–D) | $668.88 |
+| Grand total (to-buy) | $1,773.78 |
+| Electronics & payload (A–D) | $728.86 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $302 |
+| Ground station — rack (H) | $379.96 |

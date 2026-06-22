@@ -178,7 +178,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## C.  DISPLAYS & CALIBRATION
 
-- **#22 1U rack display — Pi 5 (GeeekPi 6.91")** — 1424×280 touch, 1U rack mount · $60 · GeeekPi 6.91" 1U
+- **#22 1U rack display — Pi 5 (GeeekPi 6.91")** — 1424×280 touch, 1U rack mount · $89.99 · GeeekPi 6.91" 1U
   
   - [x] Ordered
   
@@ -186,7 +186,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Pi 5 status/console bar. Bought; price est._
 
-- **#23 1U rack display — Jetson (GeeekPi 6.91")** — 1424×280 touch, 1U rack mount · $60 · GeeekPi 6.91" 1U
+- **#23 1U rack display — Jetson (GeeekPi 6.91")** — 1424×280 touch, 1U rack mount · $89.99 · GeeekPi 6.91" 1U
   
   - [x] Ordered
   
@@ -436,7 +436,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Houses compute, PSUs, drivers, displays. Bought; price est._
 
-- **#53 10" rackmount PDU** — 8 outlets, surge, 15 A switch, 1U · $30 · ElecVoztile 10" PDU
+- **#53 10" rackmount PDU** — 8 outlets, surge, 15 A switch, 1U · $69.99 · ElecVoztile 10" PDU
   
   - [x] Ordered
   
@@ -452,7 +452,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical._
 
-- **#55 Gigabit Ethernet switch** — TP-Link TL-SG108E, 8-port, managed · $25 · TP-Link TL-SG108E
+- **#55 Gigabit Ethernet switch** — TP-Link TL-SG108E, 8-port, managed · $19.99 · TP-Link TL-SG108E
   
   - [x] Ordered
   
@@ -492,9 +492,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Fill gaps; airflow._
 
-- **#60 Cable management** — Velcro, clips, ducting · $10 · generic
+- **#60 Cable management** — Velcro, clips, ducting · $20 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -508,7 +508,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _To be designed._
 
-- **#62 12-port Cat6 patch panel** — 1U; keystone + cable bar · $15 · GeeekPi 12-port
+- **#62 12-port Cat6 patch panel** — 1U; keystone + cable bar · $24.99 · GeeekPi 12-port
   
   - [x] Ordered
   
@@ -516,7 +516,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Network breakout; part of the umbilical interface. Bought; price est._
 
-- **#63 Switch rack mount (PETG)** — 1U mount for TL-SG108 · $12 · generic PETG
+- **#63 Switch rack mount (PETG)** — 1U mount for TL-SG108 · $34.99 · generic PETG
   
   - [x] Ordered
   
@@ -526,8 +526,8 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $1,635.84
-- **Electronics & payload (A–D):** $668.88
+- **Grand total (to-buy):** $1,773.78
+- **Electronics & payload (A–D):** $728.86
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $302
+- **Ground station — rack (H):** $379.96
