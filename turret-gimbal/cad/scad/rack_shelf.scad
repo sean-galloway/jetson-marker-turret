@@ -32,9 +32,13 @@ rear_lip_h     = 10;      // rear retaining lip
 
 // ---- Jetson AGX Orin dev kit (drop-in pocket) ----------------------
 jetson_xy      = 109;     // footprint (given)
+jetson_h       = 75;      // height incl. feet (72 mm bare). tray floor + this
+                          // = ~78 mm = ~1.75U -> shelf_U=3 leaves fan headroom.
 jetson_clear   = 1.0;     // pocket clearance per side
-jetson_wall    = 6;       // locating wall height
+jetson_wall    = 6;       // locating wall height (just locates the base)
 jetson_vent    = 80;      // floor cutout (square) under the fan intake
+                          // [CONFIRM fan direction: if top-exhaust, keep the U
+                          //  above open; if bottom-intake, this floor vent feeds it]
 
 // ---- Raspberry Pi 5 (standoffs) ------------------------------------
 pi5_hole_dx    = 58;      // hole rectangle X
