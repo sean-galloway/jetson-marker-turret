@@ -8,7 +8,7 @@ supervisor. Does **not** drive motors or the trigger directly.
 - ZED 2i capture + depth; camera/boresight calibration.
 - Target detection & tracking.
 - Aim solution in turret coordinates → setpoints to the Pi 5.
-- Perception monitor output (7" HDMI).
+- Perception view on the Jetson's 1U rack display (6.91").
 
 ## Inputs / outputs
 - **In:** ZED 2i (USB 3.0).

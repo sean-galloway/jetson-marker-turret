@@ -14,12 +14,12 @@ step/dir intent down to the Pico.
 - Own the **arming** logic and overall state machine (SAFE / ARMED / FAULT).
 - Drive the SAFE/ARMED state. The on-turret **ARMED LED is hardware-tied to the
   armed rail** (true indication, not a GPIO); the Pi 5 may also drive the GREEN
-  SAFE lamp and surfaces range/status on the 10.1" touch GUI.
+  SAFE lamp and surfaces range/status on its 1U rack display.
 - Command the Pico; monitor its heartbeat. (The debug OLED lives on the Pico.)
 
 ## Inputs / outputs
-- **In:** Jetson setpoints (Ethernet); IMU, lidar, limit/homing switches.
-- **Out:** commands to Pico (UART); armed/safe LED + 10.1" touch GUI; solenoid
+- **In:** Jetson setpoints (Ethernet); TF03 lidar; orientation + limit/homing status relayed from the Pico (UART).
+- **Out:** commands to Pico (UART); armed/safe LED + 1U rack display; solenoid
   HAT (gated by the hardware arming interlock).
 
 ## Safety

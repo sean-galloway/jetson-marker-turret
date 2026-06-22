@@ -146,7 +146,7 @@ NEMA 23 (~3 N·m) × 5:1 ≈ 15 N·m at axis (before gearbox losses)  →  ~1.5�
 
 ### 6.3 Protocol-first bring-up
 
-Define the **Pi↔Jetson command frames now**, and have the 10.1" console emit those exact frames during the "human-as-Jetson" phase. Then the real Jetson is a drop-in — same messages, nothing to rewire. The Pi↔Pico link should likewise be defined once and reused for both manual and autonomous control.
+Define the **Pi↔Jetson command frames now**, and have the Pi 5 console emit those exact frames during the "human-as-Jetson" phase. Then the real Jetson is a drop-in — same messages, nothing to rewire. The Pi↔Pico link should likewise be defined once and reused for both manual and autonomous control.
 
 ---
 
@@ -180,7 +180,7 @@ Run in this order; store the results so they persist across power cycles:
 5. Add the payload. Re-check holding (especially tilt) and re-balance if needed. Raise current/accel gradually.
 6. Tune the motion profile up toward target speed; watch for resonance, missed-step faults, and overshoot.
 7. Run home → level → bore-sight; store.
-8. Bring the Jetson in: validate tracking and decisions **on the 7" monitor with the trigger still disarmed** for a good while before the firing path is ever live.
+8. Bring the Jetson in: validate tracking and decisions **on the Jetson's 1U monitor with the trigger still disarmed** for a good while before the firing path is ever live.
 
 ---
 

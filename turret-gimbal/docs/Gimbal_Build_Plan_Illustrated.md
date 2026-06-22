@@ -88,7 +88,7 @@ The gearbox output is identical on both axes (Ø14 h7 shaft, Ø40 h7 register, 4
 
 - **Pico:** step/dir + acceleration profiles, homing routine, limit switches, a small command set (`HOME`, `ENABLE`, `MOVE_TO angle rate`, `JOG rate`, `STATUS?`), stop-and-hold on fault or loss of Pi heartbeat.
 - **Pi:** arming state machine, IMU/lidar, calibration, and translating Jetson/console requests into Pico commands.
-- **Protocol-first:** define the Pi↔Jetson frames now and have the 10.1" console emit them, so the human-as-Jetson phase and the real Jetson are interchangeable.
+- **Protocol-first:** define the Pi↔Jetson frames now and have the Pi 5 console emit them, so the human-as-Jetson phase and the real Jetson are interchangeable.
 
 ---
 
@@ -127,7 +127,7 @@ Run in order and store the results: home each axis to its switch (giving absolut
 5. Add payload; re-check tilt holding; raise current/accel gradually.
 6. Tune the motion profile toward target speed; watch for resonance and overshoot.
 7. Run home → level → bore-sight; store.
-8. Bring the Jetson in: validate tracking and decisions **on the 7" monitor with the trigger disarmed** before the firing path is ever live.
+8. Bring the Jetson in: validate tracking and decisions **on the Jetson's 1U monitor with the trigger disarmed** before the firing path is ever live.
 
 ---
 
