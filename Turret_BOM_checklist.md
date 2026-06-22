@@ -428,13 +428,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## H.  GROUND STATION — 10" RACK
 
-- **#52 10" rack (~12U)** — Open-frame or cabinet, 10-inch · $100 · e.g. DeskPi RackMate / GeeekPi 10"
+- **#52 10" rack — DeskPi RackMate T2** — 12U, 10" wide, 10.23" (~260 mm) deep · $100 · GeeekPi / DeskPi RackMate T2
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
-  - _Houses compute, PSUs, drivers, displays. Price est._
+  - _Houses compute, PSUs, drivers, displays. Bought; price est._
 
 - **#53 10" rackmount PDU** — 8 outlets, surge, 15 A switch, 1U · $30 · ElecVoztile 10" PDU
   

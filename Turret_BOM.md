@@ -94,7 +94,7 @@
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 52 | 10" rack (~12U) | Open-frame or cabinet, 10-inch | 1 | $100 | $100 | e.g. DeskPi RackMate / GeeekPi 10" | Houses compute, PSUs, drivers, displays. Price est. |  |
+| [x] | 52 | 10" rack — DeskPi RackMate T2 | 12U, 10" wide, 10.23" (~260 mm) deep | 1 | $100 | $100 | GeeekPi / DeskPi RackMate T2 | Houses compute, PSUs, drivers, displays. Bought; price est. |  |
 | [x] | 53 | 10" rackmount PDU | 8 outlets, surge, 15 A switch, 1U | 1 | $30 | $30 | ElecVoztile 10" PDU | All AC onboard; one cord to wall. Bought; price est. |  |
 | [ ] | 54 | E-stop (panel-mount) | Latching, 2-pole (or drives contactors) | 1 | $20 | $20 | generic | Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical. |  |
 | [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $25 | $25 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
