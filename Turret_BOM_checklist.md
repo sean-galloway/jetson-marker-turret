@@ -90,7 +90,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#11 Raspberry Pi 5 (8 GB)** — Supervisor · $80 · SC1112
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -98,7 +98,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#12 Pi 5 Active Cooler** — — · $5 · SC1148
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -106,7 +106,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#13 Pi 27 W USB-C PD supply** — 5.1 V / 5 A · $12 · SC1158
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -114,7 +114,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#14 microSD 64 GB A2** — — · $10 · SanDisk SDSQXAV-064G
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -122,7 +122,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#15 Solenoid driver HAT (8-MOSFET)** — I2C; solid-state · $45 · Sequent Eight-MOSFETS
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -130,7 +130,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#16 GPIO stacking header, 2×20 tall** — — · $3 · Adafruit 2223
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -138,7 +138,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#17 Top-of-stack GPIO breakout / proto-HAT** — — · $8 · Adafruit 2310
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -146,7 +146,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#18 Brass standoff / spacer kit (M2.5)** — — · $8 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -154,7 +154,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#19 Limit / homing switches** — microswitch; GPIO to Pico · $6 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -162,9 +162,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#20 Pico RP2040** — Motion coprocessor (step/dir) · $5 · Raspberry Pi Pico
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Drives both CL57T_
 
@@ -426,9 +426,100 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Watch flex under fast slews; confirm bowl_
 
+## H.  GROUND STATION — 10" RACK
+
+- **#52 10" rack (~12U)** — Open-frame or cabinet, 10-inch · $100 · e.g. DeskPi RackMate / GeeekPi 10"
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Houses compute, PSUs, drivers, displays. Price est._
+
+- **#53 10" rackmount PDU** — Switched outlets + mains inlet · $30 · generic 10" PDU
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _All AC onboard; one cord to wall. Price est._
+
+- **#54 E-stop (panel-mount)** — Latching, 2-pole (or drives contactors) · $20 · generic
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical._
+
+- **#55 Gigabit Ethernet switch** — 5-port unmanaged · $15 · generic
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Pi + Jetson + uplink (SSH/updates). Optional but recommended._
+
+- **#56 DIN rail + terminal/ground bus** — Terminal blocks + ground bar · $20 · generic
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Distribute/fuse 48 V & 12 V (with #28); tie all grounds._
+
+- **#57 Umbilical connectors + bulkhead** — Multi-pin circular + USB · $40 · generic (aviation GX/M-series)
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Rack↔turret disconnect at the panel. Price est._
+
+- **#58 Umbilical cable sleeve / wrap** — Braided / spiral wrap · $15 · generic
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _The single sleeved bundle, tripod↔rack._
+
+- **#59 Blank + vent rack panels** — 10" panels · $15 · generic / 3D print
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Fill gaps; airflow._
+
+- **#60 Cable management** — Velcro, clips, ducting · $10 · generic
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Tidy the onboard cabling._
+
+- **#61 Jetson/Pi 5/Pico rack shelf** — 3D print; standoffs + vents · MAKE (3D print)
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _To be designed._
+
+- **#62 Display 3U mount panels ×2** — 3U each; 10.1" + 7" · MAKE (3D print/DXF)
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _To be designed._
+
 ## Totals
 
-- **Grand total (to-buy):** $1,213.84
+- **Grand total (to-buy):** $1,478.84
 - **Electronics & payload (A–D):** $548.88
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
+- **Ground station — rack (H):** $265

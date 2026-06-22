@@ -90,11 +90,28 @@
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 51 | Tripod | 35 lb (you own) | 1 | $0 | $0 | — | Watch flex under fast slews; confirm bowl |  |
 
+## H.  GROUND STATION — 10" RACK
+
+| Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
+|:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
+| [ ] | 52 | 10" rack (~12U) | Open-frame or cabinet, 10-inch | 1 | $100 | $100 | e.g. DeskPi RackMate / GeeekPi 10" | Houses compute, PSUs, drivers, displays. Price est. |  |
+| [ ] | 53 | 10" rackmount PDU | Switched outlets + mains inlet | 1 | $30 | $30 | generic 10" PDU | All AC onboard; one cord to wall. Price est. |  |
+| [ ] | 54 | E-stop (panel-mount) | Latching, 2-pole (or drives contactors) | 1 | $20 | $20 | generic | Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical. |  |
+| [ ] | 55 | Gigabit Ethernet switch | 5-port unmanaged | 1 | $15 | $15 | generic | Pi + Jetson + uplink (SSH/updates). Optional but recommended. |  |
+| [ ] | 56 | DIN rail + terminal/ground bus | Terminal blocks + ground bar | 1 | $20 | $20 | generic | Distribute/fuse 48 V & 12 V (with #28); tie all grounds. |  |
+| [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect at the panel. Price est. |  |
+| [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
+| [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $15 | $15 | generic / 3D print | Fill gaps; airflow. |  |
+| [ ] | 60 | Cable management | Velcro, clips, ducting | 1 | $10 | $10 | generic | Tidy the onboard cabling. |  |
+| [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
+| [ ] | 62 | Display 3U mount panels ×2 | 3U each; 10.1" + 7" | 2 | $0 | $0 | MAKE (3D print/DXF) | To be designed. |  |
+
 ## Totals
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $1,213.84 |
+| Grand total (to-buy) | $1,478.84 |
 | Electronics & payload (A–D) | $548.88 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
+| Ground station — rack (H) | $265 |
