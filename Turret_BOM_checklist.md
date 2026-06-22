@@ -436,13 +436,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Houses compute, PSUs, drivers, displays. Price est._
 
-- **#53 10" rackmount PDU** — Switched outlets + mains inlet · $30 · generic 10" PDU
+- **#53 10" rackmount PDU** — 8 outlets, surge, 15 A switch, 1U · $30 · ElecVoztile 10" PDU
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
-  - _All AC onboard; one cord to wall. Price est._
+  - _All AC onboard; one cord to wall. Bought; price est._
 
 - **#54 E-stop (panel-mount)** — Latching, 2-pole (or drives contactors) · $20 · generic
   
@@ -452,13 +452,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical._
 
-- **#55 Gigabit Ethernet switch** — 5-port unmanaged · $15 · generic
+- **#55 Gigabit Ethernet switch** — TP-Link TL-SG108E, 8-port, managed · $25 · TP-Link TL-SG108E
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
-  - _Pi + Jetson + uplink (SSH/updates). Optional but recommended._
+  - _Pi + Jetson + uplink (SSH/updates). Bought; price est._
 
 - **#56 DIN rail + terminal/ground bus** — Terminal blocks + ground bar · $20 · generic
   
@@ -508,18 +508,42 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _To be designed._
 
-- **#62 Display 3U mount panels ×2** — 3U each; 10.1" + 7" · MAKE (3D print/DXF)
+- **#62 Display 3U mount panels ×2** — 3U each; 10.1" + 7" (TBD — see #63) · MAKE (3D print/DXF)
   
   - [ ] Ordered
   
   - [ ] Received
   
-  - _To be designed._
+  - _Pending display plan._
+
+- **#63 Rack status touchscreen** — GeeekPi 6.91" 1424×280, 1U rack mount · $60 · GeeekPi 6.91" 1U
+  
+  - [x] Ordered
+  
+  - [ ] Received
+  
+  - _In-rack status/console bar. Bought; price est._
+
+- **#64 12-port Cat6 patch panel** — 1U; keystone + cable bar · $15 · GeeekPi 12-port
+  
+  - [x] Ordered
+  
+  - [ ] Received
+  
+  - _Network breakout; part of the umbilical interface. Bought; price est._
+
+- **#65 Switch rack mount (PETG)** — 1U mount for TL-SG108 · $12 · generic PETG
+  
+  - [x] Ordered
+  
+  - [ ] Received
+  
+  - _Racks the TL-SG108E. Bought; price est._
 
 ## Totals
 
-- **Grand total (to-buy):** $1,478.84
+- **Grand total (to-buy):** $1,575.84
 - **Electronics & payload (A–D):** $548.88
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $265
+- **Ground station — rack (H):** $362
