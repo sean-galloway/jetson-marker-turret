@@ -10,10 +10,20 @@ fast, and safe — it takes intent from the Pi 5 and never decides to fire.
 - **Stop-and-hold** on any fault or loss of the Pi 5 heartbeat.
 - Drive a small **debug OLED** (SSD1306, I2C) showing the current routine/state,
   step/dir activity, homing status, heartbeat, and fault codes.
+- Read the **BNO055 IMU** (I2C, on the turret — runs over the umbilical via a
+  P82B715 extender or BNO055 UART). Run real-time **leveling/stabilization**.
+- **Level routine:** drive **tilt → true horizon** from IMU pitch and reset the
+  orientation reference (e.g., after a series of drills). Roll is *reported*, not
+  actuated (a pan/tilt gimbal can't correct base roll — level the tripod for that).
+- **RC manual-jog mode:** decode the ELRS RX over **CRSF** (UART) — sticks → pan/tilt
+  rate, a switch = motion-enable, a knob = speed; one button triggers the level
+  routine. **RX failsafe / signal loss → stop-and-hold.** MOTION ONLY; never firing.
+- Relay orientation/state up to the Pi 5 for its state machine + GUI.
 
 ## Inputs / outputs
-- **In:** commands + heartbeat from the Pi 5 (UART); limit/homing switches (GPIO).
-- **Out:** step/dir to CL57T V4.1 drivers; debug OLED (I2C).
+- **In:** commands + heartbeat from the Pi 5 (UART); limit/homing switches (GPIO);
+  BNO055 IMU (I2C); ELRS RX (CRSF, UART).
+- **Out:** step/dir to CL57T V4.1 drivers; debug OLED (I2C); orientation to Pi 5 (UART).
 
 ## Runtime
 MicroPython firmware — no on-device pip. `requirements-dev.txt` holds host tools

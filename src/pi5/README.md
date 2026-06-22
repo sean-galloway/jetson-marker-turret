@@ -6,10 +6,11 @@ step/dir intent down to the Pico.
 
 ## Responsibilities
 - Receive aim setpoints from the Jetson (Ethernet).
-- Read the BNO055 IMU (I2C, DFRobot Gravity SEN0253) and TF03 lidar (UART) for
-  leveling + range. Run the IMU in **IMU mode (no magnetometer)** — stepper
-  fields corrupt mag heading. **BNO055 + Pi I2C clock-stretch:** lower the bus
-  baud (`dtparam=i2c_arm_baudrate=10000` in config.txt) or you'll get I/O errors.
+- Read the TF03 lidar (UART) for range. The **BNO055 IMU now lives on the Pico**
+  (real-time leveling); the Pi 5 receives orientation **from the Pico** over their
+  UART link rather than reading the IMU directly (this also avoids the Pi's BNO055
+  I2C clock-stretch issue). Keep the IMU in **IMU mode (no magnetometer)** — stepper
+  fields corrupt mag heading.
 - Own the **arming** logic and overall state machine (SAFE / ARMED / FAULT).
 - Drive the SAFE/ARMED state. The on-turret **ARMED LED is hardware-tied to the
   armed rail** (true indication, not a GPIO); the Pi 5 may also drive the GREEN

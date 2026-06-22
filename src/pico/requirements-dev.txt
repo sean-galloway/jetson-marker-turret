@@ -5,7 +5,9 @@
 #   python3 -m pip install -r src/pico/requirements-dev.txt
 #
 mpremote>=1.22    # copy/run/repl files on the Pico over USB
-# On-device debug OLED driver: copy ssd1306.py (micropython-lib) onto the Pico;
-# it is not bundled in the firmware and is not a host pip package.
+# On-device drivers (copy the .py onto the Pico; NOT host pip packages):
+#   ssd1306.py  - debug OLED (micropython-lib)
+#   bno055.py   - BNO055 IMU MicroPython driver
+#   a CRSF decoder for the ELRS RX (UART 420k) - e.g. a micropython-crsf module
 # On-device modules (machine, rp2, utime, etc.) ship with the MicroPython
 # firmware; flash the latest RP2040 build from micropython.org.

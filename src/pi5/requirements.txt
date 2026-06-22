@@ -6,9 +6,7 @@
 
 lgpio>=0.2                              # GPIO (Pi 5 backend)
 gpiozero>=2.0                           # high-level GPIO over lgpio
-pyserial>=3.5                          # TF03 lidar + Pico UART link
-smbus2>=0.4                            # I2C bus (IMU)
-adafruit-circuitpython-bno055>=5.4     # DFRobot Gravity BNO055 IMU (SEN0253)
-# adafruit-circuitpython-bmp280>=3.2   # BMP280 baro on the same board (unused on a ground turret)
-# OLED moved to the Pico (debug). The Pi 5 drives the armed/safe LED (GPIO) and
-# the 10.1" touch GUI; add the chosen GUI toolkit here when picked.
+pyserial>=3.5                          # TF03 lidar + Pico UART link (IMU comes via Pico)
+# IMU (BNO055) and the debug OLED now live on the Pico, not the Pi 5.
+# The Pi 5 drives the armed/safe LED (GPIO) and the touch GUI; add the chosen
+# GUI toolkit here when picked.

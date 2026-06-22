@@ -60,7 +60,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers; lower Pi I2C baud for BNO055 clock-stretch._
+  - _Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Connects to the PICO (real-time leveling); I2C crosses the umbilical — use a P82B715 extender (or BNO055 UART)._
 
 - **#8 Benewake TF03 lidar (100 m)** — Single-point rangefinder; UART/CAN; IP67 · $220 · TF03-100
   
@@ -524,10 +524,37 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Racks the TL-SG108E. Bought; price est._
 
+## I.  CONTROL / TEST (operator console)
+
+- **#64 RadioMaster TX16S Mk II (ELRS)** — EdgeTX, 16CH, Hall gimbals, 4.3" touch · $239.99 · RadioMaster TX16S MkII ELRS
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Manual jog + Lua telemetry console. MOTION ONLY (not firing)._
+
+- **#65 ELRS receiver (CRSF)** — 2.4 GHz, CRSF serial out · $15 · RadioMaster RP3 (or similar)
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _RX → CRSF → Pico UART. Set failsafe → Pico stop-hold. Price est._
+
+- **#66 18650 cells (×2)** — Li-ion, for the TX16S (USB-C charge) · $12 · generic 18650 ×2
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Radio battery (not included). Price est._
+
 ## Totals
 
-- **Grand total (to-buy):** $1,763.68
+- **Grand total (to-buy):** $2,030.67
 - **Electronics & payload (A–D):** $728.86
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
 - **Ground station — rack (H):** $369.86
+- **Control / test (I):** $266.99

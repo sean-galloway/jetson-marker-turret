@@ -14,7 +14,7 @@
 | [ ] | 4 | Laser sight (boresight aid) | Mounts on top of the barrel | 1 | $15 | $15 | generic | Zero to impact point at a set range, like a rifle. |  |
 | [x] | 5 | ZED 2i stereo camera | 4 mm, polarizer; USB 3.0 | 1 | $0 | $0 | Stereolabs ZED 2i 4mm | Owned (~$549). Boresighted below the barrel; routes to the Jetson. |  |
 | [x] | 6 | ZED USB3 locking cable (3 m) | USB 3.0 Type-C locking | 1 | $0 | $0 | Stereolabs | Owned. |  |
-| [ ] | 7 | 10-DOF IMU (BNO055 + BMP280) | I2C Gravity plug (no solder); run IMU mode (no mag) | 1 | $25.90 | $25.90 | DFRobot Gravity SEN0253 | Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers; lower Pi I2C baud for BNO055 clock-stretch. | [link](https://www.dfrobot.com/product-1793.html) |
+| [ ] | 7 | 10-DOF IMU (BNO055 + BMP280) | I2C Gravity plug (no solder); run IMU mode (no mag) | 1 | $25.90 | $25.90 | DFRobot Gravity SEN0253 | Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Connects to the PICO (real-time leveling); I2C crosses the umbilical — use a P82B715 extender (or BNO055 UART). | [link](https://www.dfrobot.com/product-1793.html) |
 | [ ] | 8 | Benewake TF03 lidar (100 m) | Single-point rangefinder; UART/CAN; IP67 | 1 | $220 | $220 | TF03-100 | Boresighted to the muzzle; range along the line of fire. |  |
 | [ ] | 9 | Armed/Safe LED indicator | Red+green LEDs + resistors; hardware-tied | 1 | $3 | $3 | generic | RED ARMED off the armed rail (hardware-true); GREEN SAFE. On the turret. |  |
 
@@ -107,12 +107,21 @@
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
 
+## I.  CONTROL / TEST (operator console)
+
+| Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
+|:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
+| [ ] | 64 | RadioMaster TX16S Mk II (ELRS) | EdgeTX, 16CH, Hall gimbals, 4.3" touch | 1 | $239.99 | $239.99 | RadioMaster TX16S MkII ELRS | Manual jog + Lua telemetry console. MOTION ONLY (not firing). |  |
+| [ ] | 65 | ELRS receiver (CRSF) | 2.4 GHz, CRSF serial out | 1 | $15 | $15 | RadioMaster RP3 (or similar) | RX → CRSF → Pico UART. Set failsafe → Pico stop-hold. Price est. |  |
+| [ ] | 66 | 18650 cells (×2) | Li-ion, for the TX16S (USB-C charge) | 1 | $12 | $12 | generic 18650 ×2 | Radio battery (not included). Price est. |  |
+
 ## Totals
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $1,763.68 |
+| Grand total (to-buy) | $2,030.67 |
 | Electronics & payload (A–D) | $728.86 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
 | Ground station — rack (H) | $369.86 |
+| Control / test (I) | $266.99 |
