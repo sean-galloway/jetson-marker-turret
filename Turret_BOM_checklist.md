@@ -60,7 +60,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Connects to the PICO (real-time leveling); I2C crosses the umbilical — use a P82B715 extender (or BNO055 UART)._
+  - _Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Local I2C to the on-turret Pico (short run; no extender)._
 
 - **#8 Benewake TF03 lidar (100 m)** — Single-point rangefinder; UART/CAN; IP67 · $220 · TF03-100
   
@@ -166,7 +166,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Received
   
-  - _Drives both CL57T_
+  - _Drives both CL57T. ON THE TURRET with the drivers; reads IMU/limits/LED locally._
 
 - **#21 Pico debug OLED (SSD1306)** — 128×64; I2C · $9 · Adafruit 938
   
@@ -474,7 +474,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Rack↔turret disconnect at the panel. Price est._
+  - _Rack↔turret disconnect: 48 V + 12 V power, Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est._
 
 - **#58 Umbilical cable sleeve / wrap** — Braided / spiral wrap · $15 · generic
   

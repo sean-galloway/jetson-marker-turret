@@ -14,7 +14,7 @@
 | [ ] | 4 | Laser sight (boresight aid) | Mounts on top of the barrel | 1 | $15 | $15 | generic | Zero to impact point at a set range, like a rifle. |  |
 | [x] | 5 | ZED 2i stereo camera | 4 mm, polarizer; USB 3.0 | 1 | $0 | $0 | Stereolabs ZED 2i 4mm | Owned (~$549). Boresighted below the barrel; routes to the Jetson. |  |
 | [x] | 6 | ZED USB3 locking cable (3 m) | USB 3.0 Type-C locking | 1 | $0 | $0 | Stereolabs | Owned. |  |
-| [ ] | 7 | 10-DOF IMU (BNO055 + BMP280) | I2C Gravity plug (no solder); run IMU mode (no mag) | 1 | $25.90 | $25.90 | DFRobot Gravity SEN0253 | Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Connects to the PICO (real-time leveling); I2C crosses the umbilical — use a P82B715 extender (or BNO055 UART). | [link](https://www.dfrobot.com/product-1793.html) |
+| [ ] | 7 | 10-DOF IMU (BNO055 + BMP280) | I2C Gravity plug (no solder); run IMU mode (no mag) | 1 | $25.90 | $25.90 | DFRobot Gravity SEN0253 | Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Local I2C to the on-turret Pico (short run; no extender). | [link](https://www.dfrobot.com/product-1793.html) |
 | [ ] | 8 | Benewake TF03 lidar (100 m) | Single-point rangefinder; UART/CAN; IP67 | 1 | $220 | $220 | TF03-100 | Boresighted to the muzzle; range along the line of fire. |  |
 | [ ] | 9 | Armed/Safe LED indicator | Red+green LEDs + resistors; hardware-tied | 1 | $3 | $3 | generic | RED ARMED off the armed rail (hardware-true); GREEN SAFE. On the turret. |  |
 
@@ -32,7 +32,7 @@
 | [ ] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + Pico), spare GPIO. |  |
 | [ ] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |
 | [ ] | 19 | Limit / homing switches | microswitch; GPIO to Pico | 2 | $3 | $6 | generic | One per axis → power-up homing → absolute aiming. |  |
-| [ ] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T |  |
+| [ ] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T. ON THE TURRET with the drivers; reads IMU/limits/LED locally. |  |
 | [ ] | 21 | Pico debug OLED (SSD1306) | 128×64; I2C | 1 | $9 | $9 | Adafruit 938 | Pico debug: current routine/state, step/dir, homing, heartbeat, faults. |  |
 
 ## C.  DISPLAYS & CALIBRATION
@@ -99,7 +99,7 @@
 | [ ] | 54 | E-stop (panel-mount) | Latching, 2-pole (or drives contactors) | 1 | $20 | $20 | generic | Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical. |  |
 | [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $19.99 | $19.99 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
 | [ ] | 56 | DIN rail + terminal/ground bus | Terminal blocks + ground bar | 1 | $20 | $20 | generic | Distribute/fuse 48 V & 12 V (with #28); tie all grounds. |  |
-| [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect at the panel. Price est. |  |
+| [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect: 48 V + 12 V power, Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est. |  |
 | [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
 | [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $15 | $15 | generic / 3D print | Fill gaps; airflow. |  |
 | [x] | 60 | Cable manager (0.5U D-ring bar) | Tecmojo 2-pack, metal, 3 D-rings, 10" | 1 | $9.90 | $9.90 | Tecmojo 0.5U (2-pack) | 2 bars/pack; rack cable management. |  |

@@ -15,22 +15,24 @@ repo root (`Turret_BOM.md` table + `Turret_BOM_checklist.md`) for the live parts
 
 ## System architecture
 - **On the turret (moving payload):** marker (barrel) + trigger solenoid + boresighted **ZED 2i**
-  (mounted *below* the barrel) + laser sight (on top of the barrel) + **BNO055 IMU** (wired to the
-  **Pico** for real-time leveling — I2C crosses the umbilical, use a P82B715 extender or BNO055 UART)
-  + **TF03 lidar** + **armed/safe LED** (RED ARMED hardware-tied to the armed rail; GREEN SAFE).
-- **On the tripod:** just the gimbal + payload, on a mechanical **quick-release**. A single sleeved
-  **umbilical** carries everything to the control rack (no compute on the tripod).
+  (mounted *below* the barrel) + laser sight (on top of the barrel) + **BNO055 IMU** + **TF03 lidar**
+  + **armed/safe LED** (RED ARMED hardware-tied to the armed rail; GREEN SAFE), **plus the real-time
+  motion node: Pico RP2040** (+ debug OLED) **and the 2× CL57T drivers**, co-located with the motors.
+  IMU / limit switches / LED are **local** to the Pico (short I2C/GPIO — no umbilical extender needed).
+- **On the tripod:** the gimbal + payload + the motion node, on a mechanical **quick-release**. One
+  sleeved **umbilical** to the rack carries only **48 V motor power, 12 V solenoid power, Pi 5↔Pico
+  comms (UART/USB), the ZED USB 3.0, and ground** — no motor phases or step/dir over distance.
 - **Control rack (10" ground station — BOM Section H):** **Jetson AGX Orin** (perception/targeting)
-  + **Raspberry Pi 5** (supervisor) + **Pico RP2040** (real-time step/dir, with a small **debug OLED**)
-  + **CL57T drivers** + PSUs + **10" PDU** (all AC onboard, one cord to the wall) + Ethernet switch
-  + **E-stop** (drops both motor + solenoid rails) + front-panel arming switch + the two 1U displays.
+  + **Raspberry Pi 5** (supervisor) + PSUs + **10" PDU** (all AC onboard, one cord to the wall)
+  + Ethernet switch + **E-stop** (drops both motor + solenoid rails) + front-panel arming switch
+  + the two 1U displays. (Motion electronics — Pico + CL57T drivers — live on the turret.)
 - **Operator console (BOM Section I):** **RadioMaster TX16S (ELRS)** → ELRS RX (**CRSF**) → Pico for
   manual jog / test. MOTION ONLY — never the firing path. RX failsafe → Pico stop-hold. A console
   button triggers the Pico **level** routine (tilt → horizon via IMU + reset reference; roll is
   corrected by leveling the tripod, not actuated).
-- **Signal chain (autonomous):** sensors → Jetson → Pi 5 → Pico → CL57T drivers → 2× NEMA 23 closed-loop steppers.
-  The **IMU** and **RC console** feed the **Pico** directly (real-time leveling/jog); the Pico relays
-  orientation up to the Pi 5 for the state machine + GUI.
+- **Signal chain (autonomous):** sensors → Jetson → Pi 5 →(umbilical)→ **Pico (on the turret)** →
+  CL57T → 2× NEMA 23 closed-loop steppers. IMU / limit switches / RC console feed the Pico **locally**
+  (real-time leveling/jog); the Pico relays orientation + state up to the Pi 5 for the state machine + GUI.
 - A sensor cable bundle crosses the pan and tilt axes → needs a **service loop or slip ring**
   (decide in frame design; sets how far pan can travel).
 
