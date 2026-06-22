@@ -492,13 +492,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Fill gaps; airflow._
 
-- **#60 Cable management** — Velcro, clips, ducting · $20 · generic
+- **#60 Cable manager (0.5U D-ring bar)** — Tecmojo 2-pack, metal, 3 D-rings, 10" · $9.90 · Tecmojo 0.5U (2-pack)
   
   - [x] Ordered
   
   - [ ] Received
   
-  - _Tidy the onboard cabling._
+  - _2 bars/pack; rack cable management._
 
 - **#61 Jetson/Pi 5/Pico rack shelf** — 3D print; standoffs + vents · MAKE (3D print)
   
@@ -526,8 +526,8 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $1,773.78
+- **Grand total (to-buy):** $1,763.68
 - **Electronics & payload (A–D):** $728.86
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $379.96
+- **Ground station — rack (H):** $369.86

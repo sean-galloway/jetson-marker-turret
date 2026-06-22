@@ -102,7 +102,7 @@
 | [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect at the panel. Price est. |  |
 | [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
 | [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $15 | $15 | generic / 3D print | Fill gaps; airflow. |  |
-| [x] | 60 | Cable management | Velcro, clips, ducting | 2 | $10 | $20 | generic | Tidy the onboard cabling. |  |
+| [x] | 60 | Cable manager (0.5U D-ring bar) | Tecmojo 2-pack, metal, 3 D-rings, 10" | 1 | $9.90 | $9.90 | Tecmojo 0.5U (2-pack) | 2 bars/pack; rack cable management. |  |
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
@@ -111,8 +111,8 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $1,773.78 |
+| Grand total (to-buy) | $1,763.68 |
 | Electronics & payload (A–D) | $728.86 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $379.96 |
+| Ground station — rack (H) | $369.86 |
