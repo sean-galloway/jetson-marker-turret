@@ -534,13 +534,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Manual jog + Lua telemetry console. MOTION ONLY (not firing)._
 
-- **#65 ELRS receiver (CRSF)** — 2.4 GHz, CRSF serial out · $15 · RadioMaster RP3 (or similar)
+- **#65 ELRS receiver (CRSF)** — RadioMaster RP3, 2.4 GHz, antenna diversity · $24.99 · RadioMaster RP3
   
   - [ ] Ordered
   
   - [ ] Received
   
-  - _RX → CRSF → Pico UART. Set failsafe → Pico stop-hold. Price est._
+  - _CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold._
 
 - **#66 18650 cells (×2)** — Li-ion, for the TX16S (USB-C charge) · $12 · generic 18650 ×2
   
@@ -570,9 +570,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $2,030.67
+- **Grand total (to-buy):** $2,040.66
 - **Electronics & payload (A–D):** $728.86
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
 - **Ground station — rack (H):** $369.86
-- **Control / test (I):** $266.99
+- **Control / test (I):** $276.98

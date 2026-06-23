@@ -112,7 +112,7 @@
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [ ] | 64 | RadioMaster TX16S Mk II (ELRS) | EdgeTX, 16CH, Hall gimbals, 4.3" touch | 1 | $239.99 | $239.99 | RadioMaster TX16S MkII ELRS | Manual jog + Lua telemetry console. MOTION ONLY (not firing). |  |
-| [ ] | 65 | ELRS receiver (CRSF) | 2.4 GHz, CRSF serial out | 1 | $15 | $15 | RadioMaster RP3 (or similar) | RX → CRSF → Pico UART. Set failsafe → Pico stop-hold. Price est. |  |
+| [ ] | 65 | ELRS receiver (CRSF) | RadioMaster RP3, 2.4 GHz, antenna diversity | 1 | $24.99 | $24.99 | RadioMaster RP3 | CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold. |  |
 | [ ] | 66 | 18650 cells (×2) | Li-ion, for the TX16S (USB-C charge) | 1 | $12 | $12 | generic 18650 ×2 | Radio battery (not included). Price est. |  |
 
 ## J.  PRINTED PARTS — TURRET (MAKE)
@@ -126,9 +126,9 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,030.67 |
+| Grand total (to-buy) | $2,040.66 |
 | Electronics & payload (A–D) | $728.86 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
 | Ground station — rack (H) | $369.86 |
-| Control / test (I) | $266.99 |
+| Control / test (I) | $276.98 |
