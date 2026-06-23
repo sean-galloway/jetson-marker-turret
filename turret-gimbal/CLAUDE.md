@@ -29,7 +29,8 @@ repo root (`Turret_BOM.md` table + `Turret_BOM_checklist.md`) for the live parts
 - **Operator console (BOM Section I):** **RadioMaster TX16S (ELRS)** → ELRS RX (**CRSF**) → Pico for
   manual jog / test. MOTION ONLY — never the firing path. RX failsafe → Pico stop-hold. A console
   button triggers the Pico **level** routine (tilt → horizon via IMU + reset reference; roll is
-  corrected by leveling the tripod, not actuated).
+  corrected by leveling the tripod, not actuated). Full manual flow (arm-off → level → aim → center →
+  90°/180° sweep with optional 5 s dwell every 45°): see **docs/Operations.md**.
 - **Signal chain (autonomous):** sensors → Jetson → Pi 5 →(umbilical)→ **Pico (on the turret)** →
   CL57T → 2× NEMA 23 closed-loop steppers. IMU / limit switches / RC console feed the Pico **locally**
   (real-time leveling/jog); the Pico relays orientation + state up to the Pi 5 for the state machine + GUI.

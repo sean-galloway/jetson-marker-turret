@@ -19,9 +19,12 @@ carries only power + Pi 5 comms (UART/USB) + the ZED USB — not step/dir or pha
 - **Level routine:** drive **tilt → true horizon** from IMU pitch and reset the
   orientation reference (e.g., after a series of drills). Roll is *reported*, not
   actuated (a pan/tilt gimbal can't correct base roll — level the tripod for that).
-- **RC manual-jog mode:** decode the ELRS RX over **CRSF** (UART) — sticks → pan/tilt
-  rate, a switch = motion-enable, a knob = speed; one button triggers the level
-  routine. **RX failsafe / signal loss → stop-and-hold.** MOTION ONLY; never firing.
+- **RC mode (TX16S over CRSF, UART):** sticks → pan/tilt jog; **Center** button sets
+  the zero / sweep center; **Level** button → tilt-to-horizon; switches select the
+  **90°/180°** pan arc, **sweep** on/off, and **sweep-pause** (dwell 5 s at each 45°
+  across the arc); pot = sweep speed; a switch = motion-enable (dead-man).
+  **RX failsafe / signal loss → stop-and-hold.** MOTION ONLY; never firing.
+  Full operator flow: `docs/Operations.md`.
 - Relay orientation/state up to the Pi 5 for its state machine + GUI.
 
 ## Inputs / outputs
