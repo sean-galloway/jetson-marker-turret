@@ -34,8 +34,9 @@ repo root (`Turret_BOM.md` table + `Turret_BOM_checklist.md`) for the live parts
 - **Signal chain (autonomous):** sensors → Jetson → Pi 5 →(umbilical)→ **Pico (on the turret)** →
   CL57T → 2× NEMA 23 closed-loop steppers. IMU / limit switches / RC console feed the Pico **locally**
   (real-time leveling/jog); the Pico relays orientation + state up to the Pi 5 for the state machine + GUI.
-- A sensor cable bundle crosses the pan and tilt axes → needs a **service loop or slip ring**
-  (decide in frame design; sets how far pan can travel).
+- Cabling crosses the pan axis **through the lazy-susan open bore as a service loop** (no slip ring —
+  the 90°/180° sweep limit makes one unnecessary, and the ZED USB 3.0 can't go through a slip ring).
+  Tilt axis uses a short service loop. Full scheme + what-crosses-what: **docs/Drive_and_Cabling.md**.
 
 ## Design philosophy (locked)
 - **Bolt-together, zero machining.** Two simplifications make this possible:
