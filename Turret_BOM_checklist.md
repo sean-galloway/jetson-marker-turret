@@ -220,13 +220,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## D.  POWER & WIRING
 
-- **#27 12 V DC supply (≥3 A)** — Solenoid rail · $16 · Mean Well GST60A12
+- **#27 12 V solenoid supply (adjustable)** — 3–24 V, 3 A, 72 W; set & lock at 12 V · $17.99 · Wefomey adjustable (Amazon)
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
-  - _Solenoid only (motors on 24–48 V). Or buck from 48 V for one supply._
+  - _Solenoid rail. Set 12 V on the display + lock the knob; center-positive tip. Motors use 48 V (#41)._
 
 - **#28 Inline fuse holders + fuses** — ATC · $8 · generic
   
@@ -570,8 +570,8 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $2,040.66
-- **Electronics & payload (A–D):** $728.86
+- **Grand total (to-buy):** $2,042.65
+- **Electronics & payload (A–D):** $730.85
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
 - **Ground station — rack (H):** $369.86

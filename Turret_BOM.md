@@ -49,7 +49,7 @@
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 27 | 12 V DC supply (≥3 A) | Solenoid rail | 1 | $16 | $16 | Mean Well GST60A12 | Solenoid only (motors on 24–48 V). Or buck from 48 V for one supply. |  |
+| [x] | 27 | 12 V solenoid supply (adjustable) | 3–24 V, 3 A, 72 W; set & lock at 12 V | 1 | $17.99 | $17.99 | Wefomey adjustable (Amazon) | Solenoid rail. Set 12 V on the display + lock the knob; center-positive tip. Motors use 48 V (#41). |  |
 | [ ] | 28 | Inline fuse holders + fuses | ATC | 1 | $8 | $8 | generic | Fuse the 24–48 V and 12 V rails; tie ALL grounds together. |  |
 | [ ] | 29 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Direct Pi↔Jetson; service loop on the motion run. |  |
 | [ ] | 30 | Jumper wires (DuPont M-F, M-M) | — | 1 | $7 | $7 | generic | Signals: IMU, lidar, Pico, switches. |  |
@@ -126,8 +126,8 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,040.66 |
-| Electronics & payload (A–D) | $728.86 |
+| Grand total (to-buy) | $2,042.65 |
+| Electronics & payload (A–D) | $730.85 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
 | Ground station — rack (H) | $369.86 |
