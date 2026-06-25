@@ -34,6 +34,12 @@ slew), where the umbilical lands.
 - **Tilt axis (turntable/yoke → payload), service loop:**
   ZED USB 3.0 · lidar · solenoid · LED.
 
+> **Solenoid is switched in the rack.** The 8-MOSFET HAT (on the Pi 5, rack) does
+> the low-side switching — the **Pico never touches the firing path**. So the
+> umbilical carries the **switched solenoid pair (2 conductors: armed +12 V feed +
+> switched return)**, not a single line; account for both in the connector pinout.
+> Solenoid current loops rack → turret → rack (fine at ~1 A).
+
 ## Service‑loop sizing (frame design)
 - Size the bore loop for the **full pan travel** (the operator can set the sweep
   *center* anywhere within the allowed range, plus ±90° sweep) — confirm the total

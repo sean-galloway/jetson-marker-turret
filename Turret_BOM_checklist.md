@@ -242,7 +242,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Direct Pi↔Jetson; service loop on the motion run._
+  - _Pi↔Jetson via the rack switch (#55); short rack-internal patch — not on the umbilical._
 
 - **#30 Jumper wires (DuPont M-F, M-M)** — — · $7 · generic
   
@@ -474,7 +474,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Rack↔turret disconnect: 48 V + 12 V power, Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est._
+  - _Rack↔turret disconnect: 48 V motor power, switched solenoid pair (2 cond, from the rack HAT), Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est._
 
 - **#58 Umbilical cable sleeve / wrap** — Braided / spiral wrap · $15 · generic
   

@@ -51,7 +51,7 @@
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 27 | 12 V solenoid supply (adjustable) | 3–24 V, 3 A, 72 W; set & lock at 12 V | 1 | $17.99 | $17.99 | Wefomey adjustable (Amazon) | Solenoid rail. Set 12 V on the display + lock the knob; center-positive tip. Motors use 48 V (#41). |  |
 | [ ] | 28 | Inline fuse holders + fuses | ATC | 1 | $8 | $8 | generic | Fuse the 24–48 V and 12 V rails; tie ALL grounds together. |  |
-| [ ] | 29 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Direct Pi↔Jetson; service loop on the motion run. |  |
+| [ ] | 29 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Pi↔Jetson via the rack switch (#55); short rack-internal patch — not on the umbilical. |  |
 | [ ] | 30 | Jumper wires (DuPont M-F, M-M) | — | 1 | $7 | $7 | generic | Signals: IMU, lidar, Pico, switches. |  |
 | [ ] | 31 | Hookup wire, 18–20 AWG | — | 1 | $10 | $10 | generic | Motor, solenoid, power runs. |  |
 | [ ] | 32 | Wire ferrules / crimp terminals | — | 1 | $9 | $9 | generic | Driver/terminal terminations. |  |
@@ -99,7 +99,7 @@
 | [ ] | 54 | E-stop (panel-mount) | Latching, 2-pole (or drives contactors) | 1 | $20 | $20 | generic | Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical. |  |
 | [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $19.99 | $19.99 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
 | [ ] | 56 | DIN rail + terminal/ground bus | Terminal blocks + ground bar | 1 | $20 | $20 | generic | Distribute/fuse 48 V & 12 V (with #28); tie all grounds. |  |
-| [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect: 48 V + 12 V power, Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est. |  |
+| [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect: 48 V motor power, switched solenoid pair (2 cond, from the rack HAT), Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est. |  |
 | [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
 | [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $15 | $15 | generic / 3D print | Fill gaps; airflow. |  |
 | [x] | 60 | Cable manager (0.5U D-ring bar) | Tecmojo 2-pack, metal, 3 D-rings, 10" | 1 | $9.90 | $9.90 | Tecmojo 0.5U (2-pack) | 2 bars/pack; rack cable management. |  |
