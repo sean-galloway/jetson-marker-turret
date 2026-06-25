@@ -9,7 +9,7 @@
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 1 | Paintball marker | Bore-sighted reference for the ZED | 1 | $0 | $0 | owned | Owned. Bore aligns to the pan axis; hopper top-rear. |  |
-| [ ] | 2 | Push-pull solenoid (trigger) | 12 V, 1 A, 20 N, 10 mm stroke | 1 | $13.99 | $13.99 | TOMMSILE 0837B-12V (Amazon) | Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan. |  |
+| [ ] | 2 | Push-pull solenoid (trigger) | 12 V, 1 A, 20 N, 10 mm stroke | 1 | $13.99 | $13.99 | TOMMSILE 0837B-12V (Amazon) | Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan. Wire to a HAT high-current channel (CH1-4); onboard TVS handles flyback. |  |
 | [ ] | 3 | Arming switch (SPST toggle) | SPST latching, 10 A DC @ 12 V, pre-wired; in the 12 V solenoid line | 1 | $7.99 | $7.99 | Taiss KNS-1 (2-pack, Amazon) | HARDWARE INTERLOCK: open = cannot fire. Safety-critical. |  |
 | [ ] | 4 | Laser sight (boresight aid) | Mounts on top of the barrel | 1 | $15 | $15 | generic | Zero to impact point at a set range, like a rifle. |  |
 | [x] | 5 | ZED 2i stereo camera | 4 mm, polarizer; USB 3.0 | 1 | $0 | $0 | Stereolabs ZED 2i 4mm | Owned (~$549). Boresighted below the barrel; routes to the Jetson. |  |
@@ -27,7 +27,7 @@
 | [ ] | 12 | Pi 5 Active Cooler | — | 1 | $5 | $5 | SC1148 | Pi 5 throttles without it. |  |
 | [ ] | 13 | Pi 27 W USB-C PD supply | 5.1 V / 5 A | 1 | $12 | $12 | SC1158 | Powers the Pi + HAT reliably. |  |
 | [ ] | 14 | microSD 64 GB A2 | — | 1 | $10 | $10 | SanDisk SDSQXAV-064G | Pi OS / boot. |  |
-| [ ] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. |  |
+| [ ] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). |  |
 | [ ] | 16 | GPIO stacking header, 2×20 tall | — | 1 | $3 | $3 | Adafruit 2223 | Passes GPIO up past the HAT. |  |
 | [ ] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + Pico), spare GPIO. |  |
 | [ ] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |

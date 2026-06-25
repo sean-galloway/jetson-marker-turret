@@ -20,7 +20,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Received
   
-  - _Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan._
+  - _Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan. Wire to a HAT high-current channel (CH1-4); onboard TVS handles flyback._
 
 - **#3 Arming switch (SPST toggle)** — SPST latching, 10 A DC @ 12 V, pre-wired; in the 12 V solenoid line · $7.99 · Taiss KNS-1 (2-pack, Amazon)
   
@@ -126,7 +126,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Received
   
-  - _Trigger drive; the only HAT on the stack now._
+  - _Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode)._
 
 - **#16 GPIO stacking header, 2×20 tall** — — · $3 · Adafruit 2223
   
