@@ -18,7 +18,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan._
 
@@ -26,7 +26,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _HARDWARE INTERLOCK: open = cannot fire. Safety-critical._
 
@@ -58,7 +58,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Local I2C to the on-turret Pico (short run; no extender)._
 
@@ -66,7 +66,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Boresighted to the muzzle; range along the line of fire._
 
@@ -92,7 +92,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Setpoints, IMU/lidar, arming, state._
 
@@ -100,7 +100,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Pi 5 throttles without it._
 
@@ -108,7 +108,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Powers the Pi + HAT reliably._
 
@@ -116,7 +116,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Pi OS / boot._
 
@@ -124,7 +124,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Trigger drive; the only HAT on the stack now._
 
@@ -132,7 +132,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Passes GPIO up past the HAT._
 
@@ -148,7 +148,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Mount/space the HAT + Pi._
 
@@ -172,7 +172,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Pico debug: current routine/state, step/dir, homing, heartbeat, faults._
 
@@ -182,7 +182,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Pi 5 status/console bar. Bought; price est._
 
@@ -190,7 +190,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Jetson perception/status bar. Bought; price est._
 
@@ -296,25 +296,25 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#36 Mounted ball bearing (tilt)** — Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") · $15 · McMaster: "mounted ball bearing" · `5968K71` · [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/)
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Match pattern to plate 05_
 
 - **#37 Mounting hub** — Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm · $36 · McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` · [link](https://www.ruland.com/fht-mcl-14-ss.html#)
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Or rigid shaft coupling; no keyway_
 
 - **#38 Shoulder screw (tilt pin)** — Shoulder Ø = #36 bearing bore (e.g. 1/2") · $8 · McMaster: "shoulder screw" · `90298A716` · [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/)
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Far end of tilt axis; pairs with #36_
 
@@ -336,9 +336,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#41 Power supply 24–48 V** — 48 V, 5–10 A · $40 · select
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _DROK 48V Power Supply, AC to DC Converter 0-48V 10A 480W Variable Power Supply, AC to DC Adapter Low Voltage Transformer_
 
@@ -478,9 +478,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#58 Umbilical cable sleeve / wrap** — Braided / spiral wrap · $15 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _The single sleeved bundle, tripod↔rack._
 
@@ -528,7 +528,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#64 RadioMaster TX16S Mk II (ELRS)** — EdgeTX, 16CH, Hall gimbals, 4.3" touch · $239.99 · RadioMaster TX16S MkII ELRS
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
@@ -536,7 +536,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#65 ELRS receiver (CRSF)** — RadioMaster RP3, 2.4 GHz, antenna diversity · $24.99 · RadioMaster RP3
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
