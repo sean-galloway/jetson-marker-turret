@@ -14,14 +14,18 @@
 // Render/export: open in OpenSCAD, F6, then export STL.
 // =====================================================================
 
-// ---- Rack interface (DeskPi RackMate T2, 10") -----------------------
-U              = 44.45;   // 1U height (standard, vertical)
+// ---- Rack interface (DeskPi RackMate T2, 10") — CONFIRMED from a 1U panel ----
+U              = 44.23;   // measured 1U panel height (nominal 44.45; panels run under)
 shelf_U        = 3;       // shelf front-panel height in U
-face_width     = 254;     // [MEASURE] 10" panel outer width
-rail_hole_dx   = 236;     // [MEASURE] center-to-center between L/R rail holes
-rail_hole_dia  = 6.4;     // [MEASURE] rack screw clearance (M6 ~6.4)
+face_width     = 254;     // 10" panel outer width (measured)
 flange_th      = 4;       // front flange thickness
-slot_len       = 8;       // vertical slot length at each mount hole (tolerance)
+// Mounting holes: horizontal OVAL slots 9.33w x 6.77h; edge gaps 4.3mm sides,
+// 3mm top/bottom. Slot centers -> 8.965mm from sides, 6.385mm from top/bottom edge.
+slot_w         = 9.33;    // slot width (horizontal, gives side-to-side adjustment)
+slot_h         = 6.77;    // slot height
+slot_side_ctr  = 4.3 + slot_w/2;   // 8.965mm: slot center from each side edge
+slot_tb_ctr    = 3.0 + slot_h/2;   // 6.385mm: slot center from top/bottom edge
+rail_hole_dx   = face_width - 2*slot_side_ctr;  // = 236.07mm center-to-center
 
 // ---- Tray ----------------------------------------------------------
 usable_width   = 200;     // [MEASURE] clear width between rails
@@ -129,23 +133,25 @@ module pico_mounts() {
                 standoff(pico_standoff_h, 4, pico_screw_d);
 }
 
-// Front 3U rack-mount flange with slotted holes
+// One horizontal oval mounting slot (9.33w x 6.77h), cut through the flange (Y).
+module oval_slot() {
+    off = (slot_w - slot_h) / 2;   // circle-center offset for a horizontal oval
+    hull()
+        for (dx = [-off, off])
+            translate([dx, -eps, 0]) rotate([-90, 0, 0])
+                cylinder(h = flange_th + 2*eps, d = slot_h);
+}
+
+// Front rack-mount flange — 4 corner oval slots per the measured RackMate pattern
 module flange() {
-    fh = shelf_U * U;
-    // center the face_width over the usable_width
+    fh = shelf_U * U;                 // 3U tall
     translate([(usable_width-face_width)/2, -flange_th, 0])
     difference() {
         cube([face_width, flange_th, fh]);
-        // two slotted holes per side (top & bottom thirds)
-        for (sx = [(face_width-rail_hole_dx)/2, (face_width+rail_hole_dx)/2])
-            for (sz = [fh*0.25, fh*0.75])
-                translate([sx, -eps, sz])
-                    hull() {
-                        translate([0,0,-slot_len/2]) rotate([-90,0,0])
-                            cylinder(h=flange_th+2*eps, d=rail_hole_dia);
-                        translate([0,0, slot_len/2]) rotate([-90,0,0])
-                            cylinder(h=flange_th+2*eps, d=rail_hole_dia);
-                    }
+        // slot centers: 8.965mm from each side; 6.385mm from top & bottom edges
+        for (sx = [slot_side_ctr, face_width - slot_side_ctr])
+            for (sz = [slot_tb_ctr, fh - slot_tb_ctr])
+                translate([sx, 0, sz]) oval_slot();
     }
 }
 
