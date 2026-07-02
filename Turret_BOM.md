@@ -50,7 +50,7 @@
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 27 | 12 V solenoid supply (adjustable) | 3–24 V, 3 A, 72 W; set & lock at 12 V | 1 | $17.99 | $17.99 | Wefomey adjustable (Amazon) | Solenoid rail. Set 12 V on the display + lock the knob; center-positive tip. Motors use 48 V (#41). |  |
-| [ ] | 28 | Inline fuse holders + fuses | ATC | 1 | $8 | $8 | generic | Fuse the 24–48 V and 12 V rails; tie ALL grounds together. |  |
+| [ ] | 28 | Circuit protection — fuses + 48 V DC breaker | ATC inline holders + fuse kit (12 V/logic) + DIHOOL 15 A DC breaker (48 V) | 1 | $26 | $26 | SIM&NAT (B0CN6TVHKH) + DIHOOL (B0CFCLPGNY) | ATC blade fuses are only 32 VDC-rated → use them on the 12 V solenoid + logic rails; protect the 48 V motor rail with a DC-rated breaker (also a manual disconnect). Tie ALL grounds together. | [fuses](https://www.amazon.com/SIM-NAT-Automotive-Standard-Replacement/dp/B0CN6TVHKH) · [breaker](https://www.amazon.com/DIHOOL-Disconnect-Breaker-Circuit-Outdoor/dp/B0CFCLPGNY) |
 | [ ] | 29 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Pi↔Jetson via the rack switch (#55); short rack-internal patch — not on the umbilical. |  |
 | [ ] | 30 | Jumper wires (DuPont M-F, M-M) | — | 1 | $7 | $7 | generic | Signals: IMU, lidar, Pico, switches. |  |
 | [ ] | 31 | Hookup wire, 18–20 AWG | — | 1 | $10 | $10 | generic | Motor, solenoid, power runs. |  |
@@ -98,10 +98,10 @@
 | [x] | 53 | 10" rackmount PDU | 8 outlets, surge, 15 A switch, 1U | 1 | $69.99 | $69.99 | ElecVoztile 10" PDU | All AC onboard; one cord to wall. Bought; price est. |  |
 | [x] | 54 | E-stop (22 mm, 2NC 2NO) | Gebildet latching, 3 A, connection plug | 1 | $9.99 | $9.99 | Gebildet (Amazon) | Breaks 12 V solenoid directly + pilots the 48 V cutoff solenoid (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical. |  |
 | [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $19.99 | $19.99 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
-| [ ] | 56 | DIN rail + terminal/ground bus | Terminal blocks + ground bar | 1 | $20 | $20 | generic | Distribute/fuse 48 V & 12 V (with #28); tie all grounds. |  |
-| [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect: 48 V motor power, switched solenoid pair (2 cond, from the rack HAT), Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est. |  |
+| [ ] | 56 | DIN rail + terminal/ground bus | Dinkle DK2.5N kit: 20 blocks + 35 mm rail + ground blocks + jumpers + end brackets | 1 | $23 | $23 | ICI Dinkle DK2.5N (B07NVV28D9) | Distribute 48 V & 12 V, tie all grounds. The #28 DC breaker clips onto the same 35 mm rail. Use a heavier lug for the 48 V/10 A run. | [link](https://www.amazon.com/International-Connector-Dinkle-DK2-5N-Connectors/dp/B07NVV28D9) |
+| [ ] | 57 | Umbilical connectors + bulkhead | GX20 12-pin (power+signal) + USB3 panel coupler (ZED) | 1 | $30 | $30 | GX20-12 (B0D4VBV42Q) + PENGLIN USB3 IP67 (B09VNS64HM) | Rack↔turret disconnect. GX20 pins are 5 A each → 48 V+ ×3 pins, 48 V− ×3 pins (15 A), solenoid+/−, UART TX/RX, GND, armed-LED = 12 pins. ZED USB3 gets its OWN waterproof coupler (aviation connectors wreck USB3). No motor phases/step-dir cross (Pico+drivers on turret). | [GX20](https://www.amazon.com/Connector-Circular-Aviation-Adapter-Connection/dp/B0D4VBV42Q) · [USB3](https://www.amazon.com/PENGLIN-Waterproof-Connector-Bulkhead-Extension/dp/B09VNS64HM) |
 | [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
-| [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $15 | $15 | generic / 3D print | Fill gaps; airflow. |  |
+| [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $0 | $0 | MAKE (3D print) | Fill gaps; airflow. 3D-printed alongside the E-stop panel + PSU mount. |  |
 | [x] | 60 | Cable manager (0.5U D-ring bar) | Tecmojo 2-pack, metal, 3 D-rings, 10" | 1 | $9.90 | $9.90 | Tecmojo 0.5U (2-pack) | 2 bars/pack; rack cable management. |  |
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
@@ -127,9 +127,9 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,067.63 |
-| Electronics & payload (A–D) | $730.85 |
+| Grand total (to-buy) | $2,063.63 |
+| Electronics & payload (A–D) | $748.85 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $394.84 |
+| Ground station — rack (H) | $372.84 |
 | Control / test (I) | $276.98 |

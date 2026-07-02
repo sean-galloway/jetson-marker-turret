@@ -228,7 +228,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Solenoid rail. Set 12 V on the display + lock the knob; center-positive tip. Motors use 48 V (#41)._
 
-- **#28 Inline fuse holders + fuses** — ATC · $8 · generic
+- **#28 Circuit protection — fuses + 48 V DC breaker** — ATC inline holders + fuse kit (12 V/logic) + DIHOOL 15 A DC breaker (48 V) · $26 · SIM&NAT (B0CN6TVHKH) + DIHOOL (B0CFCLPGNY) · fuses https://www.amazon.com/SIM-NAT-Automotive-Standard-Replacement/dp/B0CN6TVHKH · breaker https://www.amazon.com/DIHOOL-Disconnect-Breaker-Circuit-Outdoor/dp/B0CFCLPGNY
   
   - [ ] Ordered
   
@@ -460,7 +460,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Pi + Jetson + uplink (SSH/updates). Bought; price est._
 
-- **#56 DIN rail + terminal/ground bus** — Terminal blocks + ground bar · $20 · generic
+- **#56 DIN rail + terminal/ground bus** — Dinkle DK2.5N kit: 20 blocks + 35 mm rail + ground blocks + jumpers + end brackets · $23 · ICI Dinkle DK2.5N (B07NVV28D9) · https://www.amazon.com/International-Connector-Dinkle-DK2-5N-Connectors/dp/B07NVV28D9
   
   - [ ] Ordered
   
@@ -468,7 +468,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Distribute/fuse 48 V & 12 V (with #28); tie all grounds._
 
-- **#57 Umbilical connectors + bulkhead** — Multi-pin circular + USB · $40 · generic (aviation GX/M-series)
+- **#57 Umbilical connectors + bulkhead** — GX20 12-pin (power+signal) + USB3 panel coupler (ZED) · $30 · GX20-12 (B0D4VBV42Q) + PENGLIN USB3 IP67 (B09VNS64HM) · GX20 https://www.amazon.com/Connector-Circular-Aviation-Adapter-Connection/dp/B0D4VBV42Q · USB3 https://www.amazon.com/PENGLIN-Waterproof-Connector-Bulkhead-Extension/dp/B09VNS64HM
   
   - [ ] Ordered
   
@@ -484,7 +484,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _The single sleeved bundle, tripod↔rack._
 
-- **#59 Blank + vent rack panels** — 10" panels · $15 · generic / 3D print
+- **#59 Blank + vent rack panels** — 10" panels · $0 · MAKE (3D print)
   
   - [ ] Ordered
   
@@ -578,9 +578,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $2,067.63
-- **Electronics & payload (A–D):** $730.85
+- **Grand total (to-buy):** $2,063.63
+- **Electronics & payload (A–D):** $748.85
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $394.84
+- **Ground station — rack (H):** $372.84
 - **Control / test (I):** $276.98
