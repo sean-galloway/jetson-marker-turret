@@ -524,7 +524,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Racks the TL-SG108E. Bought; price est._
 
-- **#64 48 V cutoff solenoid (E-stop)** — 48 V continuous-duty, SPST-NO, ~400 A cont · $20 · Club Car 48V Heavy Duty (B00UZ7XTP6, Amazon) · https://www.amazon.com/Golf-Cart-Heavy-Continuous-Solenoid/dp/B00UZ7XTP6
+- **#64 48 V cutoff solenoid (E-stop)** — 48 V continuous-duty, 4-term, 200 A cont / 600 A peak · $20 · 10L0L 48V Heavy Duty (B0C9SZV1KX, Amazon) · https://www.amazon.com/10L0L-Solenoid-Continuous-101883601-JR1-H1950-00/dp/B0C9SZV1KX
   
   - [ ] Ordered
   
