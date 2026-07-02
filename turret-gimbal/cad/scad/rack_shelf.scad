@@ -14,18 +14,20 @@
 // Render/export: open in OpenSCAD, F6, then export STL.
 // =====================================================================
 
-// ---- Rack interface (DeskPi RackMate T2, 10") — CONFIRMED from a 1U panel ----
-U              = 44.23;   // measured 1U panel height (nominal 44.45; panels run under)
+// ---- Rack interface (10" 1U panel) — from the mfr mechanical drawing ----------
+U              = 44;      // 1U panel height (drawing: 44 mm / 1.73 in)
 shelf_U        = 3;       // shelf front-panel height in U
-face_width     = 254;     // 10" panel outer width (measured)
+face_width     = 254;     // 10" panel outer width (drawing)
 flange_th      = 4;       // front flange thickness
-// Mounting holes: horizontal OVAL slots 9.33w x 6.77h; edge gaps 4.3mm sides,
-// 3mm top/bottom. Slot centers -> 8.965mm from sides, 6.385mm from top/bottom edge.
-slot_w         = 9.33;    // slot width (horizontal, gives side-to-side adjustment)
-slot_h         = 6.77;    // slot height
-slot_side_ctr  = 4.3 + slot_w/2;   // 8.965mm: slot center from each side edge
-slot_tb_ctr    = 3.0 + slot_h/2;   // 6.385mm: slot center from top/bottom edge
-rail_hole_dx   = face_width - 2*slot_side_ctr;  // = 236.07mm center-to-center
+// Mounting: 4 horizontal OVAL slots 9.33w x 6.77h. Drawing gives hole center-to-
+// center: 238 mm horizontal, 33 mm vertical (within 1U) -> slot centers 8 mm from
+// each side edge, 5.5 mm from top/bottom edge. (Clear panel opening ~214 mm.)
+slot_w         = 9.33;    // oval slot width (horizontal = side-to-side adjustment)
+slot_h         = 6.77;    // oval slot height
+rail_hole_dx   = 238;     // horizontal mounting-hole center-to-center (drawing)
+hole_cc_v      = 33;      // vertical mounting-hole C-C within 1U (drawing)
+slot_side_ctr  = (face_width - rail_hole_dx) / 2;   // = 8 mm from each side edge
+slot_tb_ctr    = (U - hole_cc_v) / 2;               // = 5.5 mm from top/bottom edge
 
 // ---- Tray ----------------------------------------------------------
 usable_width   = 200;     // [MEASURE] clear width between rails
