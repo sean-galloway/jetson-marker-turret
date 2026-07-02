@@ -106,7 +106,7 @@
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
-| [ ] | 64 | 48 V cutoff solenoid (E-stop) | 48 V continuous-duty, 4-term, 200 A cont / 600 A peak | 1 | $20 | $20 | 10L0L 48V Heavy Duty (B0C9SZV1KX, Amazon) | 48 V continuous-duty SPST-NO solenoid (2 load posts + 2 coil terminals). E-stop NC breaks the coil current → opens the 48 V motor rail (fail-safe). Contacts rated to switch 48 VDC (golf-cart main circuit). Feed coil from the line side of the 48 V rail. Price est. | [link](https://www.amazon.com/10L0L-Solenoid-Continuous-101883601-JR1-H1950-00/dp/B0C9SZV1KX) |
+| [ ] | 64 | 48 V cutoff solenoid (E-stop) | 48 V continuous-duty, 4-term, 200 A cont | 1 | $20 | $20 | Universal 48V golf-cart (B0076Q9HNM, Amazon) | 48 V continuous-duty SPST-NO solenoid (2 load posts + 2 coil terminals). E-stop NC breaks the coil current → opens the 48 V motor rail (fail-safe). Contacts rated to switch 48 VDC (golf-cart main circuit). Feed coil from the line side of the 48 V rail. Backups: EZGO 73231G01 (B0076Q9FFM), GCK Yamaha (B00S0QR68K). Price est. | [link](https://www.amazon.com/Golf-Carts-Heavy-Continuous-Solenoid/dp/B0076Q9HNM) |
 
 ## I.  CONTROL / TEST (operator console)
 

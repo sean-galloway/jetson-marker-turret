@@ -524,7 +524,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Racks the TL-SG108E. Bought; price est._
 
-- **#64 48 V cutoff solenoid (E-stop)** — 48 V continuous-duty, 4-term, 200 A cont / 600 A peak · $20 · 10L0L 48V Heavy Duty (B0C9SZV1KX, Amazon) · https://www.amazon.com/10L0L-Solenoid-Continuous-101883601-JR1-H1950-00/dp/B0C9SZV1KX
+- **#64 48 V cutoff solenoid (E-stop)** — 48 V continuous-duty, 4-term, 200 A cont · $20 · Universal 48V golf-cart (B0076Q9HNM, Amazon) · https://www.amazon.com/Golf-Carts-Heavy-Continuous-Solenoid/dp/B0076Q9HNM · backups: EZGO 73231G01 (B0076Q9FFM), GCK Yamaha (B00S0QR68K)
   
   - [ ] Ordered
   
