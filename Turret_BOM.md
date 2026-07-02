@@ -96,7 +96,7 @@
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 52 | 10" rack — DeskPi RackMate T2 | 12U, 10" wide, 10.23" (~260 mm) deep | 1 | $100 | $100 | GeeekPi / DeskPi RackMate T2 | Houses compute, PSUs, drivers, displays. Bought; price est. |  |
 | [x] | 53 | 10" rackmount PDU | 8 outlets, surge, 15 A switch, 1U | 1 | $69.99 | $69.99 | ElecVoztile 10" PDU | All AC onboard; one cord to wall. Bought; price est. |  |
-| [x] | 54 | E-stop (22 mm, 2NC 2NO) | Gebildet latching, 3 A, connection plug | 1 | $9.99 | $9.99 | Gebildet (Amazon) | Breaks 12 V solenoid directly + pilots the 48 V contactor (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical. |  |
+| [x] | 54 | E-stop (22 mm, 2NC 2NO) | Gebildet latching, 3 A, connection plug | 1 | $9.99 | $9.99 | Gebildet (Amazon) | Breaks 12 V solenoid directly + pilots the 48 V cutoff solenoid (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical. |  |
 | [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $19.99 | $19.99 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
 | [ ] | 56 | DIN rail + terminal/ground bus | Terminal blocks + ground bar | 1 | $20 | $20 | generic | Distribute/fuse 48 V & 12 V (with #28); tie all grounds. |  |
 | [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect: 48 V motor power, switched solenoid pair (2 cond, from the rack HAT), Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est. |  |
@@ -106,7 +106,7 @@
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
-| [ ] | 64 | DC contactor — 48 V rail | ≥48 VDC, ≥40 A, 12 V coil; E-stop-piloted | 1 | $25 | $25 | generic DC contactor | E-stop NC drops the coil → opens the 48 V motor rail (fail-safe). 3 A E-stop can't switch 48 V directly. Price est. |  |
+| [ ] | 64 | 48 V cutoff solenoid (E-stop) | 48 V continuous-duty, SPST-NO, ~400 A cont | 1 | $20 | $20 | Club Car 48V Heavy Duty (B00UZ7XTP6, Amazon) | 48 V continuous-duty SPST-NO solenoid; E-stop NC breaks the coil current → opens the 48 V motor rail (fail-safe). Continuous-duty, contacts rated to switch 48 VDC. Feed coil from the line side of the 48 V rail. Price est. | [link](https://www.amazon.com/Golf-Cart-Heavy-Continuous-Solenoid/dp/B00UZ7XTP6) |
 
 ## I.  CONTROL / TEST (operator console)
 
@@ -127,9 +127,9 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,057.64 |
+| Grand total (to-buy) | $2,052.64 |
 | Electronics & payload (A–D) | $730.85 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $384.85 |
+| Ground station — rack (H) | $379.85 |
 | Control / test (I) | $276.98 |

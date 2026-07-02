@@ -450,7 +450,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Breaks 12 V solenoid directly + pilots the 48 V contactor (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical._
+  - _Breaks 12 V solenoid directly + pilots the 48 V cutoff solenoid (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical._
 
 - **#55 Gigabit Ethernet switch** — TP-Link TL-SG108E, 8-port, managed · $19.99 · TP-Link TL-SG108E
   
@@ -524,7 +524,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Racks the TL-SG108E. Bought; price est._
 
-- **#64 DC contactor — 48 V rail** — ≥48 VDC, ≥40 A, 12 V coil; E-stop-piloted · $25 · generic DC contactor
+- **#64 48 V cutoff solenoid (E-stop)** — 48 V continuous-duty, SPST-NO, ~400 A cont · $20 · Club Car 48V Heavy Duty (B00UZ7XTP6, Amazon) · https://www.amazon.com/Golf-Cart-Heavy-Continuous-Solenoid/dp/B00UZ7XTP6
   
   - [ ] Ordered
   
@@ -578,9 +578,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $2,057.64
+- **Grand total (to-buy):** $2,052.64
 - **Electronics & payload (A–D):** $730.85
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $384.85
+- **Ground station — rack (H):** $379.85
 - **Control / test (I):** $276.98
