@@ -444,13 +444,13 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _All AC onboard; one cord to wall. Bought; price est._
 
-- **#54 E-stop (panel-mount)** — Latching, 2-pole (or drives contactors) · $20 · generic
+- **#54 E-stop (22 mm, 2NC 2NO)** — Gebildet latching, 3 A, connection plug · $9.99 · Gebildet (Amazon)
   
-  - [ ] Ordered
+  - [x] Ordered
   
   - [ ] Received
   
-  - _Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical._
+  - _Breaks 12 V solenoid directly + pilots the 48 V contactor (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical._
 
 - **#55 Gigabit Ethernet switch** — TP-Link TL-SG108E, 8-port, managed · $19.99 · TP-Link TL-SG108E
   
@@ -524,9 +524,17 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Racks the TL-SG108E. Bought; price est._
 
+- **#64 DC contactor — 48 V rail** — ≥48 VDC, ≥40 A, 12 V coil; E-stop-piloted · $25 · generic DC contactor
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _E-stop NC drops the coil → opens the 48 V motor rail (fail-safe). 3 A E-stop can't switch 48 V directly. Price est._
+
 ## I.  CONTROL / TEST (operator console)
 
-- **#64 RadioMaster TX16S Mk II (ELRS)** — EdgeTX, 16CH, Hall gimbals, 4.3" touch · $239.99 · RadioMaster TX16S MkII ELRS
+- **#65 RadioMaster TX16S Mk II (ELRS)** — EdgeTX, 16CH, Hall gimbals, 4.3" touch · $239.99 · RadioMaster TX16S MkII ELRS
   
   - [x] Ordered
   
@@ -534,7 +542,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Manual jog + Lua telemetry console. MOTION ONLY (not firing)._
 
-- **#65 ELRS receiver (CRSF)** — RadioMaster RP3, 2.4 GHz, antenna diversity · $24.99 · RadioMaster RP3
+- **#66 ELRS receiver (CRSF)** — RadioMaster RP3, 2.4 GHz, antenna diversity · $24.99 · RadioMaster RP3
   
   - [x] Ordered
   
@@ -542,7 +550,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold._
 
-- **#66 18650 cells (×2)** — Li-ion, for the TX16S (USB-C charge) · $12 · generic 18650 ×2
+- **#67 18650 cells (×2)** — Li-ion, for the TX16S (USB-C charge) · $12 · generic 18650 ×2
   
   - [ ] Ordered
   
@@ -552,7 +560,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## J.  PRINTED PARTS — TURRET (MAKE)
 
-- **#67 Turret electronics base** — 3D print; holds Pico + 2× CL57T + IMU, vented · MAKE (3D print)
+- **#68 Turret electronics base** — 3D print; holds Pico + 2× CL57T + IMU, vented · MAKE (3D print)
   
   - [ ] Ordered
   
@@ -560,7 +568,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Bolts to the pan base plate; IMU senses base level. cad/scad/turret_electronics_base.scad_
 
-- **#68 Barrel shroud (boresight mount)** — 3D print; holds ZED (below barrel) + lidar (to muzzle) · MAKE (3D print)
+- **#69 Barrel shroud (boresight mount)** — 3D print; holds ZED (below barrel) + lidar (to muzzle) · MAKE (3D print)
   
   - [ ] Ordered
   
@@ -570,9 +578,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $2,042.65
+- **Grand total (to-buy):** $2,057.64
 - **Electronics & payload (A–D):** $730.85
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $369.86
+- **Ground station — rack (H):** $384.85
 - **Control / test (I):** $276.98

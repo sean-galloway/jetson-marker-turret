@@ -96,7 +96,7 @@
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 52 | 10" rack — DeskPi RackMate T2 | 12U, 10" wide, 10.23" (~260 mm) deep | 1 | $100 | $100 | GeeekPi / DeskPi RackMate T2 | Houses compute, PSUs, drivers, displays. Bought; price est. |  |
 | [x] | 53 | 10" rackmount PDU | 8 outlets, surge, 15 A switch, 1U | 1 | $69.99 | $69.99 | ElecVoztile 10" PDU | All AC onboard; one cord to wall. Bought; price est. |  |
-| [ ] | 54 | E-stop (panel-mount) | Latching, 2-pole (or drives contactors) | 1 | $20 | $20 | generic | Drops BOTH the 48 V motor + 12 V solenoid rails. Safety-critical. |  |
+| [x] | 54 | E-stop (22 mm, 2NC 2NO) | Gebildet latching, 3 A, connection plug | 1 | $9.99 | $9.99 | Gebildet (Amazon) | Breaks 12 V solenoid directly + pilots the 48 V contactor (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical. |  |
 | [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $19.99 | $19.99 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
 | [ ] | 56 | DIN rail + terminal/ground bus | Terminal blocks + ground bar | 1 | $20 | $20 | generic | Distribute/fuse 48 V & 12 V (with #28); tie all grounds. |  |
 | [ ] | 57 | Umbilical connectors + bulkhead | Multi-pin circular + USB | 1 | $40 | $40 | generic (aviation GX/M-series) | Rack↔turret disconnect: 48 V motor power, switched solenoid pair (2 cond, from the rack HAT), Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est. |  |
@@ -106,29 +106,30 @@
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
+| [ ] | 64 | DC contactor — 48 V rail | ≥48 VDC, ≥40 A, 12 V coil; E-stop-piloted | 1 | $25 | $25 | generic DC contactor | E-stop NC drops the coil → opens the 48 V motor rail (fail-safe). 3 A E-stop can't switch 48 V directly. Price est. |  |
 
 ## I.  CONTROL / TEST (operator console)
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 64 | RadioMaster TX16S Mk II (ELRS) | EdgeTX, 16CH, Hall gimbals, 4.3" touch | 1 | $239.99 | $239.99 | RadioMaster TX16S MkII ELRS | Manual jog + Lua telemetry console. MOTION ONLY (not firing). |  |
-| [ ] | 65 | ELRS receiver (CRSF) | RadioMaster RP3, 2.4 GHz, antenna diversity | 1 | $24.99 | $24.99 | RadioMaster RP3 | CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold. |  |
-| [ ] | 66 | 18650 cells (×2) | Li-ion, for the TX16S (USB-C charge) | 1 | $12 | $12 | generic 18650 ×2 | Radio battery (not included). Price est. |  |
+| [ ] | 65 | RadioMaster TX16S Mk II (ELRS) | EdgeTX, 16CH, Hall gimbals, 4.3" touch | 1 | $239.99 | $239.99 | RadioMaster TX16S MkII ELRS | Manual jog + Lua telemetry console. MOTION ONLY (not firing). |  |
+| [ ] | 66 | ELRS receiver (CRSF) | RadioMaster RP3, 2.4 GHz, antenna diversity | 1 | $24.99 | $24.99 | RadioMaster RP3 | CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold. |  |
+| [ ] | 67 | 18650 cells (×2) | Li-ion, for the TX16S (USB-C charge) | 1 | $12 | $12 | generic 18650 ×2 | Radio battery (not included). Price est. |  |
 
 ## J.  PRINTED PARTS — TURRET (MAKE)
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 67 | Turret electronics base | 3D print; holds Pico + 2× CL57T + IMU, vented | 1 | $0 | $0 | MAKE (3D print) | Bolts to the pan base plate; IMU senses base level. cad/scad/turret_electronics_base.scad |  |
-| [ ] | 68 | Barrel shroud (boresight mount) | 3D print; holds ZED (below barrel) + lidar (to muzzle) | 1 | $0 | $0 | MAKE (3D print) | Rigid boresight mount. **Gated on the marker scan** (barrel OD/length/bore). |  |
+| [ ] | 68 | Turret electronics base | 3D print; holds Pico + 2× CL57T + IMU, vented | 1 | $0 | $0 | MAKE (3D print) | Bolts to the pan base plate; IMU senses base level. cad/scad/turret_electronics_base.scad |  |
+| [ ] | 69 | Barrel shroud (boresight mount) | 3D print; holds ZED (below barrel) + lidar (to muzzle) | 1 | $0 | $0 | MAKE (3D print) | Rigid boresight mount. **Gated on the marker scan** (barrel OD/length/bore). |  |
 
 ## Totals
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,042.65 |
+| Grand total (to-buy) | $2,057.64 |
 | Electronics & payload (A–D) | $730.85 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $369.86 |
+| Ground station — rack (H) | $384.85 |
 | Control / test (I) | $276.98 |
