@@ -524,7 +524,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Racks the TL-SG108E. Bought; price est._
 
-- **#64 48 V cutoff solenoid (E-stop)** — 48 V continuous-duty, 4-term, 200 A cont · $20 · Universal 48V golf-cart (B0076Q9HNM, Amazon) · https://www.amazon.com/Golf-Carts-Heavy-Continuous-Solenoid/dp/B0076Q9HNM · backups: EZGO 73231G01 (B0076Q9FFM), GCK Yamaha (B00S0QR68K)
+- **#64 48 V cutoff solenoid (E-stop)** — 48 V, 4-term, 200 A work / 500 A inrush, copper · $34.99 · 10L0L #586 (73231G01 repl., Amazon) · backups: universal (B0076Q9HNM), EZGO 73231G01 (B0076Q9FFM)
   
   - [ ] Ordered
   
@@ -578,9 +578,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $2,052.64
+- **Grand total (to-buy):** $2,067.63
 - **Electronics & payload (A–D):** $730.85
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
-- **Ground station — rack (H):** $379.85
+- **Ground station — rack (H):** $394.84
 - **Control / test (I):** $276.98
