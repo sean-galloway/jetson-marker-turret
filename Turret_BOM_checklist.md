@@ -500,7 +500,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _2 bars/pack; rack cable management._
 
-- **#61 Jetson/Pi 5/Pico rack shelf** — 3D print; standoffs + vents · MAKE (3D print)
+- **#61 3U compute bay — IMSAI-8080 face + Jetson + Pi 5** — 3U front = IMSAI bezel; drop-in Jetson pocket + Pi 5/vents · MAKE (3D print) · see `turret-gimbal/docs/Imsai_Panel_HMI.md`, panel PCB in RaspberyPi-IMSAI-8080 sub-project
   
   - [ ] Ordered
   
