@@ -532,6 +532,12 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _E-stop NC drops the coil → opens the 48 V motor rail (fail-safe). 3 A E-stop can't switch 48 V directly. Price est._
 
+
+- **#70 IMSAI panel switch harness (J3/J4)** — JST-XH 2.5 mm: XHP-10 → J3 (data) + XHP-6 → J4 (cmd) + SXH-001T contacts, or pre-crimped XH pigtails; 24–26 AWG, ~15–20 cm · $9 · JST-XH kit / pigtails (Amazon) · off-board toggles → PCB; LEDs board-mounted (no harness); + short USB-C Pi→panel
+  
+  - [ ] Ordered
+  
+  - [ ] Received
 ## I.  CONTROL / TEST (operator console)
 
 - **#65 RadioMaster TX16S Mk II (ELRS)** — EdgeTX, 16CH, Hall gimbals, 4.3" touch · $239.99 · RadioMaster TX16S MkII ELRS

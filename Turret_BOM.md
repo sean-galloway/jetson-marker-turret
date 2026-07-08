@@ -107,6 +107,7 @@
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
 | [ ] | 64 | 48 V cutoff solenoid (E-stop) | 48 V, 4-term, 200 A work / 500 A inrush, copper | 1 | $34.99 | $34.99 | 10L0L #586 (73231G01 repl., Amazon) | 48 V continuous-duty SPST-NO solenoid (2 coil studs 0.19" + 2 load studs 5/16"). E-stop NC breaks the coil current → opens the 48 V motor rail (fail-safe). Contacts rated to switch 48 VDC (golf-cart main circuit). Feed coil from the line side of the 48 V rail. Backups: universal (B0076Q9HNM), EZGO 73231G01 (B0076Q9FFM). |  |
+| [ ] | 70 | IMSAI panel switch harness (J3/J4) | JST-XH 2.5 mm mates: XHP-10 → J3 (data), XHP-6 → J4 (cmd), + SXH-001T contacts (~20); or pre-crimped XH pigtails. 24–26 AWG stranded, ~15–20 cm | 1 | $9 | $9 | JST-XH kit / pre-crimped pigtails (Amazon) | Off-board toggles → PCB (mates the PCB's S10B-XH-A / S6B-XH-A). **J3 (10p):** `3V3 · SW0-7 · GND` — 8 data commons to SW0-7; each toggle's two throws bussed to the 3V3 + GND rails at the bezel. **J4 (6p):** 4 command commons + GND (one throw → GND; pull-ups on-board). Daisy-chain the 3V3/GND rails across the toggle lugs; solder to the MTS solder lugs. All SHORT (fascia → PCB, same bay). LEDs are board-mounted → no harness. Also needs a short USB-C: Pi 5 → panel (data + logic 5 V); 2nd USB-C = LED rail. |  |
 
 ## I.  CONTROL / TEST (operator console)
 
@@ -127,9 +128,9 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,094.47 |
+| Grand total (to-buy) | $2,103.47 |
 | Electronics & payload (A–D) | $779.69 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $372.84 |
+| Ground station — rack (H) | $381.84 |
 | Control / test (I) | $276.98 |
