@@ -9,31 +9,31 @@
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 1 | Paintball marker | Bore-sighted reference for the ZED | 1 | $0 | $0 | owned | Owned. Bore aligns to the pan axis; hopper top-rear. |  |
-| [ ] | 2 | Push-pull solenoid (trigger) | 12 V, 1 A, 20 N, 10 mm stroke | 1 | $13.99 | $13.99 | TOMMSILE 0837B-12V (Amazon) | Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan. Wire to a HAT high-current channel (CH1-4); onboard TVS handles flyback. |  |
-| [ ] | 3 | Arming switch (SPST toggle) | SPST latching, 10 A DC @ 12 V, pre-wired; in the 12 V solenoid line | 1 | $7.99 | $7.99 | Taiss KNS-1 (2-pack, Amazon) | HARDWARE INTERLOCK: open = cannot fire. Safety-critical. |  |
-| [ ] | 4 | Laser sight (boresight aid) | Mounts on top of the barrel | 1 | $15 | $15 | generic | Zero to impact point at a set range, like a rifle. |  |
+| [x] | 2 | Push-pull solenoid (trigger) | 12 V, 1 A, 20 N, 10 mm stroke | 1 | $13.99 | $13.99 | TOMMSILE 0837B-12V (Amazon) | Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan. Wire to a HAT high-current channel (CH1-4); onboard TVS handles flyback. |  |
+| [x] | 3 | Arming switch (SPST, LED, safety cover) | SPST maintained, 20 A @ 12 V DC, illuminated, flip-up safety cover, 12 mm panel hole; in the 12 V solenoid+ line | 1 | $9.66 | $9.66 | Twidec ASW-07DRGYMZ (3-pack, Amazon) | HARDWARE INTERLOCK: open = cannot fire. Safety-critical; in series with the 12 V solenoid+. 3rd pin = LED → wire to GND, lights RED when armed. Flip cover = deliberate arm. This is the real interlock — NOT the panel's soft ARM paddle. |  |
+| [x] | 4 | Laser sight (boresight aid) | Mounts on top of the barrel | 1 | $15 | $15 | generic | Zero to impact point at a set range, like a rifle. |  |
 | [x] | 5 | ZED 2i stereo camera | 4 mm, polarizer; USB 3.0 | 1 | $0 | $0 | Stereolabs ZED 2i 4mm | Owned (~$549). Boresighted below the barrel; routes to the Jetson. |  |
 | [x] | 6 | ZED USB3 locking cable (3 m) | USB 3.0 Type-C locking | 1 | $0 | $0 | Stereolabs | Owned. |  |
-| [ ] | 7 | 10-DOF IMU (BNO055 + BMP280) | I2C Gravity plug (no solder); run IMU mode (no mag) | 1 | $25.90 | $25.90 | DFRobot Gravity SEN0253 | Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Local I2C to the on-turret Pico (short run; no extender). | [link](https://www.dfrobot.com/product-1793.html) |
-| [ ] | 8 | Benewake TF03 lidar (100 m) | Single-point rangefinder; UART/CAN; IP67 | 1 | $220 | $220 | TF03-100 | Boresighted to the muzzle; range along the line of fire. |  |
-| [ ] | 9 | Armed/Safe LED indicator | Red+green LEDs + resistors; hardware-tied | 1 | $3 | $3 | generic | RED ARMED off the armed rail (hardware-true); GREEN SAFE. On the turret. |  |
+| [x] | 7 | 10-DOF IMU (BNO055 + BMP280) | I2C Gravity plug (no solder); run IMU mode (no mag) | 1 | $25.90 | $25.90 | DFRobot Gravity SEN0253 | Leveling + stabilization; rigid to platform. Use IMU (no-mag) mode near steppers. Local I2C to the on-turret Pico (short run; no extender). | [link](https://www.dfrobot.com/product-1793.html) |
+| [x] | 8 | Benewake TF03 lidar (100 m) | Single-point rangefinder; UART/CAN; IP67 | 1 | $220 | $220 | TF03-100 | Boresighted to the muzzle; range along the line of fire. |  |
+| [x] | 9 | Armed/Safe LED indicator (RED + GREEN) | 12 mm metal panel indicator, 12 V, IP67, pre-wired w/ internal resistor; on the turret | 2 | $13.59 | $27.18 | FILN 12mm IP67 (Amazon; 2-pk per colour) | RED across the 12 V armed rail = hardware-true ARMED. GREEN SAFE: cleanest is a small 12 V SPDT relay (coil on the armed rail → NO drives RED, NC drives GREEN = true armed/safe XOR); simple fallback = wire GREEN to the always-on 12 V as a power/ready light. Buy 1 red + 1 green 2-pk (2 spare), or singles ~$7 ea. |  |
 
 ## B.  COMPUTE & CONTROL — ON THE TRIPOD
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 10 | NVIDIA Jetson AGX Orin 32 GB | Vision/targeting module | 1 | $0 | $0 | AGX Orin 32GB | Owned. Perception/targeting. |  |
-| [ ] | 11 | Raspberry Pi 5 (8 GB) | Supervisor | 1 | $80 | $80 | SC1112 | Setpoints, IMU/lidar, arming, state. |  |
-| [ ] | 12 | Pi 5 Active Cooler | — | 1 | $5 | $5 | SC1148 | Pi 5 throttles without it. |  |
+| [x] | 11 | Raspberry Pi 5 (8 GB) | Supervisor | 1 | $80 | $80 | SC1112 | Setpoints, IMU/lidar, arming, state. |  |
+| [x] | 12 | Pi 5 Active Cooler | — | 1 | $5 | $5 | SC1148 | Pi 5 throttles without it. |  |
 | [ ] | 13 | Pi 27 W USB-C PD supply | 5.1 V / 5 A | 1 | $12 | $12 | SC1158 | Powers the Pi + HAT reliably. |  |
-| [ ] | 14 | microSD 64 GB A2 | — | 1 | $10 | $10 | SanDisk SDSQXAV-064G | Pi OS / boot. |  |
-| [ ] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). |  |
-| [ ] | 16 | GPIO stacking header, 2×20 tall | — | 1 | $3 | $3 | Adafruit 2223 | Passes GPIO up past the HAT. |  |
+| [x] | 14 | microSD 64 GB A2 | — | 1 | $10 | $10 | SanDisk SDSQXAV-064G | Pi OS / boot. |  |
+| [x] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). |  |
+| [x] | 16 | GPIO stacking header, 2×20 tall | — | 1 | $3 | $3 | Adafruit 2223 | Passes GPIO up past the HAT. |  |
 | [ ] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + Pico), spare GPIO. |  |
 | [ ] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |
-| [ ] | 19 | Limit / homing switches | microswitch; GPIO to Pico | 2 | $3 | $6 | generic | One per axis → power-up homing → absolute aiming. |  |
-| [ ] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T. ON THE TURRET with the drivers; reads IMU/limits/LED locally. |  |
-| [ ] | 21 | Pico debug OLED (SSD1306) | 128×64; I2C | 1 | $9 | $9 | Adafruit 938 | Pico debug: current routine/state, step/dir, homing, heartbeat, faults. |  |
+| [x] | 19 | Limit / homing switches | 3D-printer mechanical endstop: lever microswitch on PCB, 1 m cable + plug, trigger LED; NO; GPIO to Pico | 1 | $10.99 | $10.99 | R REIFENG endstop (Amazon; 6-pack) | One per axis → power-up homing → absolute aiming. 6-pack = 2 used + 4 spare. Signal → Pico GPIO w/ pull-up, GND → GND; LED pin needs Vcc (optional). NO is fine; microswitch has NC too if you want fail-safe (broken wire = trip). Add a flag/tab on each axis to trip at home. |  |
+| [x] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T. ON THE TURRET with the drivers; reads IMU/limits/LED locally. |  |
+| [x] | 21 | Pico debug OLED (SSD1306) | 128×64; I2C | 1 | $9 | $9 | Adafruit 938 | Pico debug: current routine/state, step/dir, homing, heartbeat, faults. |  |
 
 ## C.  DISPLAYS & CALIBRATION
 
@@ -51,7 +51,7 @@
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
 | [x] | 27 | 12 V solenoid supply (adjustable) | 3–24 V, 3 A, 72 W; set & lock at 12 V | 1 | $17.99 | $17.99 | Wefomey adjustable (Amazon) | Solenoid rail. Set 12 V on the display + lock the knob; center-positive tip. Motors use 48 V (#41). |  |
 | [ ] | 28 | Circuit protection — fuses + 48 V DC breaker | ATC inline holders + fuse kit (12 V/logic) + DIHOOL 15 A DC breaker (48 V) | 1 | $26 | $26 | SIM&NAT (B0CN6TVHKH) + DIHOOL (B0CFCLPGNY) | ATC blade fuses are only 32 VDC-rated → use them on the 12 V solenoid + logic rails; protect the 48 V motor rail with a DC-rated breaker (also a manual disconnect). Tie ALL grounds together. | [fuses](https://www.amazon.com/SIM-NAT-Automotive-Standard-Replacement/dp/B0CN6TVHKH) · [breaker](https://www.amazon.com/DIHOOL-Disconnect-Breaker-Circuit-Outdoor/dp/B0CFCLPGNY) |
-| [ ] | 29 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Pi↔Jetson via the rack switch (#55); short rack-internal patch — not on the umbilical. |  |
+| [x] | 29 | Ethernet cable, Cat6 (short) | — | 1 | $6 | $6 | generic | Pi↔Jetson via the rack switch (#55); short rack-internal patch — not on the umbilical. |  |
 | [ ] | 30 | Jumper wires (DuPont M-F, M-M) | — | 1 | $7 | $7 | generic | Signals: IMU, lidar, Pico, switches. |  |
 | [ ] | 31 | Hookup wire, 18–20 AWG | — | 1 | $10 | $10 | generic | Motor, solenoid, power runs. |  |
 | [ ] | 32 | Wire ferrules / crimp terminals | — | 1 | $9 | $9 | generic | Driver/terminal terminations. |  |
@@ -60,15 +60,15 @@
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 33 | Motor + driver kit | NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 | 2 | $85.99 | $171.98 | 23HS45-4204D-E1000 / Amazon B0C6943QBM | STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1 |  |
-| [ ] | 34 | Planetary gearbox 5:1 | NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 | 2 | $57.99 | $115.98 | Ratio 5:1 Nema 23 … φ8mm | Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor |  |
-| [ ] | 35 | Turntable bearing (lazy susan) | Heavy-duty steel/alu, OPEN center, 6–8 in | 1 | $20 | $20 | Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` | 8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)** | [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true) |
-| [ ] | 36 | Mounted ball bearing (tilt) | Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") | 1 | $15 | $15 | McMaster: "mounted ball bearing" · `5968K71` | Match pattern to plate 05 | [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/) |
+| [x] | 33 | Motor + driver kit | NEMA 23 closed-loop 3.0 N·m + CL57T V4.1 | 2 | $85.99 | $171.98 | 23HS45-4204D-E1000 / Amazon B0C6943QBM | STEPPERONLINE Closed Loop Stepper Motor 1 Axis CNC KIT 2.0 Nm/283.28oz.in Nema 23 Motor & 0-8.0A 24-48VDC Closed Loop Stepper Driver CL57T V4.1 |  |
+| [x] | 34 | Planetary gearbox 5:1 | NEMA 23, Ø8 bore, 15 arcmin; out Ø14 / Ø40 reg / 4×Ø5.2@47.14 | 2 | $57.99 | $115.98 | Ratio 5:1 Nema 23 … φ8mm | Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor |  |
+| [x] | 35 | Turntable bearing (lazy susan) | Heavy-duty steel/alu, OPEN center, 6–8 in | 1 | $20 | $20 | Search "turntable bearing" / "lazy susan bearing" · McMaster: Ball Bearing Turntables · `193019173251` | 8INCH-SWIVEL-LAZY-SUSAN — **measured part: see [Bearing_Dimensions](turret-gimbal/docs/Bearing_Dimensions.md)** | [link](https://vxb.com/checkouts/cn/hWNDQZKNqS7FLBgAANhKclaa/en-us/thank-you?_r=AQABSTga-mN3Yrg_UjagK1rtzQSFz0x6rcQo9Jd1a6PLjnA&skip_shop_pay=true) |
+| [x] | 36 | Mounted ball bearing (tilt) | Flange-mount or pillow block; bore = pin Ø (e.g. 1/2") | 1 | $15 | $15 | McMaster: "mounted ball bearing" · `5968K71` | Match pattern to plate 05 | [link](https://www.mcmaster.com/products/mounted-ball-bearings/mounted-ball-bearings-with-two-bolt-flange~~/mounted-bearing-type~two-bolt-flange-mount/) |
 | [ ] | 37 | Mounting hub | Clamps gearbox Ø14 shaft → bolts to plate; bore 14 mm | 2 | $18 | $36 | McMaster: "mounting hub" · Ruland · `FHT-MCL-14-SS` | Or rigid shaft coupling; no keyway | [link](https://www.ruland.com/fht-mcl-14-ss.html#) |
 | [ ] | 38 | Shoulder screw (tilt pin) | Shoulder Ø = #36 bearing bore (e.g. 1/2") | 1 | $8 | $8 | McMaster: "shoulder screw" · `90298A716` | Far end of tilt axis; pairs with #36 | [link](https://www.mcmaster.com/products/shoulder-screws/shoulder-diameter~1-2/shoulder-length~1-1-2/) |
 | [ ] | 39 | L-brackets / gussets | Join yoke side-plates to turntable + stiffen | 8 | $4 | $32 | 8020 / McMaster | Bolt-together corners | [link](https://www.mcmaster.com/products/l-brackets/brackets-1~/) |
 | [ ] | 40 | Standoffs | M5, raise base plate over tripod adapter | 4 | $3 | $12 | McMaster | Length = motor/gbx clearance |  |
-| [ ] | 41 | Power supply 24–48 V | 48 V, 5–10 A | 1 | $40 | $40 | select | DROK 48V Power Supply, AC to DC Converter 0-48V 10A 480W Variable Power Supply, AC to DC Adapter Low Voltage Transformer |  |
+| [x] | 41 | Power supply 24–48 V | 48 V, 5–10 A | 1 | $40 | $40 | select | DROK 48V Power Supply, AC to DC Converter 0-48V 10A 480W Variable Power Supply, AC to DC Adapter Low Voltage Transformer |  |
 | [ ] | 42 | Fasteners + NUTS | M5/M6/M3 SHCS, nuts, washers (clearance-hole build) | 1 | $35 | $35 | McMaster / assorted · `92275A110` | Nuts replace tapping | [link](https://www.mcmaster.com/products/socket-head-cap-screw-assortments/system-of-measurement~metric/) |
 | [ ] | 43 | Dowel pins | Ø4 mm (PA-4 interface) | 1 | $8 | $8 | McMaster · `91595A161` | Reamed-fit | [link](https://www.mcmaster.com/products/dowel-pins/dowel-pins-1~~/system-of-measurement~metric/diameter~4-0000-mm/diameter~4-000-mm/diameter~4-mm/) |
 | [ ] | 44 | Consumables | Threadlocker (medium) + anti-seize | 1 | $12 | $12 | — · `7458A65` | Loctite 243 kits | [link](https://www.mcmaster.com/products/loctite-kits/manufacturer-model-number~243/) |
@@ -112,9 +112,9 @@
 
 | Bought | # | Item | Spec | Qty | Unit $ | Line $ | P/N / Source | Notes | Link |
 |:------:|:--|:-----|:-----|:---:|:------:|:------:|:-------------|:------|:----:|
-| [ ] | 65 | RadioMaster TX16S Mk II (ELRS) | EdgeTX, 16CH, Hall gimbals, 4.3" touch | 1 | $239.99 | $239.99 | RadioMaster TX16S MkII ELRS | Manual jog + Lua telemetry console. MOTION ONLY (not firing). |  |
-| [ ] | 66 | ELRS receiver (CRSF) | RadioMaster RP3, 2.4 GHz, antenna diversity | 1 | $24.99 | $24.99 | RadioMaster RP3 | CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold. |  |
-| [ ] | 67 | 18650 cells (×2) | Li-ion, for the TX16S (USB-C charge) | 1 | $12 | $12 | generic 18650 ×2 | Radio battery (not included). Price est. |  |
+| [x] | 65 | RadioMaster TX16S Mk II (ELRS) | EdgeTX, 16CH, Hall gimbals, 4.3" touch | 1 | $239.99 | $239.99 | RadioMaster TX16S MkII ELRS | Manual jog + Lua telemetry console. MOTION ONLY (not firing). |  |
+| [x] | 66 | ELRS receiver (CRSF) | RadioMaster RP3, 2.4 GHz, antenna diversity | 1 | $24.99 | $24.99 | RadioMaster RP3 | CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold. |  |
+| [x] | 67 | 18650 cells (×2) | Li-ion, for the TX16S (USB-C charge) | 1 | $12 | $12 | generic 18650 ×2 | Radio battery (not included). Price est. |  |
 
 ## J.  PRINTED PARTS — TURRET (MAKE)
 
@@ -127,8 +127,8 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,063.63 |
-| Electronics & payload (A–D) | $748.85 |
+| Grand total (to-buy) | $2,094.47 |
+| Electronics & payload (A–D) | $779.69 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
 | Ground station — rack (H) | $372.84 |

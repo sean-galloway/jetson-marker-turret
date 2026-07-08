@@ -22,7 +22,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Trigger actuator; 12 V switched. 20 N is end-of-stroke; confirm trigger force after marker scan. Wire to a HAT high-current channel (CH1-4); onboard TVS handles flyback._
 
-- **#3 Arming switch (SPST toggle)** — SPST latching, 10 A DC @ 12 V, pre-wired; in the 12 V solenoid line · $7.99 · Taiss KNS-1 (2-pack, Amazon)
+- **#3 Arming switch (SPST, LED, safety cover)** — SPST maintained, 20 A @ 12 V DC, illuminated, flip-up cover, 12 mm hole; in the 12 V solenoid+ line · $9.66 · Twidec ASW-07DRGYMZ (3-pack, Amazon) · 3rd pin = LED→GND (RED when armed); real interlock, not the panel's soft ARM
   
   - [x] Ordered
   
@@ -70,7 +70,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Boresighted to the muzzle; range along the line of fire._
 
-- **#9 Armed/Safe LED indicator** — Red+green LEDs + resistors; hardware-tied · $3 · generic
+- **#9 Armed/Safe LED indicator (RED + GREEN)** — 12 mm metal, 12 V, IP67, pre-wired w/ internal resistor; on the turret · $27.18 · FILN 12mm IP67 (1 red + 1 green 2-pk) · RED on armed rail; GREEN via 12 V SPDT relay (XOR) or as power/ready light
   
   - [ ] Ordered
   
@@ -152,7 +152,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - _Mount/space the HAT + Pi._
 
-- **#19 Limit / homing switches** — microswitch; GPIO to Pico · $6 · generic
+- **#19 Limit / homing switches** — 3D-printer mechanical endstop (lever microswitch on PCB, 1 m cable + plug, trigger LED, NO); GPIO to Pico · $10.99 · R REIFENG endstop (6-pack; 2 used + 4 spare)
   
   - [x] Ordered
   
@@ -238,9 +238,9 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#29 Ethernet cable, Cat6 (short)** — — · $6 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Pi↔Jetson via the rack switch (#55); short rack-internal patch — not on the umbilical._
 
@@ -282,7 +282,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Ratio 5:1 Planetary Gearbox for Nema 23 Stepper Motor 57-67mm Backlash 15 arcmin Input Shaft 21mm φ8mm Planetary Reducer for 57 Step Motor_
 
@@ -538,7 +538,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Manual jog + Lua telemetry console. MOTION ONLY (not firing)._
 
@@ -546,15 +546,15 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _CRSF → Pico UART (3.3 V logic); 5 V power. Set failsafe → Pico stop-hold._
 
 - **#67 18650 cells (×2)** — Li-ion, for the TX16S (USB-C charge) · $12 · generic 18650 ×2
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Radio battery (not included). Price est._
 
