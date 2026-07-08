@@ -25,12 +25,12 @@
 | [x] | 10 | NVIDIA Jetson AGX Orin 32 GB | Vision/targeting module | 1 | $0 | $0 | AGX Orin 32GB | Owned. Perception/targeting. |  |
 | [x] | 11 | Raspberry Pi 5 (8 GB) | Supervisor | 1 | $80 | $80 | SC1112 | Setpoints, IMU/lidar, arming, state. |  |
 | [x] | 12 | Pi 5 Active Cooler | — | 1 | $5 | $5 | SC1148 | Pi 5 throttles without it. |  |
-| [ ] | 13 | Pi 27 W USB-C PD supply | 5.1 V / 5 A | 1 | $12 | $12 | SC1158 | Powers the Pi + HAT reliably. |  |
+| [x] | 13 | Pi 27 W USB-C PD supply | 5.1 V / 5 A | 1 | $12 | $12 | SC1158 | Powers the Pi + HAT reliably. |  |
 | [x] | 14 | microSD 64 GB A2 | — | 1 | $10 | $10 | SanDisk SDSQXAV-064G | Pi OS / boot. |  |
 | [x] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). |  |
 | [x] | 16 | GPIO stacking header, 2×20 tall | — | 1 | $3 | $3 | Adafruit 2223 | Passes GPIO up past the HAT. |  |
-| [ ] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + Pico), spare GPIO. |  |
-| [ ] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |
+| [x] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + Pico), spare GPIO. |  |
+| [x] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |
 | [x] | 19 | Limit / homing switches | 3D-printer mechanical endstop: lever microswitch on PCB, 1 m cable + plug, trigger LED; NO; GPIO to Pico | 1 | $10.99 | $10.99 | R REIFENG endstop (Amazon; 6-pack) | One per axis → power-up homing → absolute aiming. 6-pack = 2 used + 4 spare. Signal → Pico GPIO w/ pull-up, GND → GND; LED pin needs Vcc (optional). NO is fine; microswitch has NC too if you want fail-safe (broken wire = trip). Add a flag/tab on each axis to trip at home. |  |
 | [x] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T. ON THE TURRET with the drivers; reads IMU/limits/LED locally. |  |
 | [x] | 21 | Pico debug OLED (SSD1306) | 128×64; I2C | 1 | $9 | $9 | Adafruit 938 | Pico debug: current routine/state, step/dir, homing, heartbeat, faults. |  |
@@ -42,8 +42,8 @@
 | [x] | 22 | 1U rack display — Pi 5 (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $89.99 | $89.99 | GeeekPi 6.91" 1U | Pi 5 status/console bar. Bought; price est. |  |
 | [x] | 23 | 1U rack display — Jetson (GeeekPi 6.91") | 1424×280 touch, 1U rack mount | 1 | $89.99 | $89.99 | GeeekPi 6.91" 1U | Jetson perception/status bar. Bought; price est. |  |
 | [x] | 24 | Checkerboard calibration target | Rigid flat backing | 1 | $0 | $0 | owned | Owned. Camera + boresight calibration. |  |
-| [ ] | 25 | micro-HDMI → HDMI cable | — | 1 | $7 | $7 | generic | Pi 5 micro-HDMI → 6.91" display. |  |
-| [ ] | 26 | DisplayPort → HDMI adapter | — | 1 | $9 | $9 | generic | AGX Orin DP → 6.91" display; verify. |  |
+| [x] | 25 | micro-HDMI → HDMI cable | — | 1 | $7 | $7 | generic | Pi 5 micro-HDMI → 6.91" display. |  |
+| [x] | 26 | DisplayPort → HDMI adapter | — | 1 | $9 | $9 | generic | AGX Orin DP → 6.91" display; verify. |  |
 
 ## D.  POWER & WIRING
 

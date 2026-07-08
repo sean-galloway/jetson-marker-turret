@@ -140,7 +140,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Expose SPI (IMU), UART (lidar + Pico), spare GPIO._
 
@@ -204,17 +204,17 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 - **#25 micro-HDMI → HDMI cable** — — · $7 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _Pi 5 micro-HDMI → 6.91" display._
 
 - **#26 DisplayPort → HDMI adapter** — — · $9 · generic
   
-  - [ ] Ordered
+  - [x] Ordered
   
-  - [ ] Received
+  - [x] Received
   
   - _AGX Orin DP → 6.91" display; verify._
 
