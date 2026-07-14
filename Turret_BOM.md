@@ -103,11 +103,10 @@
 | [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
 | [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $0 | $0 | MAKE (3D print) | Fill gaps; airflow. 3D-printed alongside the E-stop panel + PSU mount. |  |
 | [x] | 60 | Cable manager (0.5U D-ring bar) | Tecmojo 2-pack, metal, 3 D-rings, 10" | 1 | $9.90 | $9.90 | Tecmojo 0.5U (2-pack) | 2 bars/pack; rack cable management. |  |
-| [ ] | 61 | 3U compute bay — IMSAI-8080 face + Jetson + Pi 5 | 3D print; 3U front = the IMSAI bezel; drop-in Jetson pocket + Pi 5/vents | 1 | $0 | $0 | MAKE (3D print) | Merged: the 3U rack face IS the IMSAI-8080 smart-panel bezel (LED windows + 12 toggle cutouts + 6 PCB bosses); the same bay holds the Jetson (drop-in pocket) and the Pi 5 (standoffs, directly behind the bezel = short RP2040 USB link). Bottom-intake/rear-exhaust cooling (bezel blocks the front). CAD: `turret-gimbal/cad/scad/rack_shelf.scad`. Panel PCB/firmware + its own BOM live in the **RaspberyPi-IMSAI-8080** sub-project (PCBs on order). **SAFETY: panel is a soft USB status/HMI peripheral only — never in the arming/E-stop/firing path** (#3/#54/#9 stay hardware). LED/switch → turret-telemetry map: `turret-gimbal/docs/Imsai_Panel_HMI.md`. |  |
+| [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
 | [ ] | 64 | 48 V cutoff solenoid (E-stop) | 48 V, 4-term, 200 A work / 500 A inrush, copper | 1 | $34.99 | $34.99 | 10L0L #586 (73231G01 repl., Amazon) | 48 V continuous-duty SPST-NO solenoid (2 coil studs 0.19" + 2 load studs 5/16"). E-stop NC breaks the coil current → opens the 48 V motor rail (fail-safe). Contacts rated to switch 48 VDC (golf-cart main circuit). Feed coil from the line side of the 48 V rail. Backups: universal (B0076Q9HNM), EZGO 73231G01 (B0076Q9FFM). |  |
-| [ ] | 70 | IMSAI panel switch harness (J3/J4) | JST-XH 2.5 mm mates: XHP-10 → J3 (data), XHP-6 → J4 (cmd), + SXH-001T contacts (~20); or pre-crimped XH pigtails. 24–26 AWG stranded, ~15–20 cm | 1 | $9 | $9 | JST-XH kit / pre-crimped pigtails (Amazon) | Off-board toggles → PCB (mates the PCB's S10B-XH-A / S6B-XH-A). **J3 (10p):** `3V3 · SW0-7 · GND` — 8 data commons to SW0-7; each toggle's two throws bussed to the 3V3 + GND rails at the bezel. **J4 (6p):** 4 command commons + GND (one throw → GND; pull-ups on-board). Daisy-chain the 3V3/GND rails across the toggle lugs; solder to the MTS solder lugs. All SHORT (fascia → PCB, same bay). LEDs are board-mounted → no harness. Also needs a short USB-C: Pi 5 → panel (data + logic 5 V); 2nd USB-C = LED rail. |  |
 
 ## I.  CONTROL / TEST (operator console)
 
@@ -128,9 +127,9 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,103.47 |
+| Grand total (to-buy) | $2,094.47 |
 | Electronics & payload (A–D) | $779.69 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
-| Ground station — rack (H) | $381.84 |
+| Ground station — rack (H) | $372.84 |
 | Control / test (I) | $276.98 |
