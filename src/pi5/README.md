@@ -18,8 +18,8 @@ step/dir intent down to the Pico.
 - Command the Pico; monitor its heartbeat. (The debug OLED lives on the Pico.)
 
 ## Inputs / outputs
-- **In:** Jetson setpoints (Ethernet); TF03 lidar; orientation + limit/homing status relayed from the Pico (UART).
-- **Out:** commands to Pico (UART); armed/safe LED + 1U rack display; solenoid
+- **In:** Jetson setpoints (Ethernet); TF03 lidar; orientation + limit/homing status relayed from the Pico (RS-485 replies).
+- **Out:** commands + 20 ms heartbeat to Pico (UART → RS-485 transceiver, umbilical; the Pi 5 is the only bus master); armed/safe LED + 1U rack display; solenoid
   HAT (gated by the hardware arming interlock).
 
 ## Safety

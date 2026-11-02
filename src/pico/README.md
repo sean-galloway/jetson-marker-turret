@@ -6,7 +6,7 @@ fast, and safe — it takes intent from the Pi 5 and never decides to fire.
 
 **Lives on the turret**, co-located with the 2× CL57T drivers and the motors, so
 the IMU / limit switches / LED are local short runs. The umbilical to the rack
-carries only power + Pi 5 comms (UART/USB) + the ZED USB — not step/dir or phases.
+carries only power + Pi 5 comms (RS-485, one twisted pair) + the ZED USB — not step/dir or phases.
 
 ## Responsibilities
 - Generate step/dir for pan + tilt to the 2× CL57T drivers.
@@ -29,9 +29,11 @@ carries only power + Pi 5 comms (UART/USB) + the ZED USB — not step/dir or pha
 - Relay orientation/state up to the Pi 5 for its state machine + GUI.
 
 ## Inputs / outputs
-- **In:** commands + heartbeat from the Pi 5 (UART); limit/homing switches (GPIO);
+- **In:** commands + heartbeat from the Pi 5 (UART → RS-485 transceiver; the **only** source of motion commands); limit/homing switches (GPIO);
   BNO055 IMU (I2C); ELRS RX (CRSF, UART).
-- **Out:** step/dir to CL57T V4.1 drivers; debug OLED (I2C); orientation to Pi 5 (UART).
+- **Out:** step/dir to CL57T V4.1 drivers; debug OLED (I2C); orientation to Pi 5 (one reply per Pi 5 frame — never unprompted, the link is half-duplex).
+- **USB:** to the optional Pi Zero 2 W maintenance node (`turret-zero`) for flashing
+  (`mpremote`) and logs over Wi-Fi. Not a command path; flash with the motor rail off.
 
 ## Runtime
 MicroPython firmware — no on-device pip. `requirements-dev.txt` holds host tools

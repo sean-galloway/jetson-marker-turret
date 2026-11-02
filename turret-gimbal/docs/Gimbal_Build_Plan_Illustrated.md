@@ -96,7 +96,7 @@ The gearbox output is identical on both axes (Ø14 h7 shaft, Ø40 h7 register, 4
 
 ![Connection map](images/fig_connection_map.png)
 
-Each device sits on its native bus: I2C (solenoid HAT, OLED), SPI (IMU), UART (lidar, Pico), Ethernet (Jetson), USB 3.0 (ZED → Jetson). Nothing timing-critical shares a bus with high-rate traffic.
+Each device sits on its native bus: I2C (solenoid HAT, OLED), SPI (IMU), UART (lidar), RS-485 (Pico, over the umbilical), Ethernet (Jetson), USB 3.0 (ZED → Jetson). Nothing timing-critical shares a bus with high-rate traffic.
 
 ---
 
@@ -114,7 +114,7 @@ Run in order and store the results: home each axis to its switch (giving absolut
 2. **Tilt structure:** build the yoke on the pan turntable; install the tilt shaft in bearing blocks; mount the tilt motor + gearbox.
 3. **Payload plate:** bolt the printed platform to the tilt shaft; position the payload so its CG is within ~10 cm of the tilt axis; balance.
 4. **Limit switches:** one per axis at a repeatable reference; mechanical hard stops just beyond.
-5. **Wiring:** motors→drivers (phases + encoder), drivers→24–48 V, Pico→drivers, switches→Pico, Pico↔Pi. Common ground, fuse the rails, service loop on the Ethernet run.
+5. **Wiring:** motors→drivers (phases + encoder), drivers→24–48 V, Pico→drivers, switches→Pico, Pico↔Pi (RS-485 pair). Common ground, fuse the rails, service loop on the Ethernet run.
 
 ---
 

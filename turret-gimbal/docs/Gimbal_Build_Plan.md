@@ -27,7 +27,7 @@ Jetson Orin            Raspberry Pi 5              Pico (RP2040)        Drivers 
 (vision/targeting) --> (supervisor)          -->  (motion coprocessor) --> (closed-loop)
   ZED depth+track       IMU, lidar, arming,        real-time step/dir,      NEMA 23 CL
   "aim here"            state, setpoints           profiling, homing        steppers
-        Ethernet              UART/SPI                  step/dir/enable
+        Ethernet          RS-485 (umbilical)            step/dir/enable
 ```
 
 - **Jetson** decides *where* to aim (pixel offset → angle), sends setpoints over Ethernet.
@@ -102,7 +102,7 @@ NEMA 23 (~3 N·m) × 5:1 ≈ 15 N·m at axis (before gearbox losses)  →  ~1.5�
 ### 5.1 Motors and drivers
 
 - 2 × NEMA 23 **closed-loop** stepper (integrated encoder). Closed-loop catches any step missed under recoil load, so position is never silently lost.
-- 2 × closed-loop driver (CL57-class). Wire motor phases and the encoder cable per the driver; set the running current to the motor rating, microstepping to taste (start ~8–16×).
+- 2 × closed-loop driver (CL57-class). Wire motor phases and the encoder cable per the driver; set S1, the DIP switches and S3 per *Drive_and_Cabling.md → Drivers* (S1 ships at half current; S3 ships at 24 V).
 
 ### 5.2 Power rails
 
@@ -120,7 +120,7 @@ NEMA 23 (~3 N·m) × 5:1 ≈ 15 N·m at axis (before gearbox losses)  →  ~1.5�
 
 - Pico → each driver: `STEP`, `DIR`, `ENABLE` (3 lines/axis).
 - Limit switches → Pico GPIO (with pull-ups; wire normally-closed so a broken wire reads as "at limit" = fail-safe).
-- Pico ↔ Pi: UART (or SPI). Keep this link simple and well-defined — it carries setpoints down and position/status up.
+- Pico ↔ Pi: UART through an RS-485 transceiver at each end (half-duplex, one twisted pair in the umbilical; Pi 5 is the only master, 20 ms heartbeat). Keep this link simple and well-defined — it carries setpoints down and position/status up. Details: [Drive_and_Cabling.md](Drive_and_Cabling.md#rack--turret-control-link-rs-485).
 
 ---
 
@@ -167,7 +167,7 @@ Run in this order; store the results so they persist across power cycles:
 2. **Tilt structure:** build the yoke/trunnion on the pan turntable. Install the tilt shaft in its bearing blocks. Mount the tilt motor + gearbox to one side; couple to the shaft.
 3. **Payload plate:** bolt the printed sensor/marker platform to the tilt shaft. Position the payload to put its CG within ~10 cm of the tilt axis; add/relocate mass until balanced.
 4. **Limit switches:** mount one per axis at a repeatable reference; set mechanical hard stops just beyond the soft limits.
-5. **Wiring:** motors→drivers (phases + encoder), drivers→24–48 V, Pico→drivers (step/dir/enable), switches→Pico, Pico↔Pi. Common ground. Fuse the rails. Add a service loop on the Ethernet run to the Jetson.
+5. **Wiring:** motors→drivers (phases + encoder), drivers→24–48 V, Pico→drivers (step/dir/enable), switches→Pico, Pico↔Pi (RS-485 pair). Common ground. Fuse the rails. Add a service loop on the Ethernet run to the Jetson.
 
 ---
 

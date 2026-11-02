@@ -29,11 +29,15 @@
 | [x] | 14 | microSD 64 GB A2 | — | 1 | $10 | $10 | SanDisk SDSQXAV-064G | Pi OS / boot. |  |
 | [x] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). |  |
 | [x] | 16 | GPIO stacking header, 2×20 tall | — | 1 | $3 | $3 | Adafruit 2223 | Passes GPIO up past the HAT. |  |
-| [x] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + Pico), spare GPIO. |  |
+| [x] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + the Pico link, via the #70 RS-485 transceiver), spare GPIO. |  |
 | [x] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |
 | [x] | 19 | Limit / homing switches | 3D-printer mechanical endstop: lever microswitch on PCB, 1 m cable + plug, trigger LED; NO; GPIO to Pico | 1 | $10.99 | $10.99 | R REIFENG endstop (Amazon; 6-pack) | One per axis → power-up homing → absolute aiming. 6-pack = 2 used + 4 spare. Signal → Pico GPIO w/ pull-up, GND → GND; LED pin needs Vcc (optional). NO is fine; microswitch has NC too if you want fail-safe (broken wire = trip). Add a flag/tab on each axis to trip at home. |  |
-| [x] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T. ON THE TURRET with the drivers; reads IMU/limits/LED locally. |  |
+| [x] | 20 | Pico RP2040 | Motion coprocessor (step/dir) | 1 | $5 | $5 | Raspberry Pi Pico | Drives both CL57T. ON THE TURRET with the drivers; reads IMU/limits/LED locally. Commanded over RS-485 (#70); its USB goes to the Zero (#71) for flashing/logs only. |  |
 | [x] | 21 | Pico debug OLED (SSD1306) | 128×64; I2C | 1 | $9 | $9 | Adafruit 938 | Pico debug: current routine/state, step/dir, homing, heartbeat, faults. |  |
+| [ ] | 70 | RS-485 transceiver modules | 3.3 V TTL↔RS-485, automatic direction control (MAX13487-class), onboard 120 Ω termination | 1 | $9.99 | $9.99 | generic 5-pack | Pi 5↔Pico link over the umbilical: one at the Pi 5 UART (rack), one at the Pico UART (turret); half-duplex A/B on one twisted pair. Leave the 120 Ω fitted at both ends only. Price est. |  |
+| [x] | 71 | Raspberry Pi Zero 2 W (maintenance node) | Wi-Fi 2.4 GHz; USB OTG set to host | 1 | $0 | $0 | SC0510 | Owned (hostname turret-zero). OPTIONAL, on the turret beside the Pico: flash the Pico (mpremote) and tail its logs over Wi-Fi. NEVER in the command or heartbeat path. |  |
+| [ ] | 72 | Turret 5 V buck (logic rail) | 9–60 V in → 5 V, 3 A out | 1 | $11.99 | $11.99 | generic | Turret logic: Pico + ELRS RX + IMU + OLED + Zero (~1.2 A peak). Feed point (switched vs unswitched 48 V) is open — see Drive_and_Cabling.md. Price est. |  |
+| [ ] | 73 | Step/dir output buffer | 74LVC07A hex open-drain buffer, 3.3 V in, 5 V-tolerant outputs, 24 mA sink; SOIC-14 + SOIC-14→DIP adapter | 1 | $9.79 | $9.79 | TI SN74LVC07AD ×3 (~$0.60 ea) + adapter pack ($7.99) | Pico 3.3 V GPIO → CL57T opto inputs (need 3.5–5 V, 7–16 mA). One chip = all 6 channels (PUL/DIR/ENA ×2); 2 spares. Plus 6× 10 kΩ pull-downs + 0.1 µF decoupling (stock). Wiring: Drive_and_Cabling.md. Price est. |  |
 
 ## C.  DISPLAYS & CALIBRATION
 
@@ -99,7 +103,7 @@
 | [x] | 54 | E-stop (22 mm, 2NC 2NO) | Gebildet latching, 3 A, connection plug | 1 | $9.99 | $9.99 | Gebildet (Amazon) | Breaks 12 V solenoid directly + pilots the 48 V cutoff solenoid (#64). Spare NO → Pi "E-stop pressed" input. Safety-critical. |  |
 | [x] | 55 | Gigabit Ethernet switch | TP-Link TL-SG108E, 8-port, managed | 1 | $19.99 | $19.99 | TP-Link TL-SG108E | Pi + Jetson + uplink (SSH/updates). Bought; price est. |  |
 | [ ] | 56 | DIN rail + terminal/ground bus | Dinkle DK2.5N kit: 20 blocks + 35 mm rail + ground blocks + jumpers + end brackets | 1 | $23 | $23 | ICI Dinkle DK2.5N (B07NVV28D9) | Distribute 48 V & 12 V, tie all grounds. The #28 DC breaker clips onto the same 35 mm rail. Use a heavier lug for the 48 V/10 A run. | [link](https://www.amazon.com/International-Connector-Dinkle-DK2-5N-Connectors/dp/B07NVV28D9) |
-| [ ] | 57 | Umbilical connectors + bulkhead | GX20 12-pin (power+signal) + USB3 panel coupler (ZED) | 1 | $30 | $30 | GX20-12 (B0D4VBV42Q) + PENGLIN USB3 IP67 (B09VNS64HM) | Rack↔turret disconnect. GX20 pins are 5 A each → 48 V+ ×3 pins, 48 V− ×3 pins (15 A), solenoid+/−, UART TX/RX, GND, armed-LED = 12 pins. ZED USB3 gets its OWN waterproof coupler (aviation connectors wreck USB3). No motor phases/step-dir cross (Pico+drivers on turret). | [GX20](https://www.amazon.com/Connector-Circular-Aviation-Adapter-Connection/dp/B0D4VBV42Q) · [USB3](https://www.amazon.com/PENGLIN-Waterproof-Connector-Bulkhead-Extension/dp/B09VNS64HM) |
+| [ ] | 57 | Umbilical connectors + bulkhead | GX20 12-pin (power+signal) + USB3 panel coupler (ZED) | 1 | $30 | $30 | GX20-12 (B0D4VBV42Q) + PENGLIN USB3 IP67 (B09VNS64HM) | Rack↔turret disconnect. GX20 pins are 5 A each → 48 V+ ×3 pins, 48 V− ×3 pins (15 A), solenoid+/−, RS-485 A/B (one twisted pair, #70), GND, armed-LED = 12 pins. ZED USB3 gets its OWN waterproof coupler (aviation connectors wreck USB3). No motor phases/step-dir cross (Pico+drivers on turret). | [GX20](https://www.amazon.com/Connector-Circular-Aviation-Adapter-Connection/dp/B0D4VBV42Q) · [USB3](https://www.amazon.com/PENGLIN-Waterproof-Connector-Bulkhead-Extension/dp/B09VNS64HM) |
 | [ ] | 58 | Umbilical cable sleeve / wrap | Braided / spiral wrap | 1 | $15 | $15 | generic | The single sleeved bundle, tripod↔rack. |  |
 | [ ] | 59 | Blank + vent rack panels | 10" panels | 1 | $0 | $0 | MAKE (3D print) | Fill gaps; airflow. 3D-printed alongside the E-stop panel + PSU mount. |  |
 | [x] | 60 | Cable manager (0.5U D-ring bar) | Tecmojo 2-pack, metal, 3 D-rings, 10" | 1 | $9.90 | $9.90 | Tecmojo 0.5U (2-pack) | 2 bars/pack; rack cable management. |  |
@@ -127,8 +131,8 @@
 
 | | Amount |
 |:--|:--|
-| Grand total (to-buy) | $2,094.47 |
-| Electronics & payload (A–D) | $779.69 |
+| Grand total (to-buy) | $2,126.24 |
+| Electronics & payload (A–D) | $811.46 |
 | Gimbal — catalog (E) | $505.96 |
 | Gimbal — DXF plates (F) | $159 |
 | Ground station — rack (H) | $372.84 |

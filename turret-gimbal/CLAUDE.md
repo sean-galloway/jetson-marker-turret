@@ -21,7 +21,7 @@ repo root (`Turret_BOM.md` table + `Turret_BOM_checklist.md`) for the live parts
   IMU / limit switches / LED are **local** to the Pico (short I2C/GPIO — no umbilical extender needed).
 - **On the tripod:** the gimbal + payload + the motion node, on a mechanical **quick-release**. One
   sleeved **umbilical** to the rack carries only **48 V motor power, 12 V solenoid power, Pi 5↔Pico
-  comms (UART/USB), the ZED USB 3.0, and ground** — no motor phases or step/dir over distance.
+  comms (RS-485, one twisted pair), the ZED USB 3.0, and ground** — no motor phases or step/dir over distance.
 - **Control rack (10" ground station — BOM Section H):** **Jetson AGX Orin** (perception/targeting)
   + **Raspberry Pi 5** (supervisor) + PSUs + **10" PDU** (all AC onboard, one cord to the wall)
   + Ethernet switch + **E-stop** (drops both motor + solenoid rails) + front-panel arming switch
@@ -32,7 +32,8 @@ repo root (`Turret_BOM.md` table + `Turret_BOM_checklist.md`) for the live parts
   corrected by leveling the tripod, not actuated). Full manual flow (arm-off → level → aim → center →
   90°/180° sweep with optional 5 s dwell every 45°): see **docs/Operations.md**.
 - **Signal chain (autonomous):** sensors → Jetson → Pi 5 →(umbilical)→ **Pico (on the turret)** →
-  CL57T → 2× NEMA 23 closed-loop steppers. IMU / limit switches / RC console feed the Pico **locally**
+  CL57T → 2× NEMA 23 closed-loop steppers. The Pi 5↔Pico hop is **RS-485** (differential, half-duplex,
+  Pi 5 the only master); the heartbeat originates on the Pi 5 itself — see docs/Drive_and_Cabling.md. IMU / limit switches / RC console feed the Pico **locally**
   (real-time leveling/jog); the Pico relays orientation + state up to the Pi 5 for the state machine + GUI.
 - Cabling crosses the pan axis **through the lazy-susan open bore as a service loop** (no slip ring —
   the 90°/180° sweep limit makes one unnecessary, and the ZED USB 3.0 can't go through a slip ring).

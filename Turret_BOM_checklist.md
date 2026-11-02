@@ -142,7 +142,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Received
   
-  - _Expose SPI (IMU), UART (lidar + Pico), spare GPIO._
+  - _Expose SPI (IMU), UART (lidar + the Pico link, via the #70 RS-485 transceiver), spare GPIO._
 
 - **#18 Brass standoff / spacer kit (M2.5)** — — · $8 · generic
   
@@ -175,6 +175,38 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   - [x] Received
   
   - _Pico debug: current routine/state, step/dir, homing, heartbeat, faults._
+
+- **#70 RS-485 transceiver modules** — 3.3 V TTL↔RS-485, automatic direction control (MAX13487-class), onboard 120 Ω termination · $9.99 · generic 5-pack
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Pi 5↔Pico link over the umbilical: one at the Pi 5 UART (rack), one at the Pico UART (turret); half-duplex A/B on one twisted pair. Leave the 120 Ω fitted at both ends only. Price est._
+
+- **#71 Raspberry Pi Zero 2 W (maintenance node)** — Wi-Fi 2.4 GHz; USB OTG set to host · owned · SC0510
+  
+  - [x] Ordered
+  
+  - [x] Received
+  
+  - _Owned (hostname turret-zero). OPTIONAL, on the turret beside the Pico: flash the Pico (mpremote) and tail its logs over Wi-Fi. NEVER in the command or heartbeat path._
+
+- **#72 Turret 5 V buck (logic rail)** — 9–60 V in → 5 V, 3 A out · $11.99 · generic
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Turret logic: Pico + ELRS RX + IMU + OLED + Zero (~1.2 A peak). Feed point (switched vs unswitched 48 V) is open — see Drive_and_Cabling.md. Price est._
+
+- **#73 Step/dir output buffer** — 74LVC07A hex open-drain buffer, 3.3 V in, 5 V-tolerant outputs, 24 mA sink; SOIC-14 + SOIC-14→DIP adapter · $9.79 · TI SN74LVC07AD ×3 (~$0.60 ea) + adapter pack ($7.99)
+  
+  - [ ] Ordered
+  
+  - [ ] Received
+  
+  - _Pico 3.3 V GPIO → CL57T opto inputs (need 3.5–5 V, 7–16 mA). One chip = all 6 channels (PUL/DIR/ENA ×2); 2 spares. Plus 6× 10 kΩ pull-downs + 0.1 µF decoupling (stock). Wiring: Drive_and_Cabling.md. Price est._
 
 ## C.  DISPLAYS & CALIBRATION
 
@@ -474,7 +506,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _Rack↔turret disconnect: 48 V motor power, switched solenoid pair (2 cond, from the rack HAT), Pi↔Pico comms, ZED USB, ground (no motor phases/step-dir). Price est._
+  - _Rack↔turret disconnect: 48 V motor power, switched solenoid pair (2 cond, from the rack HAT), Pi↔Pico RS-485 pair (#70), ZED USB, ground (no motor phases/step-dir). Price est._
 
 - **#58 Umbilical cable sleeve / wrap** — Braided / spiral wrap · $15 · generic
   
@@ -579,8 +611,8 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
 
 ## Totals
 
-- **Grand total (to-buy):** $2,063.63
-- **Electronics & payload (A–D):** $748.85
+- **Grand total (to-buy):** $2,126.24
+- **Electronics & payload (A–D):** $811.46
 - **Gimbal — catalog (E):** $505.96
 - **Gimbal — DXF plates (F):** $159
 - **Ground station — rack (H):** $372.84

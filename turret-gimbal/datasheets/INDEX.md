@@ -4,6 +4,7 @@ Reference files for confirmed parts. Naming: `BOM#_part_part-number`. Maps to Se
 
 | BOM # | Part | Part number | File | Status |
 |------|------|-------------|------|--------|
+| 1 | Closed-loop driver (×2, ships in the motor kit) | STEPPERONLINE **CL57T V4.1** | `01_driver_CL57T-V4.1_manual.pdf` | Confirmed · both units checked V4.1 |
 | 2 | Planetary gearbox 5:1 | Ratio 5:1 Nema 23, Ø8 bore | `02_gearbox_5to1_Nema23_phi8mm.jpeg` | Confirmed |
 | 3 | Turntable bearing | 8" lazy susan, 265 lb (VXB) | `03_turntable-bearing_8in-lazy-susan-265lb.png` | Bought · **needs measurement** |
 | 4 | Tilt bearing | McMaster **5968K71** | `04_tilt-bearing_McMaster_5968K71.png` | Confirmed · need flange dims |
@@ -13,7 +14,7 @@ Reference files for confirmed parts. Naming: `BOM#_part_part-number`. Maps to Se
 | 12 | Dowel pins | McMaster **91595A161** | `12_dowel-pins_McMaster_91595A161.png` | Confirmed |
 
 ## Still needed (not yet on file)
-- **#1 Motor** (23HS45-4204D-E1000) — no datasheet here yet (StepperOnline/Amazon).
+- **#1 Motor** (23HS45-4204D-E1000) — no motor datasheet here yet (StepperOnline/Amazon); the driver manual is on file.
 - **#4 bearing flange dims** — the file is the catalog table; the exact 2-bolt flange spacing + hole Ø come from the McMaster product drawing (or match-drill plate 05).
 - **#3 lazy susan pattern** — needs physical measurement (4 holes: PCD + hole Ø, both faces) once it arrives → makes plates 02/03.
 - **Tripod head** — needs a straight-down photo → makes plate 06.
