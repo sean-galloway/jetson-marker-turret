@@ -126,7 +126,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [x] Received
   
-  - _Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode)._
+  - _Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). CH5 = 48 V motor-rail enable: in series with the E-stop NC in the #64 coil return (see Drive_and_Cabling.md)._
 
 - **#16 GPIO stacking header, 2×20 tall** — — · $3 · Adafruit 2223
   
@@ -562,7 +562,7 @@ Two clickable boxes per item — **Ordered** and **Received** (works in GitHub, 
   
   - [ ] Received
   
-  - _E-stop NC drops the coil → opens the 48 V motor rail (fail-safe). 3 A E-stop can't switch 48 V directly. Price est._
+  - _E-stop NC drops the coil → opens the 48 V motor rail (fail-safe). 3 A E-stop can't switch 48 V directly. Coil return runs E-stop NC → HAT CH5 (#15) → GND, so the Pi 5 can also cycle the rail (clears latched CL57T faults); E-stop still breaks it independently. Measure coil R: 48 V/R must be within CH5's rating. Price est._
 
 
 ## I.  CONTROL / TEST (operator console)

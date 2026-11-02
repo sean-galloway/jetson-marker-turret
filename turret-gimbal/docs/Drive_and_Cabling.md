@@ -54,8 +54,9 @@ turret +5V ──► PUL+ ─[CL57T opto]─ PUL− ──► 74LVC07A output (s
   up to the Pico's 3V3 → Pico fault input → stop-and-hold + report. Polarity is
   configurable; confirm on the bench.
 - **Faults latch with the shaft free** (over-current, over-voltage, following error).
-  The only reset is power-cycling the driver, so the Pi 5 needs a way to cycle the 48 V
-  rail. With the payload CG near the tilt axis, a freed shaft has little to back-drive.
+  The only reset is power-cycling the driver; the Pi 5 does that through the motor-rail
+  enable below. With the payload CG near the tilt axis, a freed shaft has little to
+  back-drive.
 - **BRK** (≤ 24 V / 100 mA): only through a relay with a flyback diode, if a brake is added.
 - Red LED blink count = fault: 1 over-current, 2 over-voltage, 4 can't lock the shaft
   (motor cable), 7 following error (SW6 ON as an encoder-wiring test).
@@ -132,6 +133,27 @@ Pi 5 UART ── RS-485 xcvr ══ A/B twisted pair (umbilical) ══ RS-485 x
 
 Run the A/B pair as a **twisted pair** the full length of the umbilical (a spare
 pair from Cat5e is fine), kept apart from the 48 V conductors inside the sleeve.
+
+### 48 V motor-rail enable (Pi 5)
+The 48 V cutoff solenoid (#64) already switches the motor rail; its coil is held in
+through the E-stop's NC contact. A spare channel on the Pi's MOSFET HAT (#15, **CH5**)
+goes in series in the coil return:
+
+```
+48 V (line side) ─► #64 coil ─► E-stop NC ─► HAT CH5 ─► GND
+```
+
+- **Pi 5 control:** CH5 off opens the rail (both drivers unpowered); CH5 on restores it.
+  This is how a latched CL57T fault is cleared — no new parts.
+- **E-stop stays independent:** it is in series, so pressing it breaks the coil
+  whatever the Pi or HAT is doing.
+- **Off at power-up:** HAT outputs start off, so the motors get 48 V only when the
+  Pi 5 enables them (after its own checks and the Pico heartbeat are up).
+- **Check before wiring:** measure the coil resistance; 48 V / R must sit within
+  CH5's current rating (golf-cart coils are typically well under 1 A). CH5–8 carry
+  flyback diodes, which this inductive load needs.
+- **Interacts with the 5 V decision below:** if the turret buck is fed after #64,
+  every rail cycle (and every E-stop) also resets the Pico and forces a re-home.
 
 ### Turret 5 V logic rail
 Nothing on the umbilical carries 5 V, so the turret makes its own: a **48 V → 5 V,

@@ -27,7 +27,7 @@
 | [x] | 12 | Pi 5 Active Cooler | — | 1 | $5 | $5 | SC1148 | Pi 5 throttles without it. |  |
 | [x] | 13 | Pi 27 W USB-C PD supply | 5.1 V / 5 A | 1 | $12 | $12 | SC1158 | Powers the Pi + HAT reliably. |  |
 | [x] | 14 | microSD 64 GB A2 | — | 1 | $10 | $10 | SanDisk SDSQXAV-064G | Pi OS / boot. |  |
-| [x] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). |  |
+| [x] | 15 | Solenoid driver HAT (8-MOSFET) | I2C; solid-state | 1 | $45 | $45 | Sequent Eight-MOSFETS | Trigger drive; the only HAT on the stack now. Solenoid on a high-current channel (CH1-4): 12A@24V, onboard TVS clamps flyback — no external diode (CH5-8 are 240V/flyback-diode). CH5 = 48 V motor-rail enable: in series with the E-stop NC in the #64 coil return (see Drive_and_Cabling.md). |  |
 | [x] | 16 | GPIO stacking header, 2×20 tall | — | 1 | $3 | $3 | Adafruit 2223 | Passes GPIO up past the HAT. |  |
 | [x] | 17 | Top-of-stack GPIO breakout / proto-HAT | — | 1 | $8 | $8 | Adafruit 2310 | Expose SPI (IMU), UART (lidar + the Pico link, via the #70 RS-485 transceiver), spare GPIO. |  |
 | [x] | 18 | Brass standoff / spacer kit (M2.5) | — | 1 | $8 | $8 | generic | Mount/space the HAT + Pi. |  |
@@ -110,7 +110,7 @@
 | [ ] | 61 | Jetson/Pi 5/Pico rack shelf | 3D print; standoffs + vents | 1 | $0 | $0 | MAKE (3D print) | To be designed. |  |
 | [x] | 62 | 12-port Cat6 patch panel | 1U; keystone + cable bar | 1 | $24.99 | $24.99 | GeeekPi 12-port | Network breakout; part of the umbilical interface. Bought; price est. |  |
 | [x] | 63 | Switch rack mount (PETG) | 1U mount for TL-SG108 | 1 | $34.99 | $34.99 | generic PETG | Racks the TL-SG108E. Bought; price est. |  |
-| [ ] | 64 | 48 V cutoff solenoid (E-stop) | 48 V, 4-term, 200 A work / 500 A inrush, copper | 1 | $34.99 | $34.99 | 10L0L #586 (73231G01 repl., Amazon) | 48 V continuous-duty SPST-NO solenoid (2 coil studs 0.19" + 2 load studs 5/16"). E-stop NC breaks the coil current → opens the 48 V motor rail (fail-safe). Contacts rated to switch 48 VDC (golf-cart main circuit). Feed coil from the line side of the 48 V rail. Backups: universal (B0076Q9HNM), EZGO 73231G01 (B0076Q9FFM). |  |
+| [ ] | 64 | 48 V cutoff solenoid (E-stop) | 48 V, 4-term, 200 A work / 500 A inrush, copper | 1 | $34.99 | $34.99 | 10L0L #586 (73231G01 repl., Amazon) | 48 V continuous-duty SPST-NO solenoid (2 coil studs 0.19" + 2 load studs 5/16"). E-stop NC breaks the coil current → opens the 48 V motor rail (fail-safe). Contacts rated to switch 48 VDC (golf-cart main circuit). Feed coil from the line side of the 48 V rail. Coil return runs E-stop NC → HAT CH5 (#15) → GND, so the Pi 5 can also cycle the rail (clears latched CL57T faults); E-stop still breaks it independently. Measure coil R: 48 V/R must be within CH5's rating. Backups: universal (B0076Q9HNM), EZGO 73231G01 (B0076Q9FFM). |  |
 
 ## I.  CONTROL / TEST (operator console)
 
